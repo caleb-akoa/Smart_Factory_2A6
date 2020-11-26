@@ -2,7 +2,7 @@
 #define FACTURES_H
 #include <QSqlQuery>
 #include <QSqlQueryModel>
-
+ //
 
 class Factures
 {
