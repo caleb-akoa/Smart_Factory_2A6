@@ -19,6 +19,14 @@
   <property name="windowTitle">
    <string>FactWare</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+#Dialog {
+
+background: gray;
+}</string>
+  </property>
   <property name="inputMethodHints">
    <set>Qt::ImhNone</set>
   </property>
@@ -371,10 +379,21 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-40</y>
+     <y>-20</y>
      <width>631</width>
      <height>731</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#Dialog {
+background: gray;
+}
+
+#Dialog {
+border: 3px solid gray;
+border-radius: 40px;
+background: white;
+}</string>
    </property>
    <property name="text">
     <string/>

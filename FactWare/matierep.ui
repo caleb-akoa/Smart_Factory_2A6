@@ -612,8 +612,8 @@
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>320</y>
+       <x>330</x>
+       <y>260</y>
        <width>75</width>
        <height>23</height>
       </rect>
@@ -635,7 +635,7 @@
        <x>60</x>
        <y>150</y>
        <width>371</width>
-       <height>221</height>
+       <height>151</height>
       </rect>
      </property>
     </widget>
@@ -678,7 +678,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Nom de la matiere 
+      <string>l'ID de la matiere 
 premiere</string>
      </property>
     </widget>

@@ -13,13 +13,14 @@ public:
     info_mp(int,QString,QString,QString, int, int);
 
     bool ajouter();
+    bool verifie(int);
     bool miseAjour(int);
     QSqlQueryModel * afficher();
 
-    bool supprimer(QString);
+    bool supprimer(int);
     QSqlQueryModel * trier_nom();
     QSqlQueryModel * trier_quantite();
-    QSqlQueryModel * chercher(QString);
+    QSqlQueryModel * chercher(int);
 
 
 private:

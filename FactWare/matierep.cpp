@@ -2,6 +2,7 @@
 #include "ui_matierep.h"
 #include "dialog.h"
 #include "matierep.h"
+#include<QMessageBox>
 
 matiereP::matiereP(QWidget *parent) :
     QDialog(parent),
@@ -32,15 +33,24 @@ void matiereP::on_pushButton_2_clicked()
     int quantite =  ui->lineEdit_quantite->text().toInt();
 
     info_mp mp(identifiant,libelle,reference,description,prix,quantite);
-    bool test = mp.ajouter();
-    ui->afficherMatierePremiere->setModel(mp.afficher());//actualiser
-     if(test)
-     {
 
-          qDebug()<<"Envoi effectue"<<endl;
-     }
+    if(identifiant!=NULL && libelle!=NULL && reference!=NULL && description!=NULL && prix!=NULL && quantite!=NULL)
+    {
+
+        bool test = mp.ajouter();
+        ui->afficherMatierePremiere->setModel(mp.afficher());//actualiser
+         if(test)
+         {
+
+              qDebug()<<"Envoi effectue"<<endl;
+         }
+        else
+              qDebug()<<"Envoi non effectue"<<endl;
+
+    }
     else
-          qDebug()<<"Envoi non effectue"<<endl;
+          QMessageBox::warning(this, "Echec", "Remplissez tout les champs !");
+
 }
 
 void matiereP::on_pushButton_clicked()
@@ -53,36 +63,49 @@ void matiereP::on_pushButton_clicked()
     int quantite =  ui->lineEdit_3->text().toInt();
 
     info_mp mp(identifiant,libelle,reference,description,prix,quantite);
-    bool test = mp.miseAjour(identifiant);
-    ui->afficherMatierePremiere->setModel(mp.afficher());//actualiser
-     if(test)
-     {
 
-          qDebug()<<"Envoi effectue"<<endl;
-     }
+    if(identifiant!=NULL && libelle!=NULL && reference!=NULL && description!=NULL && prix!=NULL && quantite!=NULL)
+    {
+        bool test = mp.miseAjour(identifiant);
+        ui->afficherMatierePremiere->setModel(mp.afficher());//actualiser
+         if(test)
+         {
+
+              qDebug()<<"Envoi effectue"<<endl;
+         }
+        else
+              qDebug()<<"Envoi non effectue"<<endl;
+
+    }
     else
-          qDebug()<<"Envoi non effectue"<<endl;
+          QMessageBox::warning(this, "Echec", "Remplissez tout les champs !");
+
 
 }
 
 void matiereP::on_lineEdit_7_textChanged(const QString &arg1)
 {
-    ui->tableView_2->setModel(mp.chercher(arg1));
- //  ui->afficherMatierePremiere->setModel(mp.afficher());
+    int identifiant = ui->lineEdit_7->text().toInt();
+    ui->tableView_2->setModel(mp.chercher(identifiant));
 }
 
 void matiereP::on_pushButton_3_clicked()
 {
-    QString nom= ui->lineEdit_7->text();
-    bool test=mp.supprimer(nom);
-    if(test)
-    {
-          ui->afficherMatierePremiere->setModel(mp.afficher());
-         qDebug()<<"Suppression effectue"<<endl;
+    int identifiant= ui->lineEdit_7->text().toInt();
+      if(identifiant!=NULL)
+      {
+          bool test=mp.supprimer(identifiant);
+          if(test)
+          {
+                ui->afficherMatierePremiere->setModel(mp.afficher());
+               qDebug()<<"Suppression effectue"<<endl;
 
-    }
-   else
-         qDebug()<<"Suppression non effectue"<<endl;
+          }
+         else
+               qDebug()<<"Suppression non effectue"<<endl;
+      }
+      else
+            QMessageBox::warning(this, "Echec", "Remplissez tout les champs !");
 }
 
 void matiereP::on_pushButton_4_clicked()

@@ -24,11 +24,11 @@ private slots:
 
     void on_pushButton_supprimer_2_clicked();
 
-    void on_recherche_textChanged(const QString &arg1);
-
     void on_pushButton_clicked();
 
     void on_pushButton_5_clicked();
+
+    void on_recherche_textChanged(const QString &arg1);
 
 private:
     Ui::fournisseur *ui;

@@ -66,32 +66,29 @@ void fournisseur::on_pushButton_M_clicked()
      info_fournisseur f(identifiant,nom,adresse,telephone,email);
 
 
-     if(identifiant!=NULL && nom!=NULL && adresse!=NULL && telephone!=NULL && email!=NULL)
-     {
-      bool test=f.modifier(identifiant);
-      if(test)
-       {
-             ui->table_F->setModel(tb.afficher());
-            qDebug()<<"Modification effectue"<<endl;
-            QMessageBox::information(this, "Reussite", "Modification effectué !");
+          if(identifiant!=NULL && nom!=NULL && adresse!=NULL && telephone!=NULL && email!=NULL)
+          {
 
-       }
-      else
-       {
-           qDebug()<<"Modification non effectue"<<endl;
-            QMessageBox::warning(this, "Echec", "Modification non effectué !");
-       }
-     }
-     else
-          QMessageBox::warning(this, "Echec", "Remplissez tout les champs !");
-}
+                  bool test=f.modifier(identifiant);
+                  if(test)
+                   {
 
 
+                         ui->table_F->setModel(tb.afficher());
+                        qDebug()<<"Modification effectue"<<endl;
+                        QMessageBox::information(this, "Reussite", "Modification effectué !");
 
-void fournisseur::on_recherche_textChanged(const QString &arg1)
-{
-    ui->tableAffichage->setModel(tb.chercher(arg1));
- //    ui->table_F->setModel(tb.afficher());
+                   }
+                  else
+                   {
+                       qDebug()<<"Modification non effectue"<<endl;
+                        QMessageBox::warning(this, "Echec", "Modification non effectué !");
+                   }
+
+             }
+          else
+              QMessageBox::warning(this, "Echec", "Remplissez le champs !");
+
 }
 
 
@@ -100,12 +97,12 @@ void fournisseur::on_recherche_textChanged(const QString &arg1)
 void fournisseur::on_pushButton_supprimer_2_clicked()
 {
 
-    QString nom = ui->recherche->text();
+    int identifiant = ui->recherche->text().toInt();
 
-    if(nom!=NULL)
+    if(identifiant!=NULL)
     {
-        bool test=tb.supprimer(nom);
-        if(test && nom!=NULL)
+        bool test=tb.supprimer(identifiant);
+        if(test)
         {
              ui->table_F->setModel(tb.afficher());
              qDebug()<<"Suppression effectue"<<endl;
@@ -137,3 +134,10 @@ void fournisseur::on_pushButton_5_clicked()
 {
      ui->table_F->setModel(tb.trier_ID());
 }
+
+
+void fournisseur::on_recherche_textChanged(const QString &arg1)
+{
+    int identifiant = ui->recherche->text().toInt();
+    ui->tableAffichage->setModel(tb.chercher(identifiant));
+ }

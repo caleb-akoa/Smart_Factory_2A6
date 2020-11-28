@@ -22,9 +22,6 @@ private slots:
     void on_fournisseur_clicked();
     void on_matiereP_clicked();
 
-
-
-
 private:
     Ui::Dialog *ui;
    fournisseur *fenetre;
