@@ -1,11 +1,12 @@
 #ifndef INFO_FOURNISSEUR_H
 #define INFO_FOURNISSEUR_H
+
 #include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
 #include <QDebug>
 #include <iostream>
-
+using namespace std;
 class info_fournisseur
 {
 public:
@@ -21,11 +22,12 @@ public:
     bool ajouter();
     bool modifier(int idd);
     QSqlQueryModel * afficher();
+    bool verifie(int);
 
-    bool supprimer(QString);
+    bool supprimer(int);
     QSqlQueryModel * trier_nom();
     QSqlQueryModel * trier_ID();
-    QSqlQueryModel * chercher(QString);
+    QSqlQueryModel * chercher(int);
 
 
 private:

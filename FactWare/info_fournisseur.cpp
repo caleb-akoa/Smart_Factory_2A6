@@ -30,6 +30,7 @@ QString info_fournisseur::get_email(){return email;}
 
 
 
+
 bool info_fournisseur::ajouter()
 {
 QSqlQuery query;
@@ -60,39 +61,48 @@ model->setHeaderData(4, Qt::Horizontal, QObject::tr("email"));
     return model;
 }
 
-bool info_fournisseur::supprimer(QString name)
+bool info_fournisseur::supprimer(int id)
 {
 QSqlQuery query;
-query.prepare("Delete from FOURNISSEUR where NOM = :nom");
-query.bindValue(":nom", name);
+query.prepare("Delete from FOURNISSEUR where IDENTIFIANT = :identifiant");
+query.bindValue(":identifiant", id);
 return    query.exec();
 }
 
+bool info_fournisseur::verifie(int id)
+{
 
+QSqlQuery query;
+
+query.prepare("select * from FOURNISSEUR  where IDENTIFIANT = :identifiant ");
+query.bindValue(":identifiant", id);
+   return   query.exec();
+}
 
 bool info_fournisseur::modifier(int idd)
 {
 
-    QSqlQuery query;
-    QString res= QString::number(idd);
-    query.prepare("UPDATE FOURNISSEUR SET NOM=:nom,ADRESSE=:adresse,TELEPHONE=:telephone,EMAIL=:email WHERE IDENTIFIANT=:identifiant");
-    query.bindValue(":identifiant", res);
-    query.bindValue(":nom", nom);
-    query.bindValue(":adresse", adresse);
-    query.bindValue(":telephone", telephone);
-    query.bindValue(":email", email);
+        QSqlQuery query;
+        QString res= QString::number(idd);
+        query.prepare("UPDATE FOURNISSEUR SET NOM=:nom,ADRESSE=:adresse,TELEPHONE=:telephone,EMAIL=:email WHERE IDENTIFIANT=:identifiant");
+        query.bindValue(":identifiant", res);
+        query.bindValue(":nom", nom);
+        query.bindValue(":adresse", adresse);
+        query.bindValue(":telephone", telephone);
+        query.bindValue(":email", email);
 
-    return    query.exec();
+        return    query.exec();
+
 }
 
-QSqlQueryModel * info_fournisseur::chercher(QString name)
+QSqlQueryModel * info_fournisseur::chercher(int id)
 
 {
     QSqlQueryModel * model= new QSqlQueryModel();
 QSqlQuery query;
 
-query.prepare("select * from FOURNISSEUR where NOM=:nom");
-query.bindValue(":nom", name);
+query.prepare("select * from FOURNISSEUR where IDENTIFIANT=:identifiant");
+query.bindValue(":identifiant", id);
 
 query.exec();
 model->setQuery(query);
@@ -134,3 +144,5 @@ QSqlQueryModel * info_fournisseur::trier_ID()
 
         return model;
 }
+
+

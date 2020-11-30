@@ -2,13 +2,14 @@
 #include "ui_dialog.h"
 #include "fournisseur.h"
 #include "matierep.h"
+
+
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Dialog)
 {
     ui->setupUi(this);
      QObject::connect(ui->pushButton, SIGNAL(clicked()), qApp, SLOT(quit()));
-
 }
 
 Dialog::~Dialog()

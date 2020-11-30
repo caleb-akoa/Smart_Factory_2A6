@@ -53,11 +53,11 @@ model->setHeaderData(5, Qt::Horizontal, QObject::tr("quantite"));
 }
 
 
-bool info_mp::supprimer(QString nom)
+bool info_mp::supprimer(int nom)
 {
 QSqlQuery query;
-query.prepare("Delete from MATIERE_PREMIERE where LIBELLE=:libelle");
-query.bindValue(":libelle", nom);
+query.prepare("Delete from MATIERE_PREMIERE where IDENTIFIANT=:identifiant");
+query.bindValue(":identifiant", nom);
 return    query.exec();
 }
 
@@ -78,13 +78,13 @@ bool info_mp::miseAjour(int idd)
     return    query.exec();
 }
 
-QSqlQueryModel * info_mp::chercher(QString name)
+QSqlQueryModel * info_mp::chercher(int name)
 
 {
     QSqlQueryModel * model= new QSqlQueryModel();
 QSqlQuery query;
-query.prepare("select * from MATIERE_PREMIERE where LIBELLE=:libelle");
-query.bindValue(":libelle", name);
+query.prepare("select * from MATIERE_PREMIERE where IDENTIFIANT=:identifiant");
+query.bindValue(":identifiant", name);
 query.exec();
 model->setQuery(query);
 model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
