@@ -53,6 +53,11 @@ private slots:
 
     void on_validermodification_clicked();
 
+
+    void on_tabWidget_currentChanged(int index);
+
+    void on_suivantmodifier_clicked();
+
 private:
     Ui::MainWindow *ui;
     Client client;

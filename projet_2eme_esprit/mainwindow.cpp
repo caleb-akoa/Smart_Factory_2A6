@@ -1,8 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include<QDebug>
-
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -19,7 +17,8 @@ void MainWindow::on_client_3_clicked(){ui->stackedWidget->setCurrentIndex(1);}
 void MainWindow::on_commande_1_clicked(){ui->stackedWidget->setCurrentIndex(3);}
 //////////////////////////////////////////////////  crouds clients clicked !!
 void MainWindow::on_ajouterclient_clicked(){ui->stackedWidget->setCurrentIndex(2);ui->tabWidget->setCurrentIndex(0);}
-void MainWindow::on_modifierclient_clicked(){ui->stackedWidget->setCurrentIndex(2);ui->tabWidget->setCurrentIndex(1);}
+void MainWindow::on_modifierclient_clicked(){ui->stackedWidget->setCurrentIndex(2);ui->tabWidget->setCurrentIndex(1);
+    /*hide modier champs */  ui->suivantmodifier->hide();ui->label_36->hide();ui->label_37->hide(); ui->lineEdit_9->hide();ui->lineEdit_10->hide();ui->lineEdit_11->hide();ui->lineEdit_12->hide();ui->lineEdit_13->hide();ui->lineEdit_14->hide();ui->lineEdit_15->hide();ui->lineEdit_17->hide();ui->validermodification->hide();}
 void MainWindow::on_supprimerclient_clicked(){ui->stackedWidget->setCurrentIndex(2);ui->tabWidget->setCurrentIndex(2);}
 void MainWindow::on_afficherclient_clicked(){ ui->stackedWidget->setCurrentIndex(2);ui->tabWidget->setCurrentIndex(3);}
 void MainWindow::on_chercherclient_clicked(){ui->stackedWidget->setCurrentIndex(2);ui->tabWidget->setCurrentIndex(4);}
@@ -44,7 +43,7 @@ void MainWindow::on_retour_10_clicked(){ui->stackedWidget->setCurrentIndex(3);}
 
 /*                                           CLIENT                                                                       */
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-void MainWindow::on_ajoutercl_clicked()
+void MainWindow::on_ajoutercl_clicked()//ajouter client
 {
     QString ID = ui->ID->text();
     QString NOM = ui->NOM->text();
@@ -86,10 +85,37 @@ void MainWindow::on_ajoutercl_clicked()
     }
 }
 
-void MainWindow::on_tabWidget_tabBarClicked(int index)//afficher
+
+void MainWindow::on_tabWidget_tabBarClicked(int index)//afficher clients
 { ui->tableView->setModel(client.list());}
 
-void MainWindow::on_deleteclient_clicked()
+
+void MainWindow::on_chercherdelete_clicked()//delete 0
+{
+    QString todelete = ui->todelete->text();
+    client.setId( todelete.toInt());
+
+    int delet = client.check();
+    if(delet == 0)
+
+    {
+        QSqlQuery query;
+        query.prepare("Select * from client where ID=:id");
+        query.bindValue(":id", todelete);
+        query.exec();
+        if(query.next())
+        {
+            ui->lineEdit->setText(query.value(0).toString());
+            ui->lineEdit_2->setText(query.value(1).toString());
+            ui->lineEdit_3->setText(query.value(2).toString());
+            ui->lineEdit_4->setText(query.value(3).toString());
+            ui->lineEdit_5->setText(query.value(4).toString());
+            ui->lineEdit_6->setText(query.value(5).toString());
+            ui->lineEdit_7->setText(query.value(6).toString());
+        }
+    }
+}
+void MainWindow::on_deleteclient_clicked()//delete 1
 {
     QSqlQuery query;
 
@@ -118,7 +144,23 @@ void MainWindow::on_deleteclient_clicked()
 
 }
 
-void MainWindow::on_cherchermodifier_clicked()
+
+void MainWindow::on_tabWidget_currentChanged(int index)/// ki tickliki ala modifier fel tab bar0
+{
+    ui->lineEdit_9->hide();
+    ui->lineEdit_10->hide();
+    ui->lineEdit_11->hide();
+    ui->lineEdit_12->hide();
+    ui->lineEdit_13->hide();
+    ui->lineEdit_14->hide();
+    ui->lineEdit_15->hide();
+    ui->lineEdit_17->hide();
+    ui->validermodification->hide();
+    ui->label_36->hide();
+    ui->label_37->hide();
+    ui->suivantmodifier->hide();
+}
+void MainWindow::on_cherchermodifier_clicked()//modfier1
 {  QString toupdate = ui->toupdate->text();
     client.setId( toupdate.toInt());
 
@@ -126,6 +168,15 @@ void MainWindow::on_cherchermodifier_clicked()
     if(delet == 0)
 
     {
+        ui->lineEdit_9->show();
+        ui->lineEdit_10->show();
+        ui->lineEdit_11->show();
+        ui->lineEdit_12->show();
+        ui->lineEdit_13->show();
+        ui->lineEdit_14->show();
+        ui->lineEdit_15->show();
+        ui->label_36->show();
+        ui->suivantmodifier->show();
         QSqlQuery query;
         query.prepare("Select * from client where ID=:id");
         query.bindValue(":id", toupdate);
@@ -139,12 +190,51 @@ void MainWindow::on_cherchermodifier_clicked()
             ui->lineEdit_13->setText(query.value(4).toString());
             ui->lineEdit_14->setText(query.value(5).toString());
             ui->lineEdit_15->setText(query.value(6).toString());
+
         }
     }
 
 }
+void MainWindow::on_suivantmodifier_clicked()//modifier2
+{
+     ui->lineEdit_17->show();
+     ui->label_37->show();
+     ui->validermodification->show();
+}
+void MainWindow::on_validermodification_clicked() // ki bch taaamil il modifcation etape finale 3
+{
 
-void MainWindow::on_chercher_clicked()
+    QString  id= ui->lineEdit_9->text();
+    QString   nom=ui->lineEdit_10->text();
+    QString  prenom= ui->lineEdit_11->text();
+    QString  email= ui->lineEdit_12->text();
+    QString  boite =ui->lineEdit_13->text();
+    QString telephone= ui->lineEdit_14->text();
+    QString adresse=ui->lineEdit_15->text();
+    QSqlQuery query;
+
+    query.prepare("update client set NOM=:nom,PRENOM=:prenom,MAIL=:email,BOITE=:boite,TELE=:telephone,VILLE=:adresse where ID=:toupdate");
+
+    query.bindValue(":toupdate",id);
+
+    query.bindValue(":nom",nom);
+    query.bindValue(":prenom",prenom);
+    query.bindValue(":email",email);
+    query.bindValue(":boite",boite);
+    query.bindValue(":telephone",telephone);
+    query.bindValue(":adresse",adresse);
+
+    if(query.exec()){
+        QMessageBox::information (this, "update", "client updated");
+        ui->toupdate->setText("");
+    }
+
+
+    else {QMessageBox::critical (this, "Error", "unexpected error");}
+}
+
+
+void MainWindow::on_chercher_clicked()// chercher
 {
     QString tochercher=ui->tochercher->text();
     QSqlQuery query;
@@ -167,60 +257,8 @@ void MainWindow::on_chercher_clicked()
     }
 }
 
-void MainWindow::on_chercherdelete_clicked()
-{
-    QString todelete = ui->todelete->text();
-    client.setId( todelete.toInt());
-
-    int delet = client.check();
-    if(delet == 0)
-
-    {
-        QSqlQuery query;
-        query.prepare("Select * from client where ID=:id");
-        query.bindValue(":id", todelete);
-        query.exec();
-        if(query.next())
-        {
-            ui->lineEdit->setText(query.value(0).toString());
-            ui->lineEdit_2->setText(query.value(1).toString());
-            ui->lineEdit_3->setText(query.value(2).toString());
-            ui->lineEdit_4->setText(query.value(3).toString());
-            ui->lineEdit_5->setText(query.value(4).toString());
-            ui->lineEdit_6->setText(query.value(5).toString());
-            ui->lineEdit_7->setText(query.value(6).toString());
-        }
-    }
-}
-
-void MainWindow::on_validermodification_clicked()
-{
-
-        QString  id= ui->lineEdit_9->text();
-        QString   nom=ui->lineEdit_10->text();
-        QString  prenom= ui->lineEdit_11->text();
-        QString  email= ui->lineEdit_12->text();
-        QString  boite =ui->lineEdit_13->text();
-        QString telephone= ui->lineEdit_14->text();
-        QString adresse=ui->lineEdit_15->text();
-        QSqlQuery query;
-
-        query.prepare("update client set NOM=:nom,PRENOM=:prenom,MAIL=:email,BOITE=:boite,TELE=:telephone,VILLE=:adresse where ID=:toupdate");
-
-        query.bindValue(":toupdate",id);
-
-        query.bindValue(":nom",nom);
-        query.bindValue(":prenom",prenom);
-        query.bindValue(":email",email);
-        query.bindValue(":boite",boite);
-        query.bindValue(":telephone",telephone);
-        query.bindValue(":adresse",adresse);
-
-        if(query.exec()){
-        QMessageBox::information (this, "update", "client updated");
-        ui->toupdate->setText("");
-    }
 
 
-    else {QMessageBox::critical (this, "Error", "unexpected error");}
-}
+
+
+

@@ -1075,7 +1075,7 @@ QPushButton:pressed {
          <string>valider</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>380</x>
@@ -1087,6 +1087,9 @@ QPushButton:pressed {
         <layout class="QVBoxLayout" name="verticalLayout_8">
          <item>
           <widget class="QLineEdit" name="lineEdit_9">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="readOnly">
             <bool>true</bool>
            </property>
@@ -1111,6 +1114,57 @@ QPushButton:pressed {
           <widget class="QLineEdit" name="lineEdit_15"/>
          </item>
         </layout>
+       </widget>
+       <widget class="QLabel" name="label_36">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>190</y>
+          <width>55</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Desktop/images qt/fleche_droite.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_37">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>180</y>
+          <width>55</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Desktop/images qt/fleche_droite.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="suivantmodifier">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>420</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Suivant </string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab">
@@ -1250,7 +1304,7 @@ QPushButton:pressed {
          <string>pour confirmer</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>390</x>
