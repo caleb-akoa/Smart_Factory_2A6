@@ -6,6 +6,7 @@
 
 class machine
 {
+public:
     QString nom, reference,categorie;
     int idMachine;
     float prix;
@@ -29,9 +30,15 @@ public:
     void SetPrix(float px){prix=px;}
 
     //Fonctions
-    bool ajouterMachine();
+    bool ajouterMachine();//
     QSqlQueryModel * afficherMachine();
     bool supprimerMachine(int);
+    int verifMachine();//
+    bool modifierMachine();//
+    QSqlQueryModel * trierMachineParNom();
+    QSqlQueryModel * trierMachineParID();
+    QSqlQueryModel * trierMachineParReference();
+     bool rechercherModifier(int);
 };
 
 #endif // MACHINE_H

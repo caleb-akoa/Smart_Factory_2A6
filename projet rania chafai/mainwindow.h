@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "machine.h"
+#include "employe.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -126,7 +128,23 @@ private slots:
 
     void on_pushButton_ajouterMachine_3_clicked();
 
+    void on_pushButton_supprimerM_clicked();
+
+    void on_pushButton_modifierMachine_4_clicked();
+
+    void on_pushButton_rechercherModM_clicked();
+
+    void on_pushButton_ajouterEmploye_3_clicked();
+
+    void on_pushButton_supprimerE_clicked();
+
+    void on_pushButton_rechercherME_clicked();
+
+    void on_pushButton_modifierEmploye_4_clicked();
+
 private:
     Ui::MainWindow *ui;
+    machine m;
+    employe e;
 };
 #endif // MAINWINDOW_H

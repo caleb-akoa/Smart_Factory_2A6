@@ -10,14 +10,18 @@ CONFIG += c++11
 
 SOURCES += \
     connexion.cpp \
+    employe.cpp \
     machine.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    statclass.cpp \
 
 HEADERS += \
     connexion.h \
+    employe.h \
     machine.h \
-    mainwindow.h
+    mainwindow.h \
+    statclass.h \
 
 FORMS += \
     mainwindow.ui

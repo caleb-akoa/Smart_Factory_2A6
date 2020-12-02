@@ -162,7 +162,7 @@ border-style: outset;
      </rect>
     </property>
     <property name="currentIndex">
-     <number>7</number>
+     <number>8</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label_2">
@@ -454,6 +454,19 @@ background-color: rgb(255, 255, 255);
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>160</y>
+        <width>291</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Bonjour,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Bienvenue sur notre application &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;FactWare.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="page_2">
@@ -1219,17 +1232,23 @@ border-style: outset;
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_naissance">
-         <property name="placeholderText">
-          <string>Naissance</string>
-         </property>
-        </widget>
+        <widget class="QDateEdit" name="dateEdit_naissance"/>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_poste">
-         <property name="placeholderText">
-          <string>Poste</string>
+        <widget class="QComboBox" name="comboBox_poste">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
+         <item>
+          <property name="text">
+           <string>Administrateur</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ouvrier</string>
+          </property>
+         </item>
         </widget>
        </item>
        <item>
@@ -1254,9 +1273,23 @@ border-style: outset;
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="lineEdit_domicile">
          <property name="placeholderText">
           <string>Domicile</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_cin">
+         <property name="placeholderText">
+          <string>CIN</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_sexe">
+         <property name="placeholderText">
+          <string>Sexe</string>
          </property>
         </widget>
        </item>
@@ -1672,17 +1705,23 @@ border-style: outset;
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_naissance_2">
-         <property name="placeholderText">
-          <string>Naissance</string>
-         </property>
-        </widget>
+        <widget class="QDateEdit" name="dateEdit_naissance_2"/>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_poste_2">
-         <property name="placeholderText">
-          <string>Poste</string>
+        <widget class="QComboBox" name="comboBox_poste_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
+         <item>
+          <property name="text">
+           <string>Administrateur</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ouvrier</string>
+          </property>
+         </item>
         </widget>
        </item>
        <item>
@@ -1707,9 +1746,23 @@ border-style: outset;
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_2">
+        <widget class="QLineEdit" name="lineEdit_domicile_2">
          <property name="placeholderText">
           <string>Domicile</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_cin_2">
+         <property name="placeholderText">
+          <string>CIN</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_sexe_2">
+         <property name="placeholderText">
+          <string>Sexe</string>
          </property>
         </widget>
        </item>
@@ -2043,7 +2096,7 @@ border-style: outset;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Trier par :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="comboBox_tri">
       <property name="geometry">
        <rect>
         <x>270</x>
@@ -2074,9 +2127,9 @@ border-style: outset;
      <widget class="QTableView" name="tabEmploye">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>10</x>
         <y>110</y>
-        <width>631</width>
+        <width>791</width>
         <height>411</height>
        </rect>
       </property>
@@ -3831,9 +3884,9 @@ border-style: outset;
         <height>451</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_7">
+      <layout class="QVBoxLayout" name="verticalLayout_modifier">
        <item>
-        <widget class="QLineEdit" name="lineEdit_idMachine_2">
+        <widget class="QLineEdit" name="lineEdit_id_2">
          <property name="placeholderText">
           <string>Identifiant</string>
          </property>
@@ -4278,9 +4331,9 @@ border-style: outset;
      <widget class="QTableView" name="tabMachine">
       <property name="geometry">
        <rect>
-        <x>155</x>
-        <y>120</y>
-        <width>561</width>
+        <x>120</x>
+        <y>110</y>
+        <width>651</width>
         <height>411</height>
        </rect>
       </property>
