@@ -1,5 +1,6 @@
 #ifndef REVENUES_H
 #define REVENUES_H
+
 #include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
@@ -30,7 +31,14 @@ public:
     void setDateVente(QString DateVentes ) {DateVente=DateVentes;}
     void setID_Revenue (int ID_Revenues ) {this->ID_Revenue=ID_Revenues;}
 
-    bool ajouter();
+    bool ajouterRevenues();
+    bool supprimerRevenues(int);
+    QSqlQueryModel  * afficherRevenues() ;
+    bool modifierRevenues(int);
+    QSqlQueryModel  * chercherRevenues(int) ;
+    QSqlQueryModel  * chercherRevenuesN(QString) ;
+    QSqlQueryModel  * chercherRevenuesC(int) ;
+
 };
 
 #endif // REVENUES_H

@@ -20,4 +20,6 @@ w.show();
         QMessageBox::critical(0, "Database not connected !", "Cannot connect to the database ...");
         return a.exec();
     }
+
+    MainWindow w;
 }

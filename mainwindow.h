@@ -1,7 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "revenues.h"
+#include "factures.h"
 #include <QMainWindow>
+#include<iostream>
+#include <QLineEdit>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -79,8 +82,45 @@ private slots:
 
     void on_ValidezRevenues_clicked();
 
+    void on_pushButton_36_clicked();
+
+    void on_pushButton_118_clicked();
+
+    void on_pushButton_SuppFactures_clicked();
+
+    void on_pushButton_35_clicked();
+
+
+
+
+
+    void on_pushButton_144_clicked();
+
+    void on_pushButton_22_clicked();
+
+    void on_pushButton_26_clicked();
+
+    void on_pushButton_119_clicked();
+
+    void on_pushButton_28_clicked();
+
+    void on_pushButton_16_clicked();
+
+    void on_pushButton_29_clicked();
+
+    void on_pushButton_30_clicked();
+
+    void on_pushButton_27_clicked();
+
+    void on_pushButton_31_clicked();
+
+    void on_pushButton_32_clicked();
+
 private:
     Ui::MainWindow *ui;
-
+Revenues rev;
+Factures fac;
+//bool check_number(QString );
+bool verifNomProduits();
 };
 #endif // MAINWINDOW_H
