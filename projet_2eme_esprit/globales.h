@@ -1,6 +1,6 @@
-#ifndef GLOBALES_H
+ #ifndef GLOBALES_H
 #define GLOBALES_H
-//
+
 #include <QSql>
 #include <QSqlDatabase>
 #include <QSqlQuery>

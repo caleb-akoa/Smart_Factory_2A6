@@ -47,3 +47,45 @@ int User::login()
         return 2;
     }
 }
+bool User::passwordcheck()
+{
+    QSqlQuery query;
+    query.prepare("select * from users where password= :password");
+    query.bindValue(":password",password);
+    query.exec();
+    if(query.next())
+
+        return true;
+
+    else
+        return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

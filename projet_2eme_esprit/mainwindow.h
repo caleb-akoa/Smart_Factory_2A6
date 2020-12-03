@@ -8,6 +8,14 @@
 #include <QSqlQuery>
 #include <QSqlQueryModel>
 #include <client.h>
+#include <user.h>
+#include <QtCharts>
+#include <QChartView>
+#include <QPieSeries>
+#include <QLineSeries>
+#include <commande.h>
+
+
 
 
 QT_BEGIN_NAMESPACE
@@ -58,9 +66,19 @@ private slots:
 
     void on_suivantmodifier_clicked();
 
+    void on_pushButton_clicked();
+
+
+    void on_tabWidget_3_tabBarClicked(int index);
+
+    void on_tabWidget_3_currentChanged(int index);
+
+    void on_ajoutercmd_clicked();
+
 private:
     Ui::MainWindow *ui;
     Client client;
-
+    User user;
+    Commande commande;
 };
 #endif // MAINWINDOW_H

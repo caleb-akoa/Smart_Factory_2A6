@@ -20,7 +20,7 @@ public:
     User(int id,QString username,QString password);
 
     int login();
-
+    bool passwordcheck();
 };
 
 #endif // USER_H

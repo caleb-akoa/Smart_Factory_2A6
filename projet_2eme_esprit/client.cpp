@@ -2,6 +2,7 @@
 #include<QDebug>
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
+#include "user.h"
 
 
 
@@ -93,15 +94,15 @@ bool Client::add()
 
     QSqlQuery query;
 
-    query.prepare("INSERT INTO client (ID, NOM, PRENOM, MAIL, VILLE, BOITE, TELE) "
+    query.prepare("INSERT INTO client (ID, NOM, PRENOM, MAIL, BOITE, TELE, VILLE) "
                   "VALUES (?, ?, ?, ?, ?, ?, ?)");
     query.bindValue(0, this->id);
     query.bindValue(1, this->firstName);
     query.bindValue(2, this->lastName);
     query.bindValue(3, this->email);
-    query.bindValue(4, this->city);
-    query.bindValue(5, this->adress);
-    query.bindValue(6, this->numTel);
+    query.bindValue(4, this->adress);
+    query.bindValue(5, this->numTel);
+    query.bindValue(6, this->city);
 
     if (query.exec())
     {
@@ -148,3 +149,109 @@ int Client::check() // check if it exsits or not
     else{
         return 2;
     }}
+QSqlQueryModel *Client::tri()
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("select * from client order by ID");
+
+
+    return model;
+
+}
+bool Client::chercherdelet()
+{
+    QSqlQuery query;
+    query.prepare("Select * from client where ID=:id");
+    query.bindValue(":id", id);
+
+    query.exec();
+
+    if(query.next())
+    {
+        id=query.value(0).toInt();
+        firstName=query.value(1).toString();
+        lastName=query.value(2).toString();
+        email=query.value(3).toString();
+        city=query.value(4).toString();
+        adress=query.value(5).toString();
+        numTel=query.value(6).toString();
+    }
+    return query.exec();
+}
+
+bool Client::deleteclient()
+{
+
+    QSqlQuery query;
+    query.prepare("delete from client where ID=:todelete");
+    query.bindValue(":todelete",id);
+    return query.exec();
+
+}
+
+bool Client::cherchermodifier()
+{
+
+    QSqlQuery query;
+    query.prepare("Select * from client where ID=:id");
+    query.bindValue(":id", id);
+
+    query.exec();
+
+    if(query.next())
+    {
+        id=query.value(0).toInt();
+        firstName=query.value(1).toString();
+        lastName=query.value(2).toString();
+        email=query.value(3).toString();
+        city=query.value(4).toString();
+        adress=query.value(5).toString();
+        numTel=query.value(6).toString();
+    }
+    return query.exec();
+
+}
+bool Client::validermodification()
+{
+
+
+    QSqlQuery query;
+
+    query.prepare("update client set NOM=:nom,PRENOM=:prenom,MAIL=:email,BOITE=:boite,TELE=:telephone,VILLE=:adresse where ID=:toupdate");
+
+    query.bindValue(":toupdate",id);
+    query.bindValue(":nom",firstName);
+    query.bindValue(":prenom",lastName);
+    query.bindValue(":email",email);
+    query.bindValue(":boite",adress);
+    query.bindValue(":telephone",numTel);
+    query.bindValue(":adresse",city);
+    return query.exec();
+
+}
+
+bool Client::chercher()
+{
+    QSqlQuery query;
+    query.prepare("Select * from client where ID=:id");
+    query.bindValue(":id", id);
+
+    query.exec();
+
+    if(query.next())
+    {
+        id=query.value(0).toInt();
+        firstName=query.value(1).toString();
+        lastName=query.value(2).toString();
+        email=query.value(3).toString();
+        city=query.value(4).toString();
+        adress=query.value(5).toString();
+        numTel=query.value(6).toString();
+    }
+    return query.exec();
+
+
+}
+
+
+

@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql charts
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -9,6 +9,7 @@ CONFIG += c++11
 
 SOURCES += \
     client.cpp \
+    commande.cpp \
     globales.cpp \
     login.cpp \
     main.cpp \
@@ -17,6 +18,7 @@ SOURCES += \
 
 HEADERS += \
     client.h \
+    commande.h \
     globales.h \
     login.h \
     mainwindow.h \

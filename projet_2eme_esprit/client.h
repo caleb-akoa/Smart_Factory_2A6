@@ -41,8 +41,13 @@ public:
     bool add();
     bool edit();
     int check();
-
+    QSqlQueryModel *tri();
     QSqlQueryModel *list();
+    bool chercherdelet();
+    bool deleteclient();
+    bool cherchermodifier();
+    bool validermodification();
+    bool chercher();
 };
 
 #endif // CLIENT_H
