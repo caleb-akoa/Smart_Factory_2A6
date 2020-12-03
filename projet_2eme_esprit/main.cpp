@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     if(database.isOpen()){
-        MainWindow screenLogin;
+        Login screenLogin;
         screenLogin.show();
         return a.exec();
     }else {

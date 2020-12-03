@@ -37,6 +37,11 @@ public:
     void setDatelivri(const QString &datelivri);
 
     bool add();
+    bool cherchermodifier();
+    int check();
+    bool validermodification();
+    bool deletecmd();
+    QSqlQueryModel *list();
 };
 
 #endif // COMMANDE_H

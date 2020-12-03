@@ -72,20 +72,86 @@ bool Commande::add()
 
 }
 
+int Commande::check() // check if it exsits or not
+{
 
-QString ID;
-QString Id_CLIENT;
-QString ID_PRODUIT;
-QString QUANTITE;
-QString DATELIVRI;
+    QSqlQuery query;
 
-
-
+    query.prepare("select * from commande where ID = :id ");
+    query.bindValue(":id",ID);
 
 
+    query.exec();
+
+    int count_user = 0;
+    while (query.next()) {
+        count_user++;
+    }
+
+    if (count_user == 1) {
+        return 0;
+    }
+    else if (count_user > 1 ) {
+        return 1;
+    }
+    else{
+        return 2;
+    }}
+
+bool Commande::cherchermodifier()
+{
+
+    QSqlQuery query;
+    query.prepare("Select * from commande where ID=:id");
+    query.bindValue(":id", ID);
+
+    query.exec();
+
+    if(query.next())
+    {
+        ID=query.value(0).toString();
+        Id_CLIENT=query.value(1).toString();
+        ID_PRODUIT=query.value(2).toString();
+        QUANTITE=query.value(3).toString();
+        DATELIVRI=query.value(4).toString();
+
+    }
+    return query.exec();
+
+}
+bool Commande::validermodification()
+{
 
 
+    QSqlQuery query;
 
+    query.prepare("update COMMANDE set Id_CLIENT=:idclient,ID_PRODUIT=:idproduit,QUANTITE=:quantite,DATELIVRI=:datelivri where ID=:toupdate");
+
+    query.bindValue(":toupdate",ID);
+    query.bindValue(":idclient",Id_CLIENT);
+    query.bindValue(":idproduit",ID_PRODUIT);
+    query.bindValue(":quantite",QUANTITE);
+    query.bindValue(":datelivri",DATELIVRI);
+
+    return query.exec();
+
+}
+
+bool Commande::deletecmd()
+{
+
+    QSqlQuery query;
+    query.prepare("delete from commande where ID=:todelete");
+    query.bindValue(":todelete",ID);
+    return query.exec();
+
+}
+QSqlQueryModel *Commande::list()
+{
+QSqlQueryModel * model=new QSqlQueryModel();
+model->setQuery("select * from commande");
+return model;
+}
 
 
 

@@ -66,14 +66,51 @@ private slots:
 
     void on_suivantmodifier_clicked();
 
-    void on_pushButton_clicked();
+
 
 
     void on_tabWidget_3_tabBarClicked(int index);
 
-    void on_tabWidget_3_currentChanged(int index);
 
     void on_ajoutercmd_clicked();
+
+    void on_tabWidget_2_tabBarClicked(int index);
+
+
+
+    void on_cherchermodifiercmd_clicked();
+
+    void on_suivantcmd_clicked();
+
+
+
+    void on_validermodifiercmd_clicked();
+
+    void on_chercherdeletecmd_clicked();
+
+    void on_deletecmd_clicked();
+
+    void on_tabWidget_2_currentChanged(int index);
+
+
+
+    void on_radioButton_2_clicked();
+
+    void on_radioButton_clicked();
+
+    void on_cherchernom_clicked();
+
+
+
+
+
+
+
+
+
+    void on_comboBox_activated(const QString &arg1);
+
+    void on_ajouterclient_2_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -42,12 +42,16 @@ public:
     bool edit();
     int check();
     QSqlQueryModel *tri();
+     QSqlQueryModel *tri_nom();
+      QSqlQueryModel *tri_prenom();
     QSqlQueryModel *list();
     bool chercherdelet();
     bool deleteclient();
     bool cherchermodifier();
     bool validermodification();
     bool chercher();
+    int check_nom();
+    bool chercher_nom();
 };
 
 #endif // CLIENT_H

@@ -124,7 +124,7 @@ QSqlQueryModel *Client::list()
     return model;
 
 }
-int Client::check() // check if it exsits or not
+int Client::check() // check if it exsits or not  par id
 {
 
     QSqlQuery query;
@@ -153,6 +153,24 @@ QSqlQueryModel *Client::tri()
 {
     QSqlQueryModel * model=new QSqlQueryModel();
     model->setQuery("select * from client order by ID");
+
+
+    return model;
+
+}
+QSqlQueryModel *Client::tri_nom()
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("select * from client order by nom");
+
+
+    return model;
+
+}
+QSqlQueryModel *Client::tri_prenom()
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("select * from client order by prenom");
 
 
     return model;
@@ -238,7 +256,7 @@ bool Client::chercher()
 
     query.exec();
 
-    if(query.next())
+    while(query.next())
     {
         id=query.value(0).toInt();
         firstName=query.value(1).toString();
@@ -254,4 +272,50 @@ bool Client::chercher()
 }
 
 
+int Client::check_nom() // check if it exsits or not  par id
+{
 
+    QSqlQuery query;
+
+    query.prepare("select * from client where nom = :id ");
+    query.bindValue(":id",firstName);
+
+
+    query.exec();
+
+    int count_user = 0;
+    while (query.next()) {
+        count_user++;
+    }
+
+    if (count_user == 1) {
+        return 0;
+    }
+    else if (count_user > 1 ) {
+        return 1;
+    }
+    else{
+        return 2;
+    }}
+bool Client::chercher_nom()
+{
+    QSqlQuery query;
+    query.prepare("Select * from client where nom=:id");
+    query.bindValue(":id", firstName);
+
+    query.exec();
+
+    while(query.next())
+    {
+        id=query.value(0).toInt();
+        firstName=query.value(1).toString();
+        lastName=query.value(2).toString();
+        email=query.value(3).toString();
+        city=query.value(4).toString();
+        adress=query.value(5).toString();
+        numTel=query.value(6).toString();
+    }
+    return query.exec();
+
+
+}
