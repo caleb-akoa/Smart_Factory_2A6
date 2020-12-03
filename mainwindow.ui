@@ -1,0 +1,7039 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1115</width>
+    <height>755</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1121</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(156, 156, 156);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_aide">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>186</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#pushButton_aide
+{
+border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 10em;
+  padding: 6px;
+}
+#pushButton_aide:hover
+{
+	border-color: blue;
+}</string>
+     </property>
+     <property name="text">
+      <string>Aide</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>1121</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(171, 171, 171);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>20</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;FactWare&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>140</y>
+      <width>1121</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>11</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>181</width>
+        <height>581</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>0</y>
+        <width>941</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/bonhomme.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>160</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton_employes">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_employes
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_employes:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Employes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_machines">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_machines
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_machines:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Machines</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_produits">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_produits
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_produits:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Produits</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_entrepots">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_entrepots
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_entrepots:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Entrepots</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_clients">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_clients
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_clients:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Clients</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_commandes">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_commandes
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_commandes:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Commandes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_fournisseurs">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_fournisseurs
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_fournisseurs:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Fournisseurs</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_matieres">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_matieres
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_matieres:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Matieres Premieres</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_factures">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_factures
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_factures:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Factures</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_revenues">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_revenues
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_revenues:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Revenues</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>200</y>
+        <width>291</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Bonjour,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Bienvenue sur notre application &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;FactWare.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>181</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>160</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pushButton_employes_2">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_employes_2
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_employes_2:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Employes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_machines_2">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_machines_2
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_machines_2:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Machines</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_produits_2">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_produits_2
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_produits_2:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Produits</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_entrepots_2">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_entrepots_2
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_entrepots_2:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Entrepots</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_clients_2">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_clients_2
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_clients_2:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Clients</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_commandes_2">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_commandes_2
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_commandes_2:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Commandes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_fournisseurs_2">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_fournisseurs_2
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_fournisseurs_2:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Fournisseurs</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_matieres_2">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_matieres_2
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_matieres_2:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Matieres Premieres</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_factures_2">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_factures_2
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_factures_2:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Factures</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_revenues_2">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_revenues_2
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_revenues_2:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Revenues</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>0</y>
+        <width>941</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/employes.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_ajouterEmploye">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>50</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_ajouterEmploye
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterEmploye:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Ajouter Employe</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_modifierEmploye">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_modifierEmploye
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierEmploye:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifier Employe</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_afficherEmploye">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>270</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_afficherEmploye
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherEmploye:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Afficher Employe</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_supprimerEmploye">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>390</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_supprimerEmploye
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerEmploye:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer Employe</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_51">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>60</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_50">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>170</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_49">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>280</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_48">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>400</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>510</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Chercher Employe</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_101">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>520</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterEmploye_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterEmploye_2
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterEmploye_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_52">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierEmploye_2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierEmploye_2
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierEmploye_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_53">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherEmploye_2">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherEmploye_2
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherEmploye_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_54">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerEmploye_2">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerEmploye_2
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerEmploye_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_55">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>840</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_2
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_102">
+       <property name="geometry">
+        <rect>
+         <x>850</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>1121</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>70</y>
+        <width>351</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_nom">
+         <property name="placeholderText">
+          <string>Nom</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_prenom">
+         <property name="placeholderText">
+          <string>Prenom</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_identifiant">
+         <property name="placeholderText">
+          <string>Identifiant</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="dateEdit_naissance"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_poste">
+         <property name="placeholderText">
+          <string>Poste</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_salaire">
+         <property name="placeholderText">
+          <string>Salaire</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_telephone">
+         <property name="placeholderText">
+          <string>Telephone</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_mail">
+         <property name="placeholderText">
+          <string>Mail</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_domicile">
+         <property name="placeholderText">
+          <string>Domicile</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_cin">
+         <property name="placeholderText">
+          <string>CIN</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_sexe">
+         <property name="placeholderText">
+          <string>Sexe</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_ajouterEmploye_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_ajouterEmploye_3
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterEmploye_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Ajouter</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_45">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterEmploye_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterEmploye_4
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterEmploye_4:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_56">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierEmploye_3">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierEmploye_3
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierEmploye_3:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_57">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherEmploye_3">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherEmploye_3
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherEmploye_3:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_58">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerEmploye_3">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerEmploye_3
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerEmploye_3:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_59">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>840</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_3
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_3:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_103">
+       <property name="geometry">
+        <rect>
+         <x>850</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>1121</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_idModifierE">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>70</y>
+        <width>241</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Identifiant a modifier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_rechercherME">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>70</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_rechercherME
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_rechercherME:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Rechercher</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>70</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>100</y>
+        <width>371</width>
+        <height>461</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_nom_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_prenom_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_identifiant_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="dateEdit_naissance_2"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_poste_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_salaire_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_telephone_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_mail_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_domicile_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_cin_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_sexe_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_modifierEmploye_4">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_modifierEmploye_4
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierEmploye_4:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Modifier</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_2">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_2
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_2:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_46">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>100</y>
+        <width>160</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_31">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Nom&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_33">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Prenom&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_32">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Identifiant&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_38">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Date de Naissance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_40">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Poste&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_42">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Salaire&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_39">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Telephone&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_43">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Adresse Mail&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_44">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Adresse Domicile&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_41">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;CIN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_98">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Sexe&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_5">
+     <widget class="QFrame" name="frame_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterEmploye_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterEmploye_5
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterEmploye_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_60">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierEmploye_5">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierEmploye_5
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierEmploye_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_61">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherEmploye_4">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherEmploye_4
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherEmploye_4:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_62">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerEmploye_4">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerEmploye_4
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerEmploye_4:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_63">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="geometry">
+        <rect>
+         <x>840</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_5
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_104">
+       <property name="geometry">
+        <rect>
+         <x>850</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>1121</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>70</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Trier par :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_tri">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>80</y>
+        <width>191</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Nom</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Identifiant</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cin</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTableView" name="tabEmploye">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>120</y>
+        <width>1001</width>
+        <height>411</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_3">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_3
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_3:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_47">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_triEmploye">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>80</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_triEmploye
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_triEmploye:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Trier</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_6">
+     <widget class="QFrame" name="frame_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterEmploye_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterEmploye_6
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterEmploye_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_64">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierEmploye_6">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierEmploye_6
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierEmploye_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_65">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherEmploye_5">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherEmploye_5
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherEmploye_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_66">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerEmploye_5">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerEmploye_5
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerEmploye_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_67">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>840</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_4
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_4:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_105">
+       <property name="geometry">
+        <rect>
+         <x>850</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>1121</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_idSupprimerE">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>301</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Identifiant a supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_rechercherSE">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>240</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_rechercherSE
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_rechercherSE:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Rechercher</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_35">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>240</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_9">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_9
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_9:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_97">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_10">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>70</y>
+        <width>361</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_nom_5">
+         <property name="placeholderText">
+          <string>Nom</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_prenom_3">
+         <property name="placeholderText">
+          <string>Prenom</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_identifiant_3">
+         <property name="placeholderText">
+          <string>Identifiant</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="dateEdit_naissance_3"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_poste_3">
+         <property name="placeholderText">
+          <string>Poste</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_salaire_3">
+         <property name="placeholderText">
+          <string>Salaire</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_telephone_3">
+         <property name="placeholderText">
+          <string>Telephone</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_mail_3">
+         <property name="placeholderText">
+          <string>Mail</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_domicile_3">
+         <property name="placeholderText">
+          <string>Domicile</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_cin_3">
+         <property name="placeholderText">
+          <string>CIN</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_sexe_3">
+         <property name="placeholderText">
+          <string>Sexe</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_supprimerE">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_supprimerE
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerE:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Supprimer</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_7">
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>181</width>
+        <height>581</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>160</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QPushButton" name="pushButton_employes_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_employes_3
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_employes_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Employes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_machines_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_machines_3
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_machines_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Machines</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_produits_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_produits_3
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_produits_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Produits</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_entrepots_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_entrepots_3
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_entrepots_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Entrepots</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_clients_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_clients_3
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_clients_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Clients</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_commandes_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_commandes_3
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_commandes_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Commandes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_fournisseurs_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_fournisseurs_3
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_fournisseurs_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Fournisseurs</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_matieres_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_matieres_3
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_matieres_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Matieres Premieres</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_factures_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_factures_3
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_factures_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Factures</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_revenues_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_revenues_3
+{
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+background-color: rgb(255, 255, 255);
+}
+#pushButton_revenues_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Revenues</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>0</y>
+        <width>941</width>
+        <height>581</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/machines.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_ajouterMachine">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>50</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_ajouterMachine
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterMachine:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Ajouter Machine</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_68">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>60</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_modifierMachine">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>130</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_modifierMachine
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierMachine:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifier Machine</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_69">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>140</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_afficherMachine">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>210</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_afficherMachine
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherMachine:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Afficher Machine</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_70">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>220</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_supprimerMachine">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>300</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_supprimerMachine
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerMachine:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer Machine</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_71">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>310</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_statistiques">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>380</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_statistiques
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_statistiques:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Statistiques</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>390</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/stat-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_chercherMachine">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>490</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_chercherMachine
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherMachine:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Chercher Machine</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_106">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>500</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_8">
+     <widget class="QFrame" name="frame_7">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterMachine_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterMachine_2
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterMachine_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_72">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierMachine_2">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierMachine_2
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierMachine_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_73">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherMachine_2">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherMachine_2
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherMachine_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_74">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerMachine_2">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerMachine_2
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerMachine_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_75">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>20</y>
+         <width>16</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_statistiques_2">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>10</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_statistiques_2
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_statistiques_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/stat-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_chercherMachine_2">
+       <property name="geometry">
+        <rect>
+         <x>900</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_chercherMachine_2
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherMachine_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_107">
+       <property name="geometry">
+        <rect>
+         <x>910</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>1121</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>70</y>
+        <width>421</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_idMachine">
+         <property name="placeholderText">
+          <string>Identifiant</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_prix">
+         <property name="placeholderText">
+          <string>Prix</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_nom_3">
+         <property name="placeholderText">
+          <string>Nom</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_reference">
+         <property name="placeholderText">
+          <string>Reference</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_categorie">
+         <property name="placeholderText">
+          <string>Categorie</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_ajouterMachine_3">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_ajouterMachine_3
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterMachine_3:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Ajouter</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_4">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_4
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_4:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_76">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_9">
+     <widget class="QFrame" name="frame_8">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterMachine_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterMachine_4
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterMachine_4:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_77">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierMachine_3">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierMachine_3
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierMachine_3:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_78">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherMachine_3">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherMachine_3
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherMachine_3:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_79">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerMachine_3">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerMachine_3
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerMachine_3:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_80">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>20</y>
+         <width>16</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_statistiques_3">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>10</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_statistiques_3
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_statistiques_3:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_23">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/stat-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_chercherMachine_3">
+       <property name="geometry">
+        <rect>
+         <x>900</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_chercherMachine_3
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherMachine_3:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_108">
+       <property name="geometry">
+        <rect>
+         <x>910</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>1121</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_idModifierM">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>80</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Identifiant a modifier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_rechercherModM">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>80</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_rechercherModM
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_rechercherModM:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Rechercher</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_36">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>80</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>120</y>
+        <width>351</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_modifier">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_id_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_prix_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_nom_4">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_reference_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_categorie_2">
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_modifierMachine_4">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_modifierMachine_4
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierMachine_4:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Modifier</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_5">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_5
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_5:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_85">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>140</y>
+        <width>160</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_28">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Identifiant&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_27">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Prix&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_20">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Nom&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_30">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Reference&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_29">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Categorie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_10">
+     <widget class="QFrame" name="frame_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterMachine_5">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterMachine_5
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterMachine_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_81">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierMachine_5">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierMachine_5
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierMachine_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_82">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherMachine_4">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherMachine_4
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherMachine_4:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_83">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerMachine_4">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerMachine_4
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerMachine_4:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_84">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>20</y>
+         <width>16</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_statistiques_4">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>10</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_statistiques_4
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_statistiques_4:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/stat-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_chercherMachine_4">
+       <property name="geometry">
+        <rect>
+         <x>900</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_chercherMachine_4
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherMachine_4:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_109">
+       <property name="geometry">
+        <rect>
+         <x>910</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>1121</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>70</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Trier par :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_triMachine">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>80</y>
+        <width>201</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Identifiant</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nom</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Reference</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTableView" name="tabMachine">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>140</y>
+        <width>651</width>
+        <height>411</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_6">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_6
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_6:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_86">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_triMachine">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>80</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_triMachine
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_triMachine:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Trier</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_11">
+     <widget class="QFrame" name="frame_10">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterMachine_6">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterMachine_6
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterMachine_6:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_87">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierMachine_6">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierMachine_6
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierMachine_6:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_88">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherMachine_5">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherMachine_5
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherMachine_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_89">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerMachine_5">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerMachine_5
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerMachine_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_90">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>20</y>
+         <width>16</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_statistiques_5">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>10</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_statistiques_5
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_statistiques_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/stat-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_chercherMachine_5">
+       <property name="geometry">
+        <rect>
+         <x>900</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_chercherMachine_5
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherMachine_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_99">
+       <property name="geometry">
+        <rect>
+         <x>910</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>1121</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_idSupprimerM">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>261</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Identifiant a supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_rechercherSM">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>230</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_rechercherSM
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_rechercherSM:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Rechercher</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_37">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_7">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_7
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_7:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_91">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_11">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>90</y>
+        <width>421</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_idMachine_2">
+         <property name="placeholderText">
+          <string>Identifiant</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_prix_3">
+         <property name="placeholderText">
+          <string>Prix</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_nom_6">
+         <property name="placeholderText">
+          <string>Nom</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_reference_3">
+         <property name="placeholderText">
+          <string>Reference</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_categorie_3">
+         <property name="placeholderText">
+          <string>Categorie</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_supprimerM">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_supprimerM
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerM:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Supprimer</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_12">
+     <widget class="QFrame" name="frame_11">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterMachine_7">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterMachine_7
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterMachine_6:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_92">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierMachine_7">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierMachine_7
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierMachine_7:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_93">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherMachine_6">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherMachine_6
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherMachine_6:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_94">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerMachine_6">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerMachine_6
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerMachine_6:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_95">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>20</y>
+         <width>16</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_statistiques_6">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>10</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_statistiques_6
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_statistiques_6:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/stat-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_chercherMachine_6">
+       <property name="geometry">
+        <rect>
+         <x>900</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_chercherMachine_6
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherMachine_6:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_100">
+       <property name="geometry">
+        <rect>
+         <x>910</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_8">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_8
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_8:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_96">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>60</y>
+        <width>1131</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QFrame" name="horizontalFrame">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>90</y>
+        <width>971</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout"/>
+     </widget>
+     <zorder>frame_11</zorder>
+     <zorder>label_19</zorder>
+     <zorder>pushButton_retour_8</zorder>
+     <zorder>label_96</zorder>
+     <zorder>horizontalFrame</zorder>
+    </widget>
+    <widget class="QWidget" name="page_13">
+     <widget class="QFrame" name="frame_12">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterEmploye_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterEmploye_7
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterEmploye_7:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_110">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierEmploye_7">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierEmploye_7
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierEmploye_7:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_111">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherEmploye_6">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherEmploye_6
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherEmploye_6:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_112">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerEmploye_6">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerEmploye_6
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerEmploye_6:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_113">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="geometry">
+        <rect>
+         <x>840</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_6
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_6:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_114">
+       <property name="geometry">
+        <rect>
+         <x>850</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_115">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>1131</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_chercherNom">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>70</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Chercher par Nom</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_chercherIdentifiant">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>70</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Chercher par Identifiant</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_chercherCIN">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>70</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>chercher par CIN</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_chercherEmploye">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>70</y>
+        <width>141</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_chercherEmploye
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherEmploye:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Chercher</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_10">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_10
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_10:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_116">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_12">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>120</y>
+        <width>411</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_nom_7">
+         <property name="placeholderText">
+          <string>Nom</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_prenom_4">
+         <property name="placeholderText">
+          <string>Prenom</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_identifiant_4">
+         <property name="placeholderText">
+          <string>Identifiant</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="dateEdit_naissance_4"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_poste_4">
+         <property name="placeholderText">
+          <string>Poste</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_salaire_4">
+         <property name="placeholderText">
+          <string>Salaire</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_telephone_4">
+         <property name="placeholderText">
+          <string>Telephone</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_mail_4">
+         <property name="placeholderText">
+          <string>Mail</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_domicile_4">
+         <property name="placeholderText">
+          <string>Domicile</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_cin_4">
+         <property name="placeholderText">
+          <string>CIN</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_sexe_4">
+         <property name="placeholderText">
+          <string>Sexe</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_14">
+     <widget class="QFrame" name="frame_13">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterMachine_8">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterMachine_8
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterMachine_8:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_117">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierMachine_8">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierMachine_8
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierMachine_8:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_118">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherMachine_7">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherMachine_7
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherMachine_7:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_119">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerMachine_7">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerMachine_7
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerMachine_7:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_120">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>20</y>
+         <width>16</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_statistiques_7">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>10</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_statistiques_7
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_statistiques_7:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_121">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/stat-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_chercherMachine_7">
+       <property name="geometry">
+        <rect>
+         <x>900</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_chercherMachine_7
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherMachine_7:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Machine</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_122">
+       <property name="geometry">
+        <rect>
+         <x>910</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_123">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>1131</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_chercherNom_2">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>80</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Chercher par Nom</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_chercherID">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>80</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Chercher par Identifiant</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_chercherReference">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>80</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Chercher par Reference</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_chercherMachine_8">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>130</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_chercherMachine_8
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherMachine_8:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Chercher</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_13">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>170</y>
+        <width>421</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_12">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_idMachine_3">
+         <property name="placeholderText">
+          <string>Identifiant</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_prix_4">
+         <property name="placeholderText">
+          <string>Prix</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_nom_8">
+         <property name="placeholderText">
+          <string>Nom</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_reference_4">
+         <property name="placeholderText">
+          <string>Reference</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_categorie_4">
+         <property name="placeholderText">
+          <string>Categorie</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_11">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_11
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_11:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_124">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_15">
+     <widget class="QLabel" name="label_125">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1131</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_12">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_12
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_12:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_126">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
