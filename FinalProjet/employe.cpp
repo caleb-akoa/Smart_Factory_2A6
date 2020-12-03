@@ -1,7 +1,7 @@
 #include "employe.h"
 using namespace std;
 
-employe::employe(QString nom,QString prenom, int idEmploye,QString naissance,QString poste,float salaire,int telephone,QString mail,QString domicile,int cin,QString sexe)
+employe::employe(QString nom,QString prenom, int idEmploye,QString naissance,QString poste,int salaire,int telephone,QString mail,QString domicile,int cin,QString sexe)
 {
     this->nom=nom;
     this->prenom=prenom;
@@ -91,7 +91,7 @@ int employe::verifEmploye()
         idEmploye=(query.value(2).toInt());
         naissance=(query.value(3).toString());
         poste=(query.value(4).toString());
-        salaire=(query.value(5).toFloat());
+        salaire=(query.value(5).toInt());
         telephone=(query.value(6).toInt());
         mail=(query.value(7).toString());
         domicile=(query.value(8).toString());
@@ -149,7 +149,7 @@ bool employe::rechercherEmploye()//recherche modification
         idEmploye=(query.value(2).toInt());
         naissance=(query.value(3).toString());
         poste=(query.value(4).toString());
-        salaire=(query.value(5).toFloat());
+        salaire=(query.value(5).toInt());
         telephone=(query.value(6).toInt());
         mail=(query.value(7).toString());
         domicile=(query.value(8).toString());
@@ -231,83 +231,131 @@ bool employe::rechercherSupprimer()
     return query.exec();
 }
 
-QSqlQueryModel * employe::chercherParId(int idEmploye)
+bool employe::chercherParNom()
 {
-    QSqlQueryModel * model= new QSqlQueryModel();
-   QSqlQuery query;
-   QString res = QString::number(idEmploye);
 
-   query.prepare("select * from employe where identifiant=:idEmloye");
-   query.bindValue(":idEmploye", idEmploye);
+    QSqlQuery query;
+    query.prepare("Select * from employe where nom=:nom");
+    query.bindValue(":nom",nom);
+    query.exec();
 
-
-   query.exec();
-   model->setQuery(query);
-   model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
-   model->setHeaderData(1,Qt::Horizontal,QObject::tr("prenom"));
-   model->setHeaderData(2,Qt::Horizontal,QObject::tr("identifiant"));
-   model->setHeaderData(3,Qt::Horizontal,QObject::tr("naissance"));
-   model->setHeaderData(4,Qt::Horizontal,QObject::tr("poste"));
-   model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
-   model->setHeaderData(6,Qt::Horizontal,QObject::tr("telephone"));
-   model->setHeaderData(7,Qt::Horizontal,QObject::tr("mail"));
-   model->setHeaderData(8,Qt::Horizontal,QObject::tr("domicile"));
-   model->setHeaderData(9,Qt::Horizontal,QObject::tr("cin"));
-   model->setHeaderData(10,Qt::Horizontal,QObject::tr("sexe"));
-
-      return model;
+    if (query.next())
+    {
+        nom=(query.value(0).toString());
+        prenom=(query.value(1).toString());
+        idEmploye=(query.value(2).toInt());
+        naissance=(query.value(3).toString());
+        poste=(query.value(4).toString());
+        salaire=(query.value(5).toInt());
+        telephone=(query.value(6).toInt());
+        mail=(query.value(7).toString());
+        domicile=(query.value(8).toString());
+        cin=(query.value(9).toInt());
+        sexe=(query.value(10).toString());
+    }
+    return query.exec();
 }
 
-QSqlQueryModel * employe::chercherParNom(QString nom)
+int employe::verifEmployeParNom()
 {
-    QSqlQueryModel * model= new QSqlQueryModel();
-   QSqlQuery query;
-   QString res =nom;
+    QSqlQuery query;
 
-   query.prepare("select * from employe where nom=:nom");
-   query.bindValue(":nom", nom);
+    employe e;
 
+    query.prepare("select * from employe where nom= :nom");
+    query.bindValue(":nom",this->nom);
+    query.exec();
 
-   query.exec();
-   model->setQuery(query);
-   model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
-   model->setHeaderData(1,Qt::Horizontal,QObject::tr("prenom"));
-   model->setHeaderData(2,Qt::Horizontal,QObject::tr("identifiant"));
-   model->setHeaderData(3,Qt::Horizontal,QObject::tr("naissance"));
-   model->setHeaderData(4,Qt::Horizontal,QObject::tr("poste"));
-   model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
-   model->setHeaderData(6,Qt::Horizontal,QObject::tr("telephone"));
-   model->setHeaderData(7,Qt::Horizontal,QObject::tr("mail"));
-   model->setHeaderData(8,Qt::Horizontal,QObject::tr("domicile"));
-   model->setHeaderData(9,Qt::Horizontal,QObject::tr("cin"));
-   model->setHeaderData(10,Qt::Horizontal,QObject::tr("sexe"));
+    int count_user = 0;
+    while (query.next())
+    {nom=(query.value(0).toString());
+        prenom=(query.value(1).toString());
+        idEmploye=(query.value(2).toInt());
+        naissance=(query.value(3).toString());
+        poste=(query.value(4).toString());
+        salaire=(query.value(5).toInt());
+        telephone=(query.value(6).toInt());
+        mail=(query.value(7).toString());
+        domicile=(query.value(8).toString());
+        cin=(query.value(9).toInt());
+        sexe=(query.value(10).toString());
 
-      return model;
+        count_user++;
+    }
+    if (count_user==1)
+    {
+        return 0;
+    }
+    else if(count_user > 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 2;
+    }
 }
 
-QSqlQueryModel * employe::chercherParCin(int cin)
+bool employe::chercherParCin()
 {
-    QSqlQueryModel * model= new QSqlQueryModel();
-   QSqlQuery query;
-   QString res = QString::number(cin);
+    QSqlQuery query;
+    query.prepare("Select * from employe where cin=:cin");
+    query.bindValue(":cin",cin);
+    query.exec();
 
-   query.prepare("select * from employe where CIN=:cin");
-   query.bindValue(":cin", cin);
+    if (query.next())
+    {
+        nom=(query.value(0).toString());
+        prenom=(query.value(1).toString());
+        idEmploye=(query.value(2).toInt());
+        naissance=(query.value(3).toString());
+        poste=(query.value(4).toString());
+        salaire=(query.value(5).toInt());
+        telephone=(query.value(6).toInt());
+        mail=(query.value(7).toString());
+        domicile=(query.value(8).toString());
+        cin=(query.value(9).toInt());
+        sexe=(query.value(10).toString());
+    }
+    return query.exec();
+}
 
+int employe::verifEmployeParCin()
+{
+    QSqlQuery query;
 
-   query.exec();
-   model->setQuery(query);
-   model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
-   model->setHeaderData(1,Qt::Horizontal,QObject::tr("prenom"));
-   model->setHeaderData(2,Qt::Horizontal,QObject::tr("identifiant"));
-   model->setHeaderData(3,Qt::Horizontal,QObject::tr("naissance"));
-   model->setHeaderData(4,Qt::Horizontal,QObject::tr("poste"));
-   model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
-   model->setHeaderData(6,Qt::Horizontal,QObject::tr("telephone"));
-   model->setHeaderData(7,Qt::Horizontal,QObject::tr("mail"));
-   model->setHeaderData(8,Qt::Horizontal,QObject::tr("domicile"));
-   model->setHeaderData(9,Qt::Horizontal,QObject::tr("cin"));
-   model->setHeaderData(10,Qt::Horizontal,QObject::tr("sexe"));
+    employe e;
 
-      return model;
+    query.prepare("select * from employe where cin= :cin");
+    query.bindValue(":cin",this->cin);
+    query.exec();
+
+    int count_user = 0;
+    while (query.next())
+    {nom=(query.value(0).toString());
+        prenom=(query.value(1).toString());
+        idEmploye=(query.value(2).toInt());
+        naissance=(query.value(3).toString());
+        poste=(query.value(4).toString());
+        salaire=(query.value(5).toInt());
+        telephone=(query.value(6).toInt());
+        mail=(query.value(7).toString());
+        domicile=(query.value(8).toString());
+        cin=(query.value(9).toInt());
+        sexe=(query.value(10).toString());
+
+        count_user++;
+    }
+    if (count_user==1)
+    {
+        return 0;
+    }
+    else if(count_user > 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 2;
+    }
 }

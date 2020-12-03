@@ -5949,22 +5949,56 @@ border-style: outset;
        <pixmap>../Bouttons/fontFinal.jpg</pixmap>
       </property>
      </widget>
-     <widget class="QFrame" name="horizontalFrame">
+     <widget class="QTabWidget" name="tabWidget">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>90</y>
-        <width>971</width>
-        <height>501</height>
+        <x>100</x>
+        <y>60</y>
+        <width>881</width>
+        <height>511</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout"/>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Courbe</string>
+       </attribute>
+       <widget class="QFrame" name="horizontalFrame">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>881</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout"/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Diagramme circulaire</string>
+       </attribute>
+       <widget class="QFrame" name="horizontalFrame1">
+        <property name="geometry">
+         <rect>
+          <x>-1</x>
+          <y>0</y>
+          <width>881</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+       </widget>
+      </widget>
      </widget>
      <zorder>frame_11</zorder>
      <zorder>label_19</zorder>
      <zorder>pushButton_retour_8</zorder>
      <zorder>label_96</zorder>
-     <zorder>horizontalFrame</zorder>
+     <zorder>tabWidget</zorder>
     </widget>
     <widget class="QWidget" name="page_13">
      <widget class="QFrame" name="frame_12">
@@ -6255,9 +6289,9 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherNom">
       <property name="geometry">
        <rect>
-        <x>220</x>
-        <y>70</y>
-        <width>171</width>
+        <x>0</x>
+        <y>240</y>
+        <width>191</width>
         <height>31</height>
        </rect>
       </property>
@@ -6268,9 +6302,9 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherIdentifiant">
       <property name="geometry">
        <rect>
-        <x>430</x>
-        <y>70</y>
-        <width>171</width>
+        <x>0</x>
+        <y>120</y>
+        <width>191</width>
         <height>31</height>
        </rect>
       </property>
@@ -6281,9 +6315,9 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherCIN">
       <property name="geometry">
        <rect>
-        <x>640</x>
-        <y>70</y>
-        <width>171</width>
+        <x>0</x>
+        <y>360</y>
+        <width>191</width>
         <height>31</height>
        </rect>
       </property>
@@ -6294,10 +6328,10 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_chercherEmploye">
       <property name="geometry">
        <rect>
-        <x>840</x>
-        <y>70</y>
-        <width>141</width>
-        <height>28</height>
+        <x>20</x>
+        <y>160</y>
+        <width>151</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -6319,7 +6353,7 @@ border-style: outset;
 }</string>
       </property>
       <property name="text">
-       <string>Chercher</string>
+       <string>Chercher par Id</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_retour_10">
@@ -6375,10 +6409,10 @@ border-style: outset;
      <widget class="QWidget" name="verticalLayoutWidget_12">
       <property name="geometry">
        <rect>
-        <x>380</x>
-        <y>120</y>
-        <width>411</width>
-        <height>451</height>
+        <x>370</x>
+        <y>90</y>
+        <width>451</width>
+        <height>471</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -6456,6 +6490,68 @@ border-style: outset;
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_chercherEmploye_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_chercherEmploye_2
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherEmploye_2:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Chercher par Nom</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_chercherEmploye_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>400</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_chercherEmploye_3
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherEmploye_3:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Chercher par CIN</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="page_14">
@@ -6797,9 +6893,9 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherNom_2">
       <property name="geometry">
        <rect>
-        <x>290</x>
-        <y>80</y>
-        <width>181</width>
+        <x>0</x>
+        <y>230</y>
+        <width>221</width>
         <height>31</height>
        </rect>
       </property>
@@ -6810,9 +6906,9 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherID">
       <property name="geometry">
        <rect>
-        <x>500</x>
-        <y>80</y>
-        <width>181</width>
+        <x>0</x>
+        <y>110</y>
+        <width>221</width>
         <height>31</height>
        </rect>
       </property>
@@ -6823,9 +6919,9 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherReference">
       <property name="geometry">
        <rect>
-        <x>720</x>
-        <y>80</y>
-        <width>181</width>
+        <x>0</x>
+        <y>350</y>
+        <width>221</width>
         <height>31</height>
        </rect>
       </property>
@@ -6836,9 +6932,9 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_chercherMachine_8">
       <property name="geometry">
        <rect>
-        <x>510</x>
-        <y>130</y>
-        <width>151</width>
+        <x>10</x>
+        <y>150</y>
+        <width>181</width>
         <height>31</height>
        </rect>
       </property>
@@ -6861,16 +6957,16 @@ border-style: outset;
 }</string>
       </property>
       <property name="text">
-       <string>Chercher</string>
+       <string>Chercher Par Id</string>
       </property>
      </widget>
      <widget class="QWidget" name="verticalLayoutWidget_13">
       <property name="geometry">
        <rect>
-        <x>380</x>
-        <y>170</y>
+        <x>390</x>
+        <y>90</y>
         <width>421</width>
-        <height>361</height>
+        <height>421</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -6961,6 +7057,68 @@ border-style: outset;
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_chercherMachine_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>280</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_chercherMachine_9
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherMachine_9:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Chercher Par Nom</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_chercherMachine_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>390</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_chercherMachine_10
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_chercherMachine_10:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Chercher Par Reference</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_15">
      <widget class="QLabel" name="label_125">
@@ -7027,6 +7185,19 @@ border-style: outset;
       </property>
       <property name="scaledContents">
        <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_127">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>100</y>
+        <width>971</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Cette application est cr&lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600; color:#222222;&quot;&gt;é&lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;e pour le &lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600; color:#222222;&quot;&gt;développement&lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600;&quot;&gt; de logicile orient&lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600; color:#222222;&quot;&gt;é objet et gestion de bases de données.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600; color:#222222;&quot;&gt;Donc, pour assurer le meilleur developpement de votre entreprise, cette application facilite et simplifie &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600; color:#222222;&quot;&gt;tous le travail.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>

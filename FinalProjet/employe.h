@@ -18,13 +18,12 @@ using namespace std;
 class employe
 {
     QString nom, prenom,naissance,poste,mail,domicile,sexe;
-    int idEmploye,telephone,cin;
-    float salaire;
+    int idEmploye,telephone,cin,salaire;
 
 public:
     //constructeurs
     employe(){};
-    employe(QString, QString,int,QString,QString,float,int,QString,QString,int,QString);
+    employe(QString, QString,int,QString,QString,int,int,QString,QString,int,QString);
 
     //getters
     QString GetNom(){return nom;}
@@ -32,7 +31,7 @@ public:
     int GetIdentifiant(){return idEmploye;}
     QString GetNaissance(){return naissance;}
     QString GetPoste(){return poste;}
-    float GetSalaire(){return salaire;}
+    int GetSalaire(){return salaire;}
     int GetTelephone(){return telephone;}
     QString GetMail(){return mail;}
     QString GetDomicile(){return domicile;}
@@ -45,7 +44,7 @@ public:
     void SetIdentifiant(int idE){idEmploye=idE;}
     void SetNaissance(QString ns){naissance=ns;}
     void SetPoste(QString pos){poste=pos;}
-    void SetSalaire(float sal){salaire=sal;}
+    void SetSalaire(int sal){salaire=sal;}
     void SetTelephone(int tel){telephone=tel;}
     void SetMail(QString m){mail=m;}
     void SetDomicile(QString dm){domicile=dm;}
@@ -59,6 +58,8 @@ public:
     bool rechercherEmploye();
     bool modifierEmploye();
     int verifEmploye();
+    int verifEmployeParNom();
+    int verifEmployeParCin();
 
     QSqlQueryModel * afficherEmploye();
     QSqlQueryModel * trierEmployeParNom();
@@ -66,8 +67,8 @@ public:
     QSqlQueryModel * trierEmployeParCin();
 
     QSqlQueryModel * chercherParId(int );
-    QSqlQueryModel * chercherParNom(QString );
-    QSqlQueryModel * chercherParCin(int );
+    bool chercherParNom();
+    bool chercherParCin();
 
 };
 
