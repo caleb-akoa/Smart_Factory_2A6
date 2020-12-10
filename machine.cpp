@@ -3,7 +3,7 @@
 #include"ui_mainwindow.h"
 #include"mainwindow.h"
 
-machine::machine(int idMachine, float prix, QString nom,QString reference, QString categorie)
+machine::machine(int idMachine, int prix, QString nom,QString reference, QString categorie)
 {
     this->idMachine=idMachine;
     this->prix=prix;
@@ -68,7 +68,7 @@ int machine::verifMachine()
     while (query.next())
     {
         idMachine=(query.value(0).toInt());
-        prix=(query.value(1).toFloat());
+        prix=(query.value(1).toInt());
         nom=(query.value(2).toString());
         reference=(query.value(3).toString());
         categorie=(query.value(4).toString());
@@ -98,7 +98,7 @@ bool machine::rechercherModifierMachine()
     if (query.next())
     {
        idMachine=(query.value(0).toInt());
-       prix=(query.value(1).toFloat());
+       prix=(query.value(1).toInt());
        nom=(query.value(2).toString());
        reference=(query.value(3).toString());
        categorie=(query.value(4).toString());
@@ -184,44 +184,107 @@ QSqlQueryModel * machine::chercherParId(int idMachine)
       return model;
 }
 
-QSqlQueryModel * machine::chercherParNom(QString nom)
+int machine::verifMachineParNom()
 {
-    QSqlQueryModel * model= new QSqlQueryModel();
-   QSqlQuery query;
-   QString res =nom;
-
-   query.prepare("select * from machine where nom=:nom");
-   query.bindValue(":nom", nom);
+    QSqlQuery query;
 
 
-   query.exec();
-   model->setQuery(query);
-   model->setHeaderData(0,Qt::Horizontal,QObject::tr("identifiant"));
-   model->setHeaderData(1,Qt::Horizontal,QObject::tr("prix"));
-   model->setHeaderData(2,Qt::Horizontal,QObject::tr("nom"));
-   model->setHeaderData(3,Qt::Horizontal,QObject::tr("reference"));
-   model->setHeaderData(4,Qt::Horizontal,QObject::tr("categorie"));
+    query.prepare("select * from machine where nom=:nom");
+    query.bindValue(":nom",this->nom);
+    query.exec();
 
-      return model;
+    int count_user = 0;
+    while (query.next())
+    {
+        idMachine=(query.value(0).toInt());
+        prix=(query.value(1).toInt());
+        nom=(query.value(2).toString());
+        reference=(query.value(3).toString());
+        categorie=(query.value(4).toString());
+        count_user++;
+    }
+    if (count_user==1)
+    {
+        return 0;
+    }
+    else if(count_user > 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 2;
+    }
 }
 
-QSqlQueryModel * machine::chercherParReference(QString reference)
+bool machine::chercherParNom()
 {
-    QSqlQueryModel * model= new QSqlQueryModel();
-   QSqlQuery query;
-   QString res =reference;
+    QSqlQuery query;
+    query.prepare("Select * from machine where nom=:nom");
+    query.bindValue(":nom",nom);
+    query.exec();
 
-   query.prepare("select * from machine where reference=:reference");
-   query.bindValue(":reference", reference);
+    if (query.next())
+    {
+       idMachine=(query.value(0).toInt());
+       prix=(query.value(1).toInt());
+       nom=(query.value(2).toString());
+       reference=(query.value(3).toString());
+       categorie=(query.value(4).toString());
+    }
+
+    return query.exec();
+}
+
+int machine::verifMachineParReference()
+{
+    QSqlQuery query;
 
 
-   query.exec();
-   model->setQuery(query);
-   model->setHeaderData(0,Qt::Horizontal,QObject::tr("identifiant"));
-   model->setHeaderData(1,Qt::Horizontal,QObject::tr("prix"));
-   model->setHeaderData(2,Qt::Horizontal,QObject::tr("nom"));
-   model->setHeaderData(3,Qt::Horizontal,QObject::tr("reference"));
-   model->setHeaderData(4,Qt::Horizontal,QObject::tr("categorie"));
+    query.prepare("select * from machine where reference=:reference");
+    query.bindValue(":reference",this->reference);
+    query.exec();
 
-      return model;
+    int count_user = 0;
+    while (query.next())
+    {
+        idMachine=(query.value(0).toInt());
+        prix=(query.value(1).toInt());
+        nom=(query.value(2).toString());
+        reference=(query.value(3).toString());
+        categorie=(query.value(4).toString());
+        count_user++;
+    }
+    if (count_user==1)
+    {
+        return 0;
+    }
+    else if(count_user > 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 2;
+    }
+}
+
+bool machine::chercherParReference()
+{
+
+    QSqlQuery query;
+    query.prepare("Select * from machine where reference=:reference");
+    query.bindValue(":reference",reference);
+    query.exec();
+
+    if (query.next())
+    {
+       idMachine=(query.value(0).toInt());
+       prix=(query.value(1).toInt());
+       nom=(query.value(2).toString());
+       reference=(query.value(3).toString());
+       categorie=(query.value(4).toString());
+    }
+
+    return query.exec();
 }
