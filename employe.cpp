@@ -24,7 +24,7 @@ bool employe::ajouterEmploye()
     QString tel=QString::number(telephone);
     QString cn=QString::number(cin);
 
-    //la requete
+    // la requete
     query.prepare("insert into employe (nom,prenom,identifiant,naissance,poste,salaire,telephone,mail,domicile,cin,sexe)" "values(:nom,:prenom,:id,:naissance,:poste,:sl,:tel,:mail,:domicile,:cn,:sexe)");
 
     //creation des variables
