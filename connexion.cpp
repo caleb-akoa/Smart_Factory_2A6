@@ -1,6 +1,6 @@
 #include "connexion.h"
 
-//test connection
+//test connection cnx
 
 //connexion::connexion()
 //{
