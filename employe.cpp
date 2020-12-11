@@ -16,7 +16,7 @@ employe::employe(QString nom,QString prenom, int idEmploye,QString naissance,QSt
     this->sexe=sexe;
 }
 
-bool employe::ajouterEmploye()
+bool employe::ajouterEmploye()//ajout
 {
     QSqlQuery query;
     QString id=QString::number(idEmploye);
