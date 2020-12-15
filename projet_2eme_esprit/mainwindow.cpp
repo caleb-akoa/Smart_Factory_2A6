@@ -626,12 +626,6 @@ void MainWindow::on_cherchernom_clicked() // chercher par nom 2 button
 
 
 
-
-
-
-
-
-
 void MainWindow::on_comboBox_activated(const QString &arg1)
 {
      if(arg1=="ID")
