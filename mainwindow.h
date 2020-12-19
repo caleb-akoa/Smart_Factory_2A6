@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "machine.h"
 #include "employe.h"
+#include "smtp.h"
+#include "arduino.h"
 
 #include<QtWidgets/QMainWindow>
 #include<QtCharts/QChartView>
@@ -40,6 +42,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    bool envoie =false;
+    void update_label();
 
 private slots:
     void on_pushButton_employes_clicked();
@@ -240,10 +244,55 @@ private slots:
 
     void on_pushButton_chercherMachine_10_clicked();
 
+    void on_pushButton_envoyer_clicked();
+
+    void on_pushButton_envoyerMail_clicked();
+
+    void on_pushButton_envoyerMail_2_clicked();
+
+    void on_pushButton_envoyerMail_3_clicked();
+
+    void on_pushButton_envoyerMail_4_clicked();
+
+    void on_pushButton_envoyerMail_5_clicked();
+
+    void on_pushButton_envoyerMail_6_clicked();
+
+    void on_pushButton_ajouterEmploye_8_clicked();
+
+    void on_pushButton_modifierEmploye_8_clicked();
+
+    void on_pushButton_afficherEmploye_7_clicked();
+
+    void on_pushButton_supprimerEmploye_7_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_retour_13_clicked();
+
+    void on_pushButton_quitter_clicked();
+
+
+    void on_pushButton_on_clicked();
+
+    void on_pushButton_off_clicked();
+
+    void on_pushButton_sup_clicked();
+
+    void on_pushButton_inf_clicked();
+
+    void on_pushButton_retour_14_clicked();
+
+    void on_pushButton_pointer_clicked();
+
+    void on_pushButton_imprimer_clicked();
+
 private:
     Ui::MainWindow *ui;
     machine m;
     employe e;
-
+    QByteArray data;
+    arduino a;
 };
+bool envoie_Retour(bool msg);
 #endif // MAINWINDOW_H

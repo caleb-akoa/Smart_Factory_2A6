@@ -17,7 +17,7 @@ using namespace std;
 
 class employe
 {
-    QString nom, prenom,naissance,poste,mail,domicile,sexe;
+    QString nom, prenom,naissance,poste,email,domicile,sexe;
     int idEmploye,telephone,cin,salaire;
 
 public:
@@ -33,7 +33,7 @@ public:
     QString GetPoste(){return poste;}
     int GetSalaire(){return salaire;}
     int GetTelephone(){return telephone;}
-    QString GetMail(){return mail;}
+    QString GetMail(){return email;}
     QString GetDomicile(){return domicile;}
     int GetCin(){return cin;}
     QString GetSexe(){return sexe;}
@@ -46,7 +46,7 @@ public:
     void SetPoste(QString pos){poste=pos;}
     void SetSalaire(int sal){salaire=sal;}
     void SetTelephone(int tel){telephone=tel;}
-    void SetMail(QString m){mail=m;}
+    void SetMail(QString m){email=m;}
     void SetDomicile(QString dm){domicile=dm;}
     void SetCin(int c){cin=c;}
     void SetSexe(QString s){sexe=s;}
@@ -69,6 +69,8 @@ public:
     QSqlQueryModel * chercherParId(int );
     bool chercherParNom();
     bool chercherParCin();
+    bool testemail(QString);
+    QSqlQueryModel * afficher_email();
 
 };
 

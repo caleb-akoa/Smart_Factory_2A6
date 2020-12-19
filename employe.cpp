@@ -1,7 +1,7 @@
 #include "employe.h"
 using namespace std;
 
-employe::employe(QString nom,QString prenom, int idEmploye,QString naissance,QString poste,int salaire,int telephone,QString mail,QString domicile,int cin,QString sexe)
+employe::employe(QString nom,QString prenom, int idEmploye,QString naissance,QString poste,int salaire,int telephone,QString email,QString domicile,int cin,QString sexe)
 {
     this->nom=nom;
     this->prenom=prenom;
@@ -10,7 +10,7 @@ employe::employe(QString nom,QString prenom, int idEmploye,QString naissance,QSt
     this->poste=poste;
     this->salaire=salaire;
     this->telephone=telephone;
-    this->mail=mail;
+    this->email=email;
     this->domicile=domicile;
     this->cin=cin;
     this->sexe=sexe;
@@ -35,7 +35,7 @@ bool employe::ajouterEmploye()//ajout
     query.bindValue(":poste",poste);
     query.bindValue(":sl",sl);
     query.bindValue(":tel",tel);
-    query.bindValue(":mail",mail);
+    query.bindValue(":mail",email);
     query.bindValue(":domicile",domicile);
     query.bindValue(":cn",cn);
     query.bindValue(":sexe",sexe);
@@ -93,7 +93,7 @@ int employe::verifEmploye()
         poste=(query.value(4).toString());
         salaire=(query.value(5).toInt());
         telephone=(query.value(6).toInt());
-        mail=(query.value(7).toString());
+        email=(query.value(7).toString());
         domicile=(query.value(8).toString());
         cin=(query.value(9).toInt());
         sexe=(query.value(10).toString());
@@ -127,7 +127,7 @@ bool employe::modifierEmploye()
     query.bindValue(":poste",poste);
     query.bindValue(":salaire",salaire);
     query.bindValue(":telephone",telephone);
-    query.bindValue(":mail",mail);
+    query.bindValue(":mail",email);
     query.bindValue(":domicile",domicile);
     query.bindValue(":cin",cin);
     query.bindValue(":sexe",sexe);
@@ -151,7 +151,7 @@ bool employe::rechercherEmploye()//recherche modification
         poste=(query.value(4).toString());
         salaire=(query.value(5).toInt());
         telephone=(query.value(6).toInt());
-        mail=(query.value(7).toString());
+        email=(query.value(7).toString());
         domicile=(query.value(8).toString());
         cin=(query.value(9).toInt());
         sexe=(query.value(10).toString());
@@ -164,17 +164,17 @@ QSqlQueryModel * employe::trierEmployeParNom()
     QSqlQueryModel * model= new QSqlQueryModel();
     model->setQuery("Select * from employe order by nom ASC ");
 
-        model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
-        model->setHeaderData(1,Qt::Horizontal,QObject::tr("prenom"));
-        model->setHeaderData(2,Qt::Horizontal,QObject::tr("identifiant"));
-        model->setHeaderData(3,Qt::Horizontal,QObject::tr("naissance"));
-        model->setHeaderData(4,Qt::Horizontal,QObject::tr("poste"));
-        model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
-        model->setHeaderData(6,Qt::Horizontal,QObject::tr("telephone"));
-        model->setHeaderData(7,Qt::Horizontal,QObject::tr("mail"));
-        model->setHeaderData(8,Qt::Horizontal,QObject::tr("domicile"));
-        model->setHeaderData(9,Qt::Horizontal,QObject::tr("cin"));
-        model->setHeaderData(10,Qt::Horizontal,QObject::tr("sexe"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("prenom"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("identifiant"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("naissance"));
+    model->setHeaderData(4,Qt::Horizontal,QObject::tr("poste"));
+    model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
+    model->setHeaderData(6,Qt::Horizontal,QObject::tr("telephone"));
+    model->setHeaderData(7,Qt::Horizontal,QObject::tr("mail"));
+    model->setHeaderData(8,Qt::Horizontal,QObject::tr("domicile"));
+    model->setHeaderData(9,Qt::Horizontal,QObject::tr("cin"));
+    model->setHeaderData(10,Qt::Horizontal,QObject::tr("sexe"));
 
     return model;
 }
@@ -185,17 +185,17 @@ QSqlQueryModel * employe::trierEmployeParID()
     QSqlQueryModel * model= new QSqlQueryModel();
     model->setQuery("Select * from employe order by identifiant ASC ");
 
-        model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
-        model->setHeaderData(1,Qt::Horizontal,QObject::tr("prenom"));
-        model->setHeaderData(2,Qt::Horizontal,QObject::tr("identifiant"));
-        model->setHeaderData(3,Qt::Horizontal,QObject::tr("naissance"));
-        model->setHeaderData(4,Qt::Horizontal,QObject::tr("poste"));
-        model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
-        model->setHeaderData(6,Qt::Horizontal,QObject::tr("telephone"));
-        model->setHeaderData(7,Qt::Horizontal,QObject::tr("mail"));
-        model->setHeaderData(8,Qt::Horizontal,QObject::tr("domicile"));
-        model->setHeaderData(9,Qt::Horizontal,QObject::tr("cin"));
-        model->setHeaderData(10,Qt::Horizontal,QObject::tr("sexe"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("prenom"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("identifiant"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("naissance"));
+    model->setHeaderData(4,Qt::Horizontal,QObject::tr("poste"));
+    model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
+    model->setHeaderData(6,Qt::Horizontal,QObject::tr("telephone"));
+    model->setHeaderData(7,Qt::Horizontal,QObject::tr("mail"));
+    model->setHeaderData(8,Qt::Horizontal,QObject::tr("domicile"));
+    model->setHeaderData(9,Qt::Horizontal,QObject::tr("cin"));
+    model->setHeaderData(10,Qt::Horizontal,QObject::tr("sexe"));
 
     return model;
 }
@@ -206,17 +206,17 @@ QSqlQueryModel * employe::trierEmployeParCin()
     QSqlQueryModel * model= new QSqlQueryModel();
     model->setQuery("Select * from employe order by cin ASC ");
 
-        model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
-        model->setHeaderData(1,Qt::Horizontal,QObject::tr("prenom"));
-        model->setHeaderData(2,Qt::Horizontal,QObject::tr("identifiant"));
-        model->setHeaderData(3,Qt::Horizontal,QObject::tr("naissance"));
-        model->setHeaderData(4,Qt::Horizontal,QObject::tr("poste"));
-        model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
-        model->setHeaderData(6,Qt::Horizontal,QObject::tr("telephone"));
-        model->setHeaderData(7,Qt::Horizontal,QObject::tr("mail"));
-        model->setHeaderData(8,Qt::Horizontal,QObject::tr("domicile"));
-        model->setHeaderData(9,Qt::Horizontal,QObject::tr("cin"));
-        model->setHeaderData(10,Qt::Horizontal,QObject::tr("sexe"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("prenom"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("identifiant"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("naissance"));
+    model->setHeaderData(4,Qt::Horizontal,QObject::tr("poste"));
+    model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
+    model->setHeaderData(6,Qt::Horizontal,QObject::tr("telephone"));
+    model->setHeaderData(7,Qt::Horizontal,QObject::tr("mail"));
+    model->setHeaderData(8,Qt::Horizontal,QObject::tr("domicile"));
+    model->setHeaderData(9,Qt::Horizontal,QObject::tr("cin"));
+    model->setHeaderData(10,Qt::Horizontal,QObject::tr("sexe"));
 
     return model;
 }
@@ -248,7 +248,7 @@ bool employe::chercherParNom()
         poste=(query.value(4).toString());
         salaire=(query.value(5).toInt());
         telephone=(query.value(6).toInt());
-        mail=(query.value(7).toString());
+        email=(query.value(7).toString());
         domicile=(query.value(8).toString());
         cin=(query.value(9).toInt());
         sexe=(query.value(10).toString());
@@ -275,7 +275,7 @@ int employe::verifEmployeParNom()
         poste=(query.value(4).toString());
         salaire=(query.value(5).toInt());
         telephone=(query.value(6).toInt());
-        mail=(query.value(7).toString());
+        email=(query.value(7).toString());
         domicile=(query.value(8).toString());
         cin=(query.value(9).toInt());
         sexe=(query.value(10).toString());
@@ -312,7 +312,7 @@ bool employe::chercherParCin()
         poste=(query.value(4).toString());
         salaire=(query.value(5).toInt());
         telephone=(query.value(6).toInt());
-        mail=(query.value(7).toString());
+        email=(query.value(7).toString());
         domicile=(query.value(8).toString());
         cin=(query.value(9).toInt());
         sexe=(query.value(10).toString());
@@ -339,7 +339,7 @@ int employe::verifEmployeParCin()
         poste=(query.value(4).toString());
         salaire=(query.value(5).toInt());
         telephone=(query.value(6).toInt());
-        mail=(query.value(7).toString());
+        email=(query.value(7).toString());
         domicile=(query.value(8).toString());
         cin=(query.value(9).toInt());
         sexe=(query.value(10).toString());
@@ -358,4 +358,46 @@ int employe::verifEmployeParCin()
     {
         return 2;
     }
+}
+
+bool employe::testemail(QString email)
+{
+    int test=0;
+    for(int i= 0; i<email.size(); i++)
+    {
+        if(email[i]=="@")
+        {
+            test++;
+
+        }
+    }
+    for(int i= 0; i < email.size(); i++)
+    {
+        if((test==1)&&(email[i]=="."))
+        {
+            if(email.size()>i+1)
+                return true;
+        }
+    }
+    return false;
+}
+
+QSqlQueryModel * employe::afficher_email()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select mail from employe");
+//    model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
+//    model->setHeaderData(1,Qt::Horizontal,QObject::tr("prenom"));
+//    model->setHeaderData(2,Qt::Horizontal,QObject::tr("identifiant"));
+//    model->setHeaderData(3,Qt::Horizontal,QObject::tr("naissance"));
+//    model->setHeaderData(4,Qt::Horizontal,QObject::tr("poste"));
+//    model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
+//    model->setHeaderData(6,Qt::Horizontal,QObject::tr("telephone"));
+//    model->setHeaderData(0,Qt::Horizontal,QObject::tr("mail"));
+//    model->setHeaderData(8,Qt::Horizontal,QObject::tr("domicile"));
+//    model->setHeaderData(9,Qt::Horizontal,QObject::tr("cin"));
+//    model->setHeaderData(10,Qt::Horizontal,QObject::tr("sexe"));
+
+    return model;
 }

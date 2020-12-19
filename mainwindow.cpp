@@ -1,5 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "smtp.h"
+#include <QPlainTextEdit>
+#include <QPlainTextDocumentLayout>
+#include <QLineEdit>
+#include<QPdfWriter>
+#include<QPainter>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -8,8 +14,18 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->tabMachine->setModel(m.afficherMachine());
     ui->tabEmploye->setModel(e.afficherEmploye());
-
-
+    ui->comboBox_mail->setModel(e.afficher_email());
+    //connect(ui->pushButton_envoyer, SIGNAL(clicked()),this, SLOT(sendMail()));
+    //    int ret=a.connect_arduino();
+    //    switch(ret)
+    //    {
+    //    case(0):qDebug()<< "arduino is available and connected to :" << a.getArduino_port_name();
+    //        break;
+    //    case(1):qDebug()<< "arduino is not available but not connected to"<< a.getArduino_port_name();
+    //        break;
+    //    case(-1):qDebug()<< "arduino is not avaible";
+    //    }
+    //    QObject::connect(a.getSerial(),SIGNAL(readyRead()),this,SLOT(update_label()));
 }
 
 MainWindow::~MainWindow()
@@ -41,6 +57,29 @@ void MainWindow::on_pushButton_ajouterEmploye_clicked()
 void MainWindow::on_pushButton_modifierEmploye_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
+    ui->lineEdit_nom_2->hide();
+    ui->lineEdit_prenom_2->hide();
+    ui->lineEdit_identifiant_2->hide();
+    ui->dateEdit_naissance_2->hide();
+    ui->lineEdit_poste_2->hide();
+    ui->lineEdit_salaire_2->hide();
+    ui->lineEdit_telephone_2->hide();
+    ui->lineEdit_mail_2->hide();
+    ui->lineEdit_domicile_2->hide();
+    ui->lineEdit_cin_2->hide();
+    ui->lineEdit_sexe_2->hide();
+    ui->pushButton_modifierEmploye_4->hide();
+    ui->label_nom->hide();
+    ui->label_prenom->hide();
+    ui->label_id->hide();
+    ui->label_naissance->hide();
+    ui->label_poste->hide();
+    ui->label_salaire->hide();
+    ui->label_telephone->hide();
+    ui->label_mail->hide();
+    ui->label_domicile->hide();
+    ui->label_cin->hide();
+    ui->label_sexe->hide();
 }
 
 void MainWindow::on_pushButton_afficherEmploye_clicked()
@@ -68,6 +107,31 @@ void MainWindow::on_pushButton_supprimerEmploye_clicked()///////////////////////
 void MainWindow::on_pushButton_modifierEmploye_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
+    //    ui->stackedWidget->setCurrentIndex(5);
+    //    ui->stackedWidget->setCurrentIndex(5);
+    ui->lineEdit_nom_2->hide();
+    ui->lineEdit_prenom_2->hide();
+    ui->lineEdit_identifiant_2->hide();
+    ui->dateEdit_naissance_2->hide();
+    ui->lineEdit_poste_2->hide();
+    ui->lineEdit_salaire_2->hide();
+    ui->lineEdit_telephone_2->hide();
+    ui->lineEdit_mail_2->hide();
+    ui->lineEdit_domicile_2->hide();
+    ui->lineEdit_cin_2->hide();
+    ui->lineEdit_sexe_2->hide();
+    ui->pushButton_modifierEmploye_4->hide();
+    ui->label_nom->hide();
+    ui->label_prenom->hide();
+    ui->label_id->hide();
+    ui->label_naissance->hide();
+    ui->label_poste->hide();
+    ui->label_salaire->hide();
+    ui->label_telephone->hide();
+    ui->label_mail->hide();
+    ui->label_domicile->hide();
+    ui->label_cin->hide();
+    ui->label_sexe->hide();
 }
 
 void MainWindow::on_pushButton_afficherEmploye_2_clicked()
@@ -139,6 +203,29 @@ void MainWindow::on_pushButton_ajouterEmploye_5_clicked()
 void MainWindow::on_pushButton_modifierEmploye_5_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
+    ui->lineEdit_nom_2->hide();
+    ui->lineEdit_prenom_2->hide();
+    ui->lineEdit_identifiant_2->hide();
+    ui->dateEdit_naissance_2->hide();
+    ui->lineEdit_poste_2->hide();
+    ui->lineEdit_salaire_2->hide();
+    ui->lineEdit_telephone_2->hide();
+    ui->lineEdit_mail_2->hide();
+    ui->lineEdit_domicile_2->hide();
+    ui->lineEdit_cin_2->hide();
+    ui->lineEdit_sexe_2->hide();
+    ui->pushButton_modifierEmploye_4->hide();
+    ui->label_nom->hide();
+    ui->label_prenom->hide();
+    ui->label_id->hide();
+    ui->label_naissance->hide();
+    ui->label_poste->hide();
+    ui->label_salaire->hide();
+    ui->label_telephone->hide();
+    ui->label_mail->hide();
+    ui->label_domicile->hide();
+    ui->label_cin->hide();
+    ui->label_sexe->hide();
 }
 
 void MainWindow::on_pushButton_supprimerEmploye_4_clicked()//////////////////////////////////
@@ -172,6 +259,29 @@ void MainWindow::on_pushButton_ajouterEmploye_6_clicked()
 void MainWindow::on_pushButton_modifierEmploye_6_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
+    ui->lineEdit_nom_2->hide();
+    ui->lineEdit_prenom_2->hide();
+    ui->lineEdit_identifiant_2->hide();
+    ui->dateEdit_naissance_2->hide();
+    ui->lineEdit_poste_2->hide();
+    ui->lineEdit_salaire_2->hide();
+    ui->lineEdit_telephone_2->hide();
+    ui->lineEdit_mail_2->hide();
+    ui->lineEdit_domicile_2->hide();
+    ui->lineEdit_cin_2->hide();
+    ui->lineEdit_sexe_2->hide();
+    ui->pushButton_modifierEmploye_4->hide();
+    ui->label_nom->hide();
+    ui->label_prenom->hide();
+    ui->label_id->hide();
+    ui->label_naissance->hide();
+    ui->label_poste->hide();
+    ui->label_salaire->hide();
+    ui->label_telephone->hide();
+    ui->label_mail->hide();
+    ui->label_domicile->hide();
+    ui->label_cin->hide();
+    ui->label_sexe->hide();
 }
 
 void MainWindow::on_pushButton_afficherEmploye_5_clicked()
@@ -197,6 +307,17 @@ void MainWindow::on_pushButton_ajouterMachine_clicked()
 void MainWindow::on_pushButton_modifierMachine_clicked()
 {
     ui->stackedWidget->setCurrentIndex(8);
+    ui->lineEdit_id_2->hide();
+    ui->lineEdit_prix_2->hide();
+    ui->lineEdit_nom_4->hide();
+    ui->lineEdit_reference_2->hide();
+    ui->lineEdit_categorie_2->hide();
+    ui->label_idMachine->hide();
+    ui->label_prix->hide();
+    ui->label_nom_2->hide();
+    ui->label_ref->hide();
+    ui->label_catg->hide();
+    ui->pushButton_modifierMachine_4->hide();
 }
 
 void MainWindow::on_pushButton_afficherMachine_clicked()
@@ -220,9 +341,20 @@ void MainWindow::on_pushButton_statistiques_clicked()
     ui->stackedWidget->setCurrentIndex(11);
 }
 
-void MainWindow::on_pushButton_modifierMachine_2_clicked()
+void MainWindow::on_pushButton_modifierMachine_2_clicked()////////////////////
 {
     ui->stackedWidget->setCurrentIndex(8);
+    ui->lineEdit_id_2->hide();
+    ui->lineEdit_prix_2->hide();
+    ui->lineEdit_nom_4->hide();
+    ui->lineEdit_reference_2->hide();
+    ui->lineEdit_categorie_2->hide();
+    ui->label_idMachine->hide();
+    ui->label_prix->hide();
+    ui->label_nom_2->hide();
+    ui->label_ref->hide();
+    ui->label_catg->hide();
+    ui->pushButton_modifierMachine_4->hide();
 }
 
 void MainWindow::on_pushButton_afficherMachine_2_clicked()
@@ -285,6 +417,17 @@ void MainWindow::on_pushButton_ajouterMachine_5_clicked()
 void MainWindow::on_pushButton_modifierMachine_5_clicked()
 {
     ui->stackedWidget->setCurrentIndex(8);
+    ui->lineEdit_id_2->hide();
+    ui->lineEdit_prix_2->hide();
+    ui->lineEdit_nom_4->hide();
+    ui->lineEdit_reference_2->hide();
+    ui->lineEdit_categorie_2->hide();
+    ui->label_idMachine->hide();
+    ui->label_prix->hide();
+    ui->label_nom_2->hide();
+    ui->label_ref->hide();
+    ui->label_catg->hide();
+    ui->pushButton_modifierMachine_4->hide();
 }
 
 void MainWindow::on_pushButton_supprimerMachine_4_clicked()//////////////////////////
@@ -311,6 +454,17 @@ void MainWindow::on_pushButton_ajouterMachine_6_clicked()
 void MainWindow::on_pushButton_modifierMachine_6_clicked()
 {
     ui->stackedWidget->setCurrentIndex(8);
+    ui->lineEdit_id_2->hide();
+    ui->lineEdit_prix_2->hide();
+    ui->lineEdit_nom_4->hide();
+    ui->lineEdit_reference_2->hide();
+    ui->lineEdit_categorie_2->hide();
+    ui->label_idMachine->hide();
+    ui->label_prix->hide();
+    ui->label_nom_2->hide();
+    ui->label_ref->hide();
+    ui->label_catg->hide();
+    ui->pushButton_modifierMachine_4->hide();
 }
 
 void MainWindow::on_pushButton_afficherMachine_5_clicked()
@@ -341,6 +495,17 @@ void MainWindow::on_pushButton_ajouterMachine_7_clicked()
 void MainWindow::on_pushButton_modifierMachine_7_clicked()
 {
     ui->stackedWidget->setCurrentIndex(8);
+    ui->lineEdit_id_2->hide();
+    ui->lineEdit_prix_2->hide();
+    ui->lineEdit_nom_4->hide();
+    ui->lineEdit_reference_2->hide();
+    ui->lineEdit_categorie_2->hide();
+    ui->label_idMachine->hide();
+    ui->label_prix->hide();
+    ui->label_nom_2->hide();
+    ui->label_ref->hide();
+    ui->label_catg->hide();
+    ui->pushButton_modifierMachine_4->hide();
 }
 
 void MainWindow::on_pushButton_afficherMachine_6_clicked()
@@ -390,8 +555,8 @@ void MainWindow::on_pushButton_supprimerEmploye_5_clicked()
 void MainWindow::on_pushButton_clicked()//chercher Employe//////////////////////////////////////////
 {
     ui->stackedWidget->setCurrentIndex(12);
-//    ui->lineEdit_chercherNom->hide();
-//    ui->lineEdit_chercherCIN->hide();
+    //    ui->lineEdit_chercherNom->hide();
+    //    ui->lineEdit_chercherCIN->hide();
     ui->lineEdit_nom_7->hide();
     ui->lineEdit_prenom_4->hide();
     ui->lineEdit_identifiant_4->hide();
@@ -406,28 +571,28 @@ void MainWindow::on_pushButton_clicked()//chercher Employe//////////////////////
 }
 void MainWindow::on_pushButton_2_clicked()////////////////////////
 {
-   ui->stackedWidget->setCurrentIndex(12);
-   ui->stackedWidget->setCurrentIndex(12);
-//   ui->lineEdit_chercherNom->hide();
-//   ui->lineEdit_chercherCIN->hide();
-   ui->lineEdit_nom_7->hide();
-   ui->lineEdit_prenom_4->hide();
-   ui->lineEdit_identifiant_4->hide();
-   ui->dateEdit_naissance_4->hide();
-   ui->lineEdit_poste_4->hide();
-   ui->lineEdit_salaire_4->hide();
-   ui->lineEdit_telephone_4->hide();
-   ui->lineEdit_mail_4->hide();
-   ui->lineEdit_domicile_4->hide();
-   ui->lineEdit_cin_4->hide();
-   ui->lineEdit_sexe_4->hide();
+    ui->stackedWidget->setCurrentIndex(12);
+    ui->stackedWidget->setCurrentIndex(12);
+    //   ui->lineEdit_chercherNom->hide();
+    //   ui->lineEdit_chercherCIN->hide();
+    ui->lineEdit_nom_7->hide();
+    ui->lineEdit_prenom_4->hide();
+    ui->lineEdit_identifiant_4->hide();
+    ui->dateEdit_naissance_4->hide();
+    ui->lineEdit_poste_4->hide();
+    ui->lineEdit_salaire_4->hide();
+    ui->lineEdit_telephone_4->hide();
+    ui->lineEdit_mail_4->hide();
+    ui->lineEdit_domicile_4->hide();
+    ui->lineEdit_cin_4->hide();
+    ui->lineEdit_sexe_4->hide();
 }
 void MainWindow::on_pushButton_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(12);
     ui->stackedWidget->setCurrentIndex(12);
-//    ui->lineEdit_chercherNom->hide();
-//    ui->lineEdit_chercherCIN->hide();
+    //    ui->lineEdit_chercherNom->hide();
+    //    ui->lineEdit_chercherCIN->hide();
     ui->lineEdit_nom_7->hide();
     ui->lineEdit_prenom_4->hide();
     ui->lineEdit_identifiant_4->hide();
@@ -442,43 +607,43 @@ void MainWindow::on_pushButton_3_clicked()
 }
 void MainWindow::on_pushButton_5_clicked()
 {
-  ui->stackedWidget->setCurrentIndex(12);
-  ui->stackedWidget->setCurrentIndex(12);
-//  ui->lineEdit_chercherNom->hide();
-//  ui->lineEdit_chercherCIN->hide();
-  ui->lineEdit_nom_7->hide();
-  ui->lineEdit_prenom_4->hide();
-  ui->lineEdit_identifiant_4->hide();
-  ui->dateEdit_naissance_4->hide();
-  ui->lineEdit_poste_4->hide();
-  ui->lineEdit_salaire_4->hide();
-  ui->lineEdit_telephone_4->hide();
-  ui->lineEdit_mail_4->hide();
-  ui->lineEdit_domicile_4->hide();
-  ui->lineEdit_cin_4->hide();
-  ui->lineEdit_sexe_4->hide();
+    ui->stackedWidget->setCurrentIndex(12);
+    ui->stackedWidget->setCurrentIndex(12);
+    //  ui->lineEdit_chercherNom->hide();
+    //  ui->lineEdit_chercherCIN->hide();
+    ui->lineEdit_nom_7->hide();
+    ui->lineEdit_prenom_4->hide();
+    ui->lineEdit_identifiant_4->hide();
+    ui->dateEdit_naissance_4->hide();
+    ui->lineEdit_poste_4->hide();
+    ui->lineEdit_salaire_4->hide();
+    ui->lineEdit_telephone_4->hide();
+    ui->lineEdit_mail_4->hide();
+    ui->lineEdit_domicile_4->hide();
+    ui->lineEdit_cin_4->hide();
+    ui->lineEdit_sexe_4->hide();
 }
 void MainWindow::on_pushButton_4_clicked()
 {
-     ui->stackedWidget->setCurrentIndex(12);
-     ui->stackedWidget->setCurrentIndex(12);
-//     ui->lineEdit_chercherNom->hide();
-//     ui->lineEdit_chercherCIN->hide();
-     ui->lineEdit_nom_7->hide();
-     ui->lineEdit_prenom_4->hide();
-     ui->lineEdit_identifiant_4->hide();
-     ui->dateEdit_naissance_4->hide();
-     ui->lineEdit_poste_4->hide();
-     ui->lineEdit_salaire_4->hide();
-     ui->lineEdit_telephone_4->hide();
-     ui->lineEdit_mail_4->hide();
-     ui->lineEdit_domicile_4->hide();
-     ui->lineEdit_cin_4->hide();
-     ui->lineEdit_sexe_4->hide();
+    ui->stackedWidget->setCurrentIndex(12);
+    ui->stackedWidget->setCurrentIndex(12);
+    //     ui->lineEdit_chercherNom->hide();
+    //     ui->lineEdit_chercherCIN->hide();
+    ui->lineEdit_nom_7->hide();
+    ui->lineEdit_prenom_4->hide();
+    ui->lineEdit_identifiant_4->hide();
+    ui->dateEdit_naissance_4->hide();
+    ui->lineEdit_poste_4->hide();
+    ui->lineEdit_salaire_4->hide();
+    ui->lineEdit_telephone_4->hide();
+    ui->lineEdit_mail_4->hide();
+    ui->lineEdit_domicile_4->hide();
+    ui->lineEdit_cin_4->hide();
+    ui->lineEdit_sexe_4->hide();
 }
 void MainWindow::on_pushButton_retour_10_clicked()
 {
-   ui->stackedWidget->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(1);
 }
 void MainWindow::on_pushButton_supprimerEmploye_6_clicked()
 {
@@ -493,6 +658,29 @@ void MainWindow::on_pushButton_afficherEmploye_6_clicked()
 void MainWindow::on_pushButton_modifierEmploye_7_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
+    ui->lineEdit_nom_2->hide();
+    ui->lineEdit_prenom_2->hide();
+    ui->lineEdit_identifiant_2->hide();
+    ui->dateEdit_naissance_2->hide();
+    ui->lineEdit_poste_2->hide();
+    ui->lineEdit_salaire_2->hide();
+    ui->lineEdit_telephone_2->hide();
+    ui->lineEdit_mail_2->hide();
+    ui->lineEdit_domicile_2->hide();
+    ui->lineEdit_cin_2->hide();
+    ui->lineEdit_sexe_2->hide();
+    ui->pushButton_modifierEmploye_4->hide();
+    ui->label_nom->hide();
+    ui->label_prenom->hide();
+    ui->label_id->hide();
+    ui->label_naissance->hide();
+    ui->label_poste->hide();
+    ui->label_salaire->hide();
+    ui->label_telephone->hide();
+    ui->label_mail->hide();
+    ui->label_domicile->hide();
+    ui->label_cin->hide();
+    ui->label_sexe->hide();
 }
 
 void MainWindow::on_pushButton_ajouterEmploye_7_clicked()
@@ -502,21 +690,21 @@ void MainWindow::on_pushButton_ajouterEmploye_7_clicked()
 
 void MainWindow::on_pushButton_chercherMachine_clicked()////////////////////////////
 {
-   ui->stackedWidget->setCurrentIndex(13);
-//   ui->lineEdit_chercherNom_2->hide();
-//   ui->lineEdit_chercherReference->hide();
-   ui->lineEdit_idMachine_3->hide();
-   ui->lineEdit_prix_4->hide();
-   ui->lineEdit_nom_8->hide();
-   ui->lineEdit_reference_4->hide();
-   ui->lineEdit_categorie_4->hide();
+    ui->stackedWidget->setCurrentIndex(13);
+    //   ui->lineEdit_chercherNom_2->hide();
+    //   ui->lineEdit_chercherReference->hide();
+    ui->lineEdit_idMachine_3->hide();
+    ui->lineEdit_prix_4->hide();
+    ui->lineEdit_nom_8->hide();
+    ui->lineEdit_reference_4->hide();
+    ui->lineEdit_categorie_4->hide();
 }
 
 void MainWindow::on_pushButton_chercherMachine_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(13);
-//    ui->lineEdit_chercherNom_2->hide();
-//    ui->lineEdit_chercherReference->hide();
+    //    ui->lineEdit_chercherNom_2->hide();
+    //    ui->lineEdit_chercherReference->hide();
     ui->lineEdit_idMachine_3->hide();
     ui->lineEdit_prix_4->hide();
     ui->lineEdit_nom_8->hide();
@@ -527,8 +715,8 @@ void MainWindow::on_pushButton_chercherMachine_2_clicked()
 void MainWindow::on_pushButton_chercherMachine_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(13);
-//    ui->lineEdit_chercherNom_2->hide();
-//    ui->lineEdit_chercherReference->hide();
+    //    ui->lineEdit_chercherNom_2->hide();
+    //    ui->lineEdit_chercherReference->hide();
     ui->lineEdit_idMachine_3->hide();
     ui->lineEdit_prix_4->hide();
     ui->lineEdit_nom_8->hide();
@@ -539,8 +727,8 @@ void MainWindow::on_pushButton_chercherMachine_3_clicked()
 void MainWindow::on_pushButton_chercherMachine_4_clicked()
 {
     ui->stackedWidget->setCurrentIndex(13);
-//    ui->lineEdit_chercherNom_2->hide();
-//    ui->lineEdit_chercherReference->hide();
+    //    ui->lineEdit_chercherNom_2->hide();
+    //    ui->lineEdit_chercherReference->hide();
     ui->lineEdit_idMachine_3->hide();
     ui->lineEdit_prix_4->hide();
     ui->lineEdit_nom_8->hide();
@@ -551,8 +739,8 @@ void MainWindow::on_pushButton_chercherMachine_4_clicked()
 void MainWindow::on_pushButton_chercherMachine_5_clicked()
 {
     ui->stackedWidget->setCurrentIndex(13);
-//    ui->lineEdit_chercherNom_2->hide();
-//    ui->lineEdit_chercherReference->hide();
+    //    ui->lineEdit_chercherNom_2->hide();
+    //    ui->lineEdit_chercherReference->hide();
     ui->lineEdit_idMachine_3->hide();
     ui->lineEdit_prix_4->hide();
     ui->lineEdit_nom_8->hide();
@@ -563,8 +751,8 @@ void MainWindow::on_pushButton_chercherMachine_5_clicked()
 void MainWindow::on_pushButton_chercherMachine_6_clicked()
 {
     ui->stackedWidget->setCurrentIndex(13);
-//    ui->lineEdit_chercherNom_2->hide();
-//    ui->lineEdit_chercherReference->hide();
+    //    ui->lineEdit_chercherNom_2->hide();
+    //    ui->lineEdit_chercherReference->hide();
     ui->lineEdit_idMachine_3->hide();
     ui->lineEdit_prix_4->hide();
     ui->lineEdit_nom_8->hide();
@@ -585,6 +773,17 @@ void MainWindow::on_pushButton_ajouterMachine_8_clicked()
 void MainWindow::on_pushButton_modifierMachine_8_clicked()
 {
     ui->stackedWidget->setCurrentIndex(8);
+    ui->lineEdit_id_2->hide();
+    ui->lineEdit_prix_2->hide();
+    ui->lineEdit_nom_4->hide();
+    ui->lineEdit_reference_2->hide();
+    ui->lineEdit_categorie_2->hide();
+    ui->label_idMachine->hide();
+    ui->label_prix->hide();
+    ui->label_nom_2->hide();
+    ui->label_ref->hide();
+    ui->label_catg->hide();
+    ui->pushButton_modifierMachine_4->hide();
 }
 
 void MainWindow::on_pushButton_afficherMachine_7_clicked()
@@ -616,6 +815,131 @@ void MainWindow::on_pushButton_aide_clicked()
 void MainWindow::on_pushButton_retour_12_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+}
+/***********************bouton mailing*****************************/
+void MainWindow::on_pushButton_envoyerMail_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(15);
+}
+
+void MainWindow::on_pushButton_envoyerMail_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(15);
+}
+
+void MainWindow::on_pushButton_envoyerMail_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(15);
+}
+
+void MainWindow::on_pushButton_envoyerMail_4_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(15);
+}
+
+void MainWindow::on_pushButton_envoyerMail_5_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(15);
+}
+
+void MainWindow::on_pushButton_envoyerMail_6_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(15);
+}
+
+void MainWindow::on_pushButton_ajouterEmploye_8_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_pushButton_modifierEmploye_8_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+    ui->lineEdit_nom_2->hide();
+    ui->lineEdit_prenom_2->hide();
+    ui->lineEdit_identifiant_2->hide();
+    ui->dateEdit_naissance_2->hide();
+    ui->lineEdit_poste_2->hide();
+    ui->lineEdit_salaire_2->hide();
+    ui->lineEdit_telephone_2->hide();
+    ui->lineEdit_mail_2->hide();
+    ui->lineEdit_domicile_2->hide();
+    ui->lineEdit_cin_2->hide();
+    ui->lineEdit_sexe_2->hide();
+    ui->pushButton_modifierEmploye_4->hide();
+    ui->label_nom->hide();
+    ui->label_prenom->hide();
+    ui->label_id->hide();
+    ui->label_naissance->hide();
+    ui->label_poste->hide();
+    ui->label_salaire->hide();
+    ui->label_telephone->hide();
+    ui->label_mail->hide();
+    ui->label_domicile->hide();
+    ui->label_cin->hide();
+    ui->label_sexe->hide();
+}
+
+void MainWindow::on_pushButton_afficherEmploye_7_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+void MainWindow::on_pushButton_supprimerEmploye_7_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+    ui->lineEdit_nom_5->hide();
+    ui->lineEdit_prenom_3->hide();
+    ui->lineEdit_identifiant_3->hide();
+    ui->dateEdit_naissance_3->hide();
+    ui->lineEdit_poste_3->hide();
+    ui->lineEdit_salaire_3->hide();
+    ui->lineEdit_telephone_3->hide();
+    ui->lineEdit_mail_3->hide();
+    ui->lineEdit_domicile_3->hide();
+    ui->lineEdit_cin_3->hide();
+    ui->lineEdit_sexe_3->hide();
+    ui->pushButton_supprimerE->hide();
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(12);
+    //    ui->lineEdit_chercherNom->hide();
+    //    ui->lineEdit_chercherCIN->hide();
+    ui->lineEdit_nom_7->hide();
+    ui->lineEdit_prenom_4->hide();
+    ui->lineEdit_identifiant_4->hide();
+    ui->dateEdit_naissance_4->hide();
+    ui->lineEdit_poste_4->hide();
+    ui->lineEdit_salaire_4->hide();
+    ui->lineEdit_telephone_4->hide();
+    ui->lineEdit_mail_4->hide();
+    ui->lineEdit_domicile_4->hide();
+    ui->lineEdit_cin_4->hide();
+    ui->lineEdit_sexe_4->hide();
+}
+
+void MainWindow::on_pushButton_retour_13_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+/*************pointage*******************/
+
+void MainWindow::on_pushButton_retour_14_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_pushButton_pointer_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(16);
+}
+
+/**************quitter l'application************************************/
+void MainWindow::on_pushButton_quitter_clicked()
+{
+    close();
 }
 
 /**********************MACHINE***************************/
@@ -693,21 +1017,21 @@ void MainWindow::on_pushButton_rechercherSM_clicked()//recherche supprimer
 
     if(m.verifMachine()==0)
     {
-    ui->lineEdit_idMachine_2->show();
-    ui->lineEdit_prix_3->show();
-    ui->lineEdit_nom_6->show();
-    ui->lineEdit_reference_3->show();
-    ui->lineEdit_categorie_3->show();
-    ui->pushButton_supprimerM->show();
+        ui->lineEdit_idMachine_2->show();
+        ui->lineEdit_prix_3->show();
+        ui->lineEdit_nom_6->show();
+        ui->lineEdit_reference_3->show();
+        ui->lineEdit_categorie_3->show();
+        ui->pushButton_supprimerM->show();
 
-    QString id=QString::number(m.GetIdMachine());
-    QString pr=QString::number(m.GetPrix());
+        QString id=QString::number(m.GetIdMachine());
+        QString pr=QString::number(m.GetPrix());
 
-    ui->lineEdit_idMachine_2->setText(id);
-    ui->lineEdit_prix_3->setText(pr);
-    ui->lineEdit_nom_6->setText(m.GetNom());
-    ui->lineEdit_reference_3->setText(m.GetReference());
-    ui->lineEdit_categorie_3->setText(m.GetCategorie());
+        ui->lineEdit_idMachine_2->setText(id);
+        ui->lineEdit_prix_3->setText(pr);
+        ui->lineEdit_nom_6->setText(m.GetNom());
+        ui->lineEdit_reference_3->setText(m.GetReference());
+        ui->lineEdit_categorie_3->setText(m.GetCategorie());
     }
     else
     {
@@ -724,21 +1048,30 @@ void MainWindow::on_pushButton_rechercherModM_clicked()//recherche modification
 
     if(m.verifMachine()==0)
     {
-        if(m.rechercherModifierMachine())
-        {
-            QString id=QString::number(m.GetIdMachine());
-            QString pr=QString::number(m.GetPrix());
+        ui->lineEdit_id_2->show();
+        ui->lineEdit_prix_2->show();
+        ui->lineEdit_nom_4->show();
+        ui->lineEdit_reference_2->show();
+        ui->lineEdit_categorie_2->show();
+        ui->label_idMachine->show();
+        ui->label_prix->show();
+        ui->label_nom_2->show();
+        ui->label_ref->show();
+        ui->label_catg->show();
+        ui->pushButton_modifierMachine_4->show();
 
-            ui->lineEdit_id_2->setText(id);
-            ui->lineEdit_prix_2->setText(pr);
-            ui->lineEdit_nom_4->setText(m.GetNom());
-            ui->lineEdit_reference_2->setText(m.GetReference());
-            ui->lineEdit_categorie_2->setText(m.GetCategorie());
+        QString id=QString::number(m.GetIdMachine());
+        QString pr=QString::number(m.GetPrix());
 
-//            QMessageBox::information(nullptr, QObject::tr("ok"),
-//                                     QObject::tr("Machine existe \n"
-//                                                 "click cancel to exit."), QMessageBox::Cancel);
-        }
+        ui->lineEdit_id_2->setText(id);
+        ui->lineEdit_prix_2->setText(pr);
+        ui->lineEdit_nom_4->setText(m.GetNom());
+        ui->lineEdit_reference_2->setText(m.GetReference());
+        ui->lineEdit_categorie_2->setText(m.GetCategorie());
+
+        //            QMessageBox::information(nullptr, QObject::tr("ok"),
+        //                                     QObject::tr("Machine existe \n"
+        //                                                 "click cancel to exit."), QMessageBox::Cancel);
     }
     else
     {
@@ -847,8 +1180,8 @@ void MainWindow::on_pushButton_chercherMachine_8_clicked()
     else
     {
         QMessageBox::critical(nullptr, QObject::tr("ok"),
-                                 QObject::tr("Machine non trouve \n"
-                                             "click cancel to exit."), QMessageBox::Cancel);
+                              QObject::tr("Machine non trouve \n"
+                                          "click cancel to exit."), QMessageBox::Cancel);
     }
 }
 
@@ -894,8 +1227,8 @@ void MainWindow::on_pushButton_chercherMachine_9_clicked()
     else
     {
         QMessageBox::critical(nullptr, QObject::tr("ok"),
-                                 QObject::tr("Machine non trouve \n"
-                                             "click cancel to exit."), QMessageBox::Cancel);
+                              QObject::tr("Machine non trouve \n"
+                                          "click cancel to exit."), QMessageBox::Cancel);
     }
 }
 
@@ -942,8 +1275,8 @@ void MainWindow::on_pushButton_chercherMachine_10_clicked()
     else
     {
         QMessageBox::critical(nullptr, QObject::tr("ok"),
-                                 QObject::tr("Machine non trouve \n"
-                                             "click cancel to exit."), QMessageBox::Cancel);
+                              QObject::tr("Machine non trouve \n"
+                                          "click cancel to exit."), QMessageBox::Cancel);
     }
 }
 
@@ -970,6 +1303,7 @@ void MainWindow::on_pushButton_ajouterEmploye_3_clicked()
         bool test=e.ajouterEmploye();
         if (test)
         {
+            ui->comboBox_mail->setModel(e.afficher_email());
             ui->tabEmploye->setModel(e.afficherEmploye());
             QMessageBox::information(nullptr, QObject::tr("ok"),
                                      QObject::tr("Ajout Employe effectue \n"
@@ -1042,10 +1376,6 @@ void MainWindow::on_pushButton_rechercherSE_clicked()//recherche supprimer emplo
 
     if(e.verifEmploye()==0)
     {
-//        QMessageBox::information(nullptr, QObject::tr("ok"),
-//                                 QObject::tr("l'identifiant existe \n"
-//                                             "click cancel to exit."), QMessageBox::Cancel);
-
         ui->lineEdit_nom_5->show();
         ui->lineEdit_prenom_3->show();
         ui->lineEdit_identifiant_3->show();
@@ -1063,6 +1393,7 @@ void MainWindow::on_pushButton_rechercherSE_clicked()//recherche supprimer emplo
         QString sl=QString::number(e.GetSalaire());
         QString cn=QString::number(e.GetCin());
         QString tel=QString::number(e.GetTelephone());
+
         ui->lineEdit_nom_5->setText(e.GetNom());
         ui->lineEdit_prenom_3->setText(e.GetPrenom());
         ui->lineEdit_identifiant_3->setText(id);
@@ -1088,45 +1419,57 @@ void MainWindow::on_pushButton_rechercherME_clicked()//rechercher modification e
     QString idEmploye= ui->lineEdit_idModifierE->text();
     e.SetIdentifiant(idEmploye.toInt());
 
-    //    bool test =e.verifEmploye();
     if(e.verifEmploye()==0)
     {
-        if (e.rechercherEmploye())
-        {
-            QSqlQuery query;
 
-            QString id=QString::number((e.GetIdentifiant()));
-            QString sl=QString::number(e.GetSalaire());
-            QString cn=QString::number(e.GetCin());
-            QString tel=QString::number(e.GetTelephone());
+        ui->lineEdit_nom_2->show();
+        ui->lineEdit_prenom_2->show();
+        ui->lineEdit_identifiant_2->show();
+        ui->dateEdit_naissance_2->show();
+        ui->lineEdit_poste_2->show();
+        ui->lineEdit_salaire_2->show();
+        ui->lineEdit_telephone_2->show();
+        ui->lineEdit_mail_2->show();
+        ui->lineEdit_domicile_2->show();
+        ui->lineEdit_cin_2->show();
+        ui->lineEdit_sexe_2->show();
+        ui->pushButton_modifierEmploye_4->show();
+        ui->label_nom->show();
+        ui->label_prenom->show();
+        ui->label_id->show();
+        ui->label_naissance->show();
+        ui->label_poste->show();
+        ui->label_salaire->show();
+        ui->label_telephone->show();
+        ui->label_mail->show();
+        ui->label_domicile->show();
+        ui->label_cin->show();
+        ui->label_sexe->show();
 
-            ui->lineEdit_nom_2->setText(e.GetNom());
-            ui->lineEdit_prenom_2->setText(e.GetPrenom());
-            ui->lineEdit_identifiant_2->setText(id);
-            ui->dateEdit_naissance_2->setDate(QDate::fromString(e.GetNaissance(),"dd/MM/yyyy"));
-            ui->lineEdit_poste_2->setText(e.GetPoste());
-            ui->lineEdit_salaire_2->setText(sl);
-            ui->lineEdit_telephone_2->setText(tel);
-            ui->lineEdit_mail_2->setText(e.GetMail());
-            ui->lineEdit_domicile_2->setText(e.GetDomicile());
-            ui->lineEdit_cin_2->setText(cn);
-            ui->lineEdit_sexe_2->setText(e.GetSexe());
+        QString id=QString::number((e.GetIdentifiant()));
+        QString sl=QString::number(e.GetSalaire());
+        QString cn=QString::number(e.GetCin());
+        QString tel=QString::number(e.GetTelephone());
 
-//            QMessageBox::information(nullptr, QObject::tr("ok"),
-//                                     QObject::tr("Employe existe \n"
-//                                                 "click cancel to exit."), QMessageBox::Cancel);
-        }
-        else
-        {
-            QMessageBox::critical(nullptr, QObject::tr("ok"),
-                                  QObject::tr("Employe n'existe pas \n"
-                                              "click cancel to exit."), QMessageBox::Cancel);
-             ui->lineEdit_idModifierE->clear();
-        }
+        ui->lineEdit_nom_2->setText(e.GetNom());
+        ui->lineEdit_prenom_2->setText(e.GetPrenom());
+        ui->lineEdit_identifiant_2->setText(id);
+        ui->dateEdit_naissance_2->setDate(QDate::fromString(e.GetNaissance(),"dd/MM/yyyy"));
+        ui->lineEdit_poste_2->setText(e.GetPoste());
+        ui->lineEdit_salaire_2->setText(sl);
+        ui->lineEdit_telephone_2->setText(tel);
+        ui->lineEdit_mail_2->setText(e.GetMail());
+        ui->lineEdit_domicile_2->setText(e.GetDomicile());
+        ui->lineEdit_cin_2->setText(cn);
+        ui->lineEdit_sexe_2->setText(e.GetSexe());
+
     }
     else
     {
-        QMessageBox::warning(this,"echec","Employe n'existe pas!");
+        QMessageBox::critical(nullptr, QObject::tr("ok"),
+                              QObject::tr("Employe n'existe pas \n"
+                                          "click cancel to exit."), QMessageBox::Cancel);
+        ui->lineEdit_idModifierE->clear();
     }
 }
 
@@ -1269,27 +1612,27 @@ void MainWindow::on_pushButton_chercherEmploye_clicked()
     else
     {
         QMessageBox::critical(nullptr, QObject::tr("ok"),
-                                 QObject::tr("Employe non trouve \n"
-                                             "click cancel to exit."), QMessageBox::Cancel);
+                              QObject::tr("Employe non trouve \n"
+                                          "click cancel to exit."), QMessageBox::Cancel);
     }
 }
 
 void MainWindow::on_tabWidget_currentChanged(int index)
 {
     QLineSeries *series = new QLineSeries();
-       series->append(0,6);
-       series->append(2,4);
-       series->append(3,8);
-       series->append(10,5);
-       *series << QPoint(11,1)<<QPoint(13,3)<<QPoint(17,6)<<QPoint(18,3)<<QPoint(20,2);
-       QChart *chart = new QChart();
-       chart->legend()->hide();
-       chart->addSeries(series);
-       chart->createDefaultAxes();
-       chart->setTitle("Rendement de Machines");
-       QChartView *chartview=new QChartView(chart);
-       chartview->setRenderHint(QPainter::Antialiasing);
-       chartview->setParent(ui->horizontalFrame1);
+    series->append(0,6);
+    series->append(2,4);
+    series->append(3,8);
+    series->append(10,5);
+    *series << QPoint(11,1)<<QPoint(13,3)<<QPoint(17,6)<<QPoint(18,3)<<QPoint(20,2);
+    QChart *chart = new QChart();
+    chart->legend()->hide();
+    chart->addSeries(series);
+    chart->createDefaultAxes();
+    chart->setTitle("Rendement de Machines");
+    QChartView *chartview=new QChartView(chart);
+    chartview->setRenderHint(QPainter::Antialiasing);
+    chartview->setParent(ui->horizontalFrame1);
 }
 
 void MainWindow::on_tabWidget_tabBarClicked(int index)
@@ -1375,8 +1718,8 @@ void MainWindow::on_pushButton_chercherEmploye_2_clicked()
     else
     {
         QMessageBox::critical(nullptr, QObject::tr("ok"),
-                                 QObject::tr("Employe non trouve \n"
-                                             "click cancel to exit."), QMessageBox::Cancel);
+                              QObject::tr("Employe non trouve \n"
+                                          "click cancel to exit."), QMessageBox::Cancel);
     }
 }
 
@@ -1442,11 +1785,162 @@ void MainWindow::on_pushButton_chercherEmploye_3_clicked()
     else
     {
         QMessageBox::critical(nullptr, QObject::tr("ok"),
-                                 QObject::tr("Employe non trouve \n"
-                                             "click cancel to exit."), QMessageBox::Cancel);
+                              QObject::tr("Employe non trouve \n"
+                                          "click cancel to exit."), QMessageBox::Cancel);
     }
 }
 
 
+/*************************************Mailing*************************************/
+
+bool envoie_Retour(bool msg)
+{
+    return msg;
+}
+
+void MainWindow::on_pushButton_envoyer_clicked()
+{    
+    //    QString expediteur = ui->server->text();
+    //    int port = ui->port->text().toInt();
+    //    QString nomUtilisateur= ui->uname->text();
+    //    QString mdp= ui->paswd->text();
+    //    QString accepteur =ui->rcpt->text();
+    //    QString sujet= ui->subject->text();
+    //    QString msg= ui->msg->toPlainText();
+
+    //    if ((expediteur!=NULL)&&(port!=NULL)&&(nomUtilisateur!=NULL)&&(mdp!=NULL)&&(accepteur!=NULL)&&(sujet!=NULL)&&(msg!=NULL))
+    //    {
+    //        envoie=true;
+    //        envoie_Retour(envoie);
+    //        //close();
+    //        QMessageBox::information(nullptr, QObject::tr("ok"),
+    //                                 QObject::tr("Msg envoye \n"
+    //                                             "click cancel to exit."), QMessageBox::Cancel);
+    //    }
+    //    else
+    //    {
+    //        QMessageBox::critical(nullptr, QObject::tr("ok"),
+    //                              QObject::tr("Msg non envoye \n"
+    //                                          "click cancel to exit."), QMessageBox::Cancel);
+    //    }
 
 
+    //    QString status;
+    //    smtp* s = new smtp(ui->lineEdit_administrateur->text(),ui->lineEdit_numMecanicien->text() , ui->lineEdit_sujet->text(),ui->textEdit_msg->toPlainText() );
+    //    smtp* s;
+
+    //        connect(s, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+
+    //        s->sendMail(ui->lineEdit_administrateur->text(), ui->lineEdit_numMecanicien->text() , ui->lineEdit_sujet->text(),ui->textEdit_msg->toPlainText());
+    //        QMessageBox::information(nullptr, QObject::tr("ok"),
+    //                                        QObject::tr("Msg envoye \n"
+    //                                                    "click cancel to exit."), QMessageBox::Cancel);
+
+    //    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
+    //        connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+
+    //        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+    //    }
+
+
+    //        if(status == "Message sent")
+    //            QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+    Smtp* smtp = new Smtp("raniacheffai@gmail.com","RC02072000","smtp.gmail.com",465);
+    connect (smtp, SIGNAL (status (QString)), this, SLOT (mailSent(QString)));
+    smtp->sendMail("raniacheffai@gmail.com", ui->comboBox_mail->currentText(), ui->subject->text(), ui->msg->toPlainText());
+
+
+    //    Smtp * smtp = new Smtp ("amen.benkhalifaaa9@gmail.com", "191JMT2645", "smtp.gmail.com", 465);
+    //    connect (smtp, SIGNAL (status (QString)), this, SLOT (mailSent (QString)));
+    //    smtp-> sendMail ("amen.benkhalifaaa9@gmail.com", ui-> comboBox_mail-> currentText (), ui-> subject-> text (), ui-> msg-> toPlainText ());
+}
+
+/********************ARDUINO************************/
+void MainWindow::on_pushButton_on_clicked()
+{
+    a.write_to_arduino("1");
+}
+
+void MainWindow::on_pushButton_off_clicked()
+{
+    a.write_to_arduino("0");
+}
+
+void MainWindow::on_pushButton_sup_clicked()
+{
+    a.write_to_arduino("2");
+}
+
+void MainWindow::on_pushButton_inf_clicked()
+{
+    a.write_to_arduino("3");
+}
+
+void MainWindow::update_label()
+{
+    data=a.read_from_arduino();
+    if(data=="1")
+    {
+        ui->label_38->setText("ENTRE");
+    }
+    else if(data=="0")
+    {
+        ui->label_38->setText("SORTIE");
+    }
+}
+
+void MainWindow::on_pushButton_imprimer_clicked()
+{
+    //QDateTime datecreation = date.currentDateTime();
+    //QString afficheDC = "Date de Creation PDF : " + datecreation.toString() ;
+    QPdfWriter pdf("C:/Users/rania/Desktop/rania/Pdf.pdf");
+    QPainter painter(&pdf);
+    int i = 4000;
+    painter.setPen(Qt::blue);
+    painter.setFont(QFont("Arial", 30));
+    painter.drawText(1100,1200,"Liste des Employes ");
+    painter.setPen(Qt::black);
+    painter.setFont(QFont("Arial", 50));
+    // painter.drawText(1100,2000,afficheDC);
+    painter.drawRect(100,100,7300,2600);
+    //painter.drawPixmap(QRect(7600,70,2000,2600),QPixmap("C:/Users/RH/Desktop/projecpp/image/logopdf.png"));
+    painter.drawRect(0,3000,9600,500);
+    painter.setFont(QFont("Arial", 9));
+    painter.drawText(200,3300,"NOM");
+    painter.drawText(1700,3300,"PRENOM");
+    painter.drawText(3200,3300,"IDENTIFIANT");
+    painter.drawText(4900,3300,"NAISSANCE");
+    painter.drawText(6600,3300,"POSTE");
+    painter.drawText(8100,3300,"SALAIRE");
+    painter.drawText(9600,3300,"TELEPHONE");
+    painter.drawText(11100,3300,"MAIL");
+    painter.drawText(12600,3300,"DOMICILE");
+    painter.drawText(14100,3300,"CIN");
+    painter.drawText(15600,3300,"SEXE");
+    QSqlQuery query;
+    query.prepare("select * from EMPLOYE");
+    query.exec();
+    while (query.next())
+    {
+        painter.drawText(200,i,query.value(0).toString());
+        painter.drawText(1700,i,query.value(1).toString());
+        painter.drawText(3200,i,query.value(2).toString());
+        painter.drawText(4900,i,query.value(3).toString());
+        painter.drawText(6600,i,query.value(4).toString());
+        painter.drawText(8100,i,query.value(5).toString());
+        i = i + 500;
+    }
+    int reponse = QMessageBox::question(this, "Génerer PDF", "<PDF Enregistré>...Vous Voulez Affichez Le PDF ?", QMessageBox::Yes |  QMessageBox::No);
+    if (reponse == QMessageBox::Yes)
+    {
+        QDesktopServices::openUrl(QUrl::fromLocalFile("C:/Users/rania/Desktop/rania/Pdf.pdf"));
+        painter.end();
+    }
+    if (reponse == QMessageBox::No)
+    {
+        painter.end();
+    }
+
+}

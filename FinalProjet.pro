@@ -1,4 +1,4 @@
-QT       += core gui sql charts serialport
+QT       += core gui sql charts serialport network
 
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -10,19 +10,25 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    arduino.cpp \
     connexion.cpp \
     employe.cpp \
     machine.cpp \
+    mailing.cpp \
     main.cpp \
     mainwindow.cpp \
-    statclass.cpp \
+    smtp.cpp \
+    statclass.cpp
 
 HEADERS += \
+    arduino.h \
     connexion.h \
     employe.h \
     machine.h \
+    mailing.h \
     mainwindow.h \
-    statclass.h \
+    smtp.h \
+    statclass.h
 
 FORMS += \
     mainwindow.ui
@@ -34,3 +40,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     bouton.qrc
+
+DISTFILES += \
+    libeay32.dll \
+    smtp.exe \
+    ssleay32.dll

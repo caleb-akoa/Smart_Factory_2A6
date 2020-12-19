@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1115</width>
+    <width>1236</width>
     <height>755</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1121</width>
+      <width>1241</width>
       <height>61</height>
      </rect>
     </property>
@@ -38,7 +38,7 @@
        <x>10</x>
        <y>10</y>
        <width>186</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -61,13 +61,132 @@ border-style: outset;
       <string>Aide</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_quitter">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>10</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#pushButton_quitter
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_quitter:hover
+{
+	border-color: blue;
+}</string>
+     </property>
+     <property name="text">
+      <string>Quitter</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_144">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>20</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../Bouttons/quitter-removebg-preview (1).png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_141">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../Bouttons/aide-removebg-preview.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_pointer">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>10</y>
+       <width>241</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#pushButton_pointer
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_pointer:hover
+{
+	border-color: blue;
+}</string>
+     </property>
+     <property name="text">
+      <string>Pointage des employes</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_39">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>20</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../Bouttons/pointage-removebg-preview.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="frame_2">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>60</y>
-      <width>1121</width>
+      <width>1241</width>
       <height>80</height>
      </rect>
     </property>
@@ -99,12 +218,12 @@ border-style: outset;
      <rect>
       <x>0</x>
       <y>140</y>
-      <width>1121</width>
+      <width>1241</width>
       <height>581</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>13</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label_2">
@@ -131,7 +250,7 @@ border-style: outset;
        <rect>
         <x>180</x>
         <y>0</y>
-        <width>941</width>
+        <width>1061</width>
         <height>601</height>
        </rect>
       </property>
@@ -400,7 +519,7 @@ background-color: rgb(255, 255, 255);
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>760</x>
+        <x>840</x>
         <y>200</y>
         <width>291</width>
         <height>171</height>
@@ -688,7 +807,7 @@ background-color: rgb(255, 255, 255);
        <rect>
         <x>180</x>
         <y>0</y>
-        <width>941</width>
+        <width>1061</width>
         <height>591</height>
        </rect>
       </property>
@@ -705,8 +824,8 @@ background-color: rgb(255, 255, 255);
      <widget class="QPushButton" name="pushButton_ajouterEmploye">
       <property name="geometry">
        <rect>
-        <x>220</x>
-        <y>50</y>
+        <x>230</x>
+        <y>30</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -736,8 +855,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_modifierEmploye">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>160</y>
+        <x>390</x>
+        <y>110</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -767,8 +886,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_afficherEmploye">
       <property name="geometry">
        <rect>
-        <x>550</x>
-        <y>270</y>
+        <x>540</x>
+        <y>190</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -798,8 +917,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_supprimerEmploye">
       <property name="geometry">
        <rect>
-        <x>680</x>
-        <y>390</y>
+        <x>670</x>
+        <y>280</y>
         <width>201</width>
         <height>41</height>
        </rect>
@@ -829,8 +948,8 @@ border-style: outset;
      <widget class="QLabel" name="label_51">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>60</y>
+        <x>240</x>
+        <y>40</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -848,8 +967,8 @@ border-style: outset;
      <widget class="QLabel" name="label_50">
       <property name="geometry">
        <rect>
-        <x>410</x>
-        <y>170</y>
+        <x>400</x>
+        <y>120</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -867,8 +986,8 @@ border-style: outset;
      <widget class="QLabel" name="label_49">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>280</y>
+        <x>550</x>
+        <y>200</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -886,8 +1005,8 @@ border-style: outset;
      <widget class="QLabel" name="label_48">
       <property name="geometry">
        <rect>
-        <x>690</x>
-        <y>400</y>
+        <x>680</x>
+        <y>290</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -905,8 +1024,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>850</x>
-        <y>510</y>
+        <x>810</x>
+        <y>390</y>
         <width>201</width>
         <height>41</height>
        </rect>
@@ -936,8 +1055,8 @@ border-style: outset;
      <widget class="QLabel" name="label_101">
       <property name="geometry">
        <rect>
-        <x>860</x>
-        <y>520</y>
+        <x>820</x>
+        <y>400</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -952,6 +1071,56 @@ border-style: outset;
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_envoyerMail">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>500</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_envoyerMail
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(145, 145, 145, 151), stop:1 rgba(145, 145, 145, 145));
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_envoyerMail:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Envoyer un Mail</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_128">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>510</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/mail-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_3">
      <widget class="QFrame" name="frame_3">
@@ -959,7 +1128,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>61</height>
        </rect>
       </property>
@@ -1222,13 +1391,63 @@ border-style: outset;
         <bool>true</bool>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_envoyerMail_2">
+       <property name="geometry">
+        <rect>
+         <x>1050</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_envoyerMail_2
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_envoyerMail_2:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Envoyer un Mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_129">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/mail-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>60</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>521</height>
        </rect>
       </property>
@@ -1245,9 +1464,9 @@ border-style: outset;
      <widget class="QWidget" name="verticalLayoutWidget_3">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>420</x>
         <y>70</y>
-        <width>351</width>
+        <width>401</width>
         <height>491</height>
        </rect>
       </property>
@@ -1355,7 +1574,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -1386,7 +1605,7 @@ border-style: outset;
      <widget class="QLabel" name="label_45">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -1409,7 +1628,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>61</height>
        </rect>
       </property>
@@ -1672,13 +1891,63 @@ border-style: outset;
         <bool>true</bool>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_envoyerMail_3">
+       <property name="geometry">
+        <rect>
+         <x>1050</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_envoyerMail_3
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_envoyerMail_3:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Envoyer un Mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_130">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/mail-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
      <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>60</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>521</height>
        </rect>
       </property>
@@ -1695,10 +1964,10 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_idModifierE">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>70</y>
-        <width>241</width>
-        <height>22</height>
+        <x>40</x>
+        <y>220</y>
+        <width>251</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="placeholderText">
@@ -1708,8 +1977,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_rechercherME">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>70</y>
+        <x>90</x>
+        <y>260</y>
         <width>151</width>
         <height>28</height>
        </rect>
@@ -1739,8 +2008,8 @@ border-style: outset;
      <widget class="QLabel" name="label_34">
       <property name="geometry">
        <rect>
-        <x>670</x>
-        <y>70</y>
+        <x>100</x>
+        <y>260</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -1758,9 +2027,9 @@ border-style: outset;
      <widget class="QWidget" name="verticalLayoutWidget_4">
       <property name="geometry">
        <rect>
-        <x>410</x>
-        <y>100</y>
-        <width>371</width>
+        <x>620</x>
+        <y>110</y>
+        <width>421</width>
         <height>461</height>
        </rect>
       </property>
@@ -1868,7 +2137,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour_2">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -1899,7 +2168,7 @@ border-style: outset;
      <widget class="QLabel" name="label_46">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -1918,85 +2187,85 @@ border-style: outset;
      <widget class="QWidget" name="verticalLayoutWidget_9">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>100</y>
+        <x>470</x>
+        <y>110</y>
         <width>160</width>
         <height>401</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_8">
        <item>
-        <widget class="QLabel" name="label_31">
+        <widget class="QLabel" name="label_nom">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Nom&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_33">
+        <widget class="QLabel" name="label_prenom">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Prenom&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_32">
+        <widget class="QLabel" name="label_id">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Identifiant&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_38">
+        <widget class="QLabel" name="label_naissance">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Date de Naissance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_40">
+        <widget class="QLabel" name="label_poste">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Poste&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_42">
+        <widget class="QLabel" name="label_salaire">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Salaire&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_39">
+        <widget class="QLabel" name="label_telephone">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Telephone&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_43">
+        <widget class="QLabel" name="label_mail">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Adresse Mail&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_44">
+        <widget class="QLabel" name="label_domicile">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Adresse Domicile&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_41">
+        <widget class="QLabel" name="label_cin">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;CIN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_98">
+        <widget class="QLabel" name="label_sexe">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Sexe&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
@@ -2011,7 +2280,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>61</height>
        </rect>
       </property>
@@ -2274,13 +2543,63 @@ border-style: outset;
         <bool>true</bool>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_envoyerMail_4">
+       <property name="geometry">
+        <rect>
+         <x>1050</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_envoyerMail_4
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_envoyerMail_4:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Envoyer un Mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_131">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/mail-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>60</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>521</height>
        </rect>
       </property>
@@ -2340,7 +2659,7 @@ border-style: outset;
        <rect>
         <x>70</x>
         <y>120</y>
-        <width>1001</width>
+        <width>931</width>
         <height>411</height>
        </rect>
       </property>
@@ -2348,7 +2667,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour_3">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -2379,7 +2698,7 @@ border-style: outset;
      <widget class="QLabel" name="label_47">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -2426,6 +2745,56 @@ border-style: outset;
        <string>Trier</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_imprimer">
+      <property name="geometry">
+       <rect>
+        <x>1030</x>
+        <y>290</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_imprimer
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_imprimer:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Imprimer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>290</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/imprimer-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_6">
      <widget class="QFrame" name="frame_6">
@@ -2433,7 +2802,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>61</height>
        </rect>
       </property>
@@ -2696,13 +3065,63 @@ border-style: outset;
         <bool>true</bool>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_envoyerMail_5">
+       <property name="geometry">
+        <rect>
+         <x>1050</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_envoyerMail_5
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_envoyerMail_5:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Envoyer un Mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_132">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/mail-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>60</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>521</height>
        </rect>
       </property>
@@ -2782,7 +3201,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour_9">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -2813,7 +3232,7 @@ border-style: outset;
      <widget class="QLabel" name="label_97">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -2834,7 +3253,7 @@ border-style: outset;
        <rect>
         <x>450</x>
         <y>70</y>
-        <width>361</width>
+        <width>411</width>
         <height>491</height>
        </rect>
       </property>
@@ -3217,7 +3636,7 @@ background-color: rgb(255, 255, 255);
        <rect>
         <x>180</x>
         <y>0</y>
-        <width>941</width>
+        <width>1061</width>
         <height>581</height>
        </rect>
       </property>
@@ -3234,8 +3653,8 @@ background-color: rgb(255, 255, 255);
      <widget class="QPushButton" name="pushButton_ajouterMachine">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>50</y>
+        <x>240</x>
+        <y>60</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -3265,8 +3684,8 @@ border-style: outset;
      <widget class="QLabel" name="label_68">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>60</y>
+        <x>250</x>
+        <y>70</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -3284,8 +3703,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_modifierMachine">
       <property name="geometry">
        <rect>
-        <x>410</x>
-        <y>130</y>
+        <x>430</x>
+        <y>140</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -3315,8 +3734,8 @@ border-style: outset;
      <widget class="QLabel" name="label_69">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>140</y>
+        <x>440</x>
+        <y>150</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -3334,8 +3753,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_afficherMachine">
       <property name="geometry">
        <rect>
-        <x>520</x>
-        <y>210</y>
+        <x>540</x>
+        <y>220</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -3365,8 +3784,8 @@ border-style: outset;
      <widget class="QLabel" name="label_70">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>220</y>
+        <x>550</x>
+        <y>230</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -3384,7 +3803,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_supprimerMachine">
       <property name="geometry">
        <rect>
-        <x>630</x>
+        <x>680</x>
         <y>300</y>
         <width>201</width>
         <height>41</height>
@@ -3415,7 +3834,7 @@ border-style: outset;
      <widget class="QLabel" name="label_71">
       <property name="geometry">
        <rect>
-        <x>640</x>
+        <x>690</x>
         <y>310</y>
         <width>21</width>
         <height>21</height>
@@ -3434,8 +3853,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_statistiques">
       <property name="geometry">
        <rect>
-        <x>770</x>
-        <y>380</y>
+        <x>840</x>
+        <y>390</y>
         <width>201</width>
         <height>41</height>
        </rect>
@@ -3465,8 +3884,8 @@ border-style: outset;
      <widget class="QLabel" name="label_21">
       <property name="geometry">
        <rect>
-        <x>790</x>
-        <y>390</y>
+        <x>860</x>
+        <y>400</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -3484,8 +3903,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_chercherMachine">
       <property name="geometry">
        <rect>
-        <x>890</x>
-        <y>490</y>
+        <x>980</x>
+        <y>500</y>
         <width>201</width>
         <height>41</height>
        </rect>
@@ -3515,8 +3934,8 @@ border-style: outset;
      <widget class="QLabel" name="label_106">
       <property name="geometry">
        <rect>
-        <x>900</x>
-        <y>500</y>
+        <x>990</x>
+        <y>510</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -3538,7 +3957,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>61</height>
        </rect>
       </property>
@@ -3554,7 +3973,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_ajouterMachine_2">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>20</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -3585,7 +4004,7 @@ border-style: outset;
       <widget class="QLabel" name="label_72">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>30</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -3604,7 +4023,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_modifierMachine_2">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>220</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -3635,7 +4054,7 @@ border-style: outset;
       <widget class="QLabel" name="label_73">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>230</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -3654,7 +4073,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_afficherMachine_2">
        <property name="geometry">
         <rect>
-         <x>360</x>
+         <x>420</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -3685,7 +4104,7 @@ border-style: outset;
       <widget class="QLabel" name="label_74">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>430</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -3704,7 +4123,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_supprimerMachine_2">
        <property name="geometry">
         <rect>
-         <x>540</x>
+         <x>620</x>
          <y>10</y>
          <width>191</width>
          <height>41</height>
@@ -3735,7 +4154,7 @@ border-style: outset;
       <widget class="QLabel" name="label_75">
        <property name="geometry">
         <rect>
-         <x>550</x>
+         <x>630</x>
          <y>20</y>
          <width>16</width>
          <height>20</height>
@@ -3754,7 +4173,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_statistiques_2">
        <property name="geometry">
         <rect>
-         <x>730</x>
+         <x>830</x>
          <y>10</y>
          <width>171</width>
          <height>41</height>
@@ -3785,7 +4204,7 @@ border-style: outset;
       <widget class="QLabel" name="label_22">
        <property name="geometry">
         <rect>
-         <x>740</x>
+         <x>840</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -3804,7 +4223,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_chercherMachine_2">
        <property name="geometry">
         <rect>
-         <x>900</x>
+         <x>1020</x>
          <y>10</y>
          <width>201</width>
          <height>41</height>
@@ -3835,7 +4254,7 @@ border-style: outset;
       <widget class="QLabel" name="label_107">
        <property name="geometry">
         <rect>
-         <x>910</x>
+         <x>1030</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -3857,7 +4276,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>60</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>521</height>
        </rect>
       </property>
@@ -3874,8 +4293,8 @@ border-style: outset;
      <widget class="QWidget" name="verticalLayoutWidget_6">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>70</y>
+        <x>430</x>
+        <y>80</y>
         <width>421</width>
         <height>471</height>
        </rect>
@@ -3946,7 +4365,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour_4">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -3977,7 +4396,7 @@ border-style: outset;
      <widget class="QLabel" name="label_76">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -4000,7 +4419,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>61</height>
        </rect>
       </property>
@@ -4016,7 +4435,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_ajouterMachine_4">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>20</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -4047,7 +4466,7 @@ border-style: outset;
       <widget class="QLabel" name="label_77">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>30</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -4066,7 +4485,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_modifierMachine_3">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>220</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -4097,7 +4516,7 @@ border-style: outset;
       <widget class="QLabel" name="label_78">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>230</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -4116,7 +4535,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_afficherMachine_3">
        <property name="geometry">
         <rect>
-         <x>360</x>
+         <x>420</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -4147,7 +4566,7 @@ border-style: outset;
       <widget class="QLabel" name="label_79">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>430</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -4166,7 +4585,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_supprimerMachine_3">
        <property name="geometry">
         <rect>
-         <x>540</x>
+         <x>620</x>
          <y>10</y>
          <width>191</width>
          <height>41</height>
@@ -4197,7 +4616,7 @@ border-style: outset;
       <widget class="QLabel" name="label_80">
        <property name="geometry">
         <rect>
-         <x>550</x>
+         <x>630</x>
          <y>20</y>
          <width>16</width>
          <height>20</height>
@@ -4216,7 +4635,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_statistiques_3">
        <property name="geometry">
         <rect>
-         <x>730</x>
+         <x>830</x>
          <y>10</y>
          <width>171</width>
          <height>41</height>
@@ -4247,7 +4666,7 @@ border-style: outset;
       <widget class="QLabel" name="label_23">
        <property name="geometry">
         <rect>
-         <x>740</x>
+         <x>840</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -4266,7 +4685,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_chercherMachine_3">
        <property name="geometry">
         <rect>
-         <x>900</x>
+         <x>1020</x>
          <y>10</y>
          <width>201</width>
          <height>41</height>
@@ -4297,7 +4716,7 @@ border-style: outset;
       <widget class="QLabel" name="label_108">
        <property name="geometry">
         <rect>
-         <x>910</x>
+         <x>1030</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -4319,7 +4738,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>60</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>521</height>
        </rect>
       </property>
@@ -4336,8 +4755,8 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_idModifierM">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>80</y>
+        <x>30</x>
+        <y>180</y>
         <width>271</width>
         <height>31</height>
        </rect>
@@ -4349,8 +4768,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_rechercherModM">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>80</y>
+        <x>80</x>
+        <y>240</y>
         <width>151</width>
         <height>28</height>
        </rect>
@@ -4380,8 +4799,8 @@ border-style: outset;
      <widget class="QLabel" name="label_36">
       <property name="geometry">
        <rect>
-        <x>670</x>
-        <y>80</y>
+        <x>90</x>
+        <y>240</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -4399,10 +4818,10 @@ border-style: outset;
      <widget class="QWidget" name="verticalLayoutWidget_7">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>120</y>
-        <width>351</width>
-        <height>451</height>
+        <x>640</x>
+        <y>80</y>
+        <width>401</width>
+        <height>481</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_modifier">
@@ -4471,7 +4890,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour_5">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -4502,7 +4921,7 @@ border-style: outset;
      <widget class="QLabel" name="label_85">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -4521,43 +4940,43 @@ border-style: outset;
      <widget class="QWidget" name="verticalLayoutWidget_8">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>140</y>
+        <x>550</x>
+        <y>100</y>
         <width>160</width>
-        <height>331</height>
+        <height>351</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_7">
        <item>
-        <widget class="QLabel" name="label_28">
+        <widget class="QLabel" name="label_idMachine">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Identifiant&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_27">
+        <widget class="QLabel" name="label_prix">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Prix&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_20">
+        <widget class="QLabel" name="label_nom_2">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Nom&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_30">
+        <widget class="QLabel" name="label_ref">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Reference&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_29">
+        <widget class="QLabel" name="label_catg">
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Categorie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
@@ -4572,7 +4991,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>61</height>
        </rect>
       </property>
@@ -4588,7 +5007,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_ajouterMachine_5">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>20</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -4619,7 +5038,7 @@ border-style: outset;
       <widget class="QLabel" name="label_81">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>30</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -4638,7 +5057,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_modifierMachine_5">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>220</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -4669,7 +5088,7 @@ border-style: outset;
       <widget class="QLabel" name="label_82">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>230</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -4688,7 +5107,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_afficherMachine_4">
        <property name="geometry">
         <rect>
-         <x>360</x>
+         <x>420</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -4719,7 +5138,7 @@ border-style: outset;
       <widget class="QLabel" name="label_83">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>430</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -4738,7 +5157,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_supprimerMachine_4">
        <property name="geometry">
         <rect>
-         <x>540</x>
+         <x>620</x>
          <y>10</y>
          <width>191</width>
          <height>41</height>
@@ -4769,7 +5188,7 @@ border-style: outset;
       <widget class="QLabel" name="label_84">
        <property name="geometry">
         <rect>
-         <x>550</x>
+         <x>630</x>
          <y>20</y>
          <width>16</width>
          <height>20</height>
@@ -4788,7 +5207,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_statistiques_4">
        <property name="geometry">
         <rect>
-         <x>730</x>
+         <x>830</x>
          <y>10</y>
          <width>171</width>
          <height>41</height>
@@ -4819,7 +5238,7 @@ border-style: outset;
       <widget class="QLabel" name="label_24">
        <property name="geometry">
         <rect>
-         <x>740</x>
+         <x>840</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -4838,7 +5257,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_chercherMachine_4">
        <property name="geometry">
         <rect>
-         <x>900</x>
+         <x>1020</x>
          <y>10</y>
          <width>201</width>
          <height>41</height>
@@ -4869,7 +5288,7 @@ border-style: outset;
       <widget class="QLabel" name="label_109">
        <property name="geometry">
         <rect>
-         <x>910</x>
+         <x>1030</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -4891,7 +5310,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>60</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>521</height>
        </rect>
       </property>
@@ -4959,7 +5378,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour_6">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -4990,7 +5409,7 @@ border-style: outset;
      <widget class="QLabel" name="label_86">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -5044,7 +5463,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>61</height>
        </rect>
       </property>
@@ -5060,7 +5479,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_ajouterMachine_6">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>20</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -5091,7 +5510,7 @@ border-style: outset;
       <widget class="QLabel" name="label_87">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>30</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -5110,7 +5529,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_modifierMachine_6">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>220</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -5141,7 +5560,7 @@ border-style: outset;
       <widget class="QLabel" name="label_88">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>230</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -5160,7 +5579,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_afficherMachine_5">
        <property name="geometry">
         <rect>
-         <x>360</x>
+         <x>420</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -5191,7 +5610,7 @@ border-style: outset;
       <widget class="QLabel" name="label_89">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>430</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -5210,7 +5629,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_supprimerMachine_5">
        <property name="geometry">
         <rect>
-         <x>540</x>
+         <x>620</x>
          <y>10</y>
          <width>191</width>
          <height>41</height>
@@ -5241,7 +5660,7 @@ border-style: outset;
       <widget class="QLabel" name="label_90">
        <property name="geometry">
         <rect>
-         <x>550</x>
+         <x>630</x>
          <y>20</y>
          <width>16</width>
          <height>20</height>
@@ -5260,7 +5679,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_statistiques_5">
        <property name="geometry">
         <rect>
-         <x>730</x>
+         <x>830</x>
          <y>10</y>
          <width>171</width>
          <height>41</height>
@@ -5291,7 +5710,7 @@ border-style: outset;
       <widget class="QLabel" name="label_25">
        <property name="geometry">
         <rect>
-         <x>740</x>
+         <x>840</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -5310,7 +5729,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_chercherMachine_5">
        <property name="geometry">
         <rect>
-         <x>900</x>
+         <x>1020</x>
          <y>10</y>
          <width>201</width>
          <height>41</height>
@@ -5341,7 +5760,7 @@ border-style: outset;
       <widget class="QLabel" name="label_99">
        <property name="geometry">
         <rect>
-         <x>910</x>
+         <x>1030</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -5363,7 +5782,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>60</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>521</height>
        </rect>
       </property>
@@ -5380,7 +5799,7 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_idSupprimerM">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>20</x>
         <y>180</y>
         <width>261</width>
         <height>31</height>
@@ -5393,8 +5812,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_rechercherSM">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>230</y>
+        <x>60</x>
+        <y>220</y>
         <width>171</width>
         <height>31</height>
        </rect>
@@ -5424,8 +5843,8 @@ border-style: outset;
      <widget class="QLabel" name="label_37">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>230</y>
+        <x>70</x>
+        <y>220</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -5443,7 +5862,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour_7">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -5474,7 +5893,7 @@ border-style: outset;
      <widget class="QLabel" name="label_91">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -5493,8 +5912,8 @@ border-style: outset;
      <widget class="QWidget" name="verticalLayoutWidget_11">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>90</y>
+        <x>450</x>
+        <y>80</y>
         <width>421</width>
         <height>471</height>
        </rect>
@@ -5569,7 +5988,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>61</height>
        </rect>
       </property>
@@ -5585,7 +6004,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_ajouterMachine_7">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>20</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -5616,7 +6035,7 @@ border-style: outset;
       <widget class="QLabel" name="label_92">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>30</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -5635,7 +6054,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_modifierMachine_7">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>220</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -5666,7 +6085,7 @@ border-style: outset;
       <widget class="QLabel" name="label_93">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>230</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -5685,7 +6104,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_afficherMachine_6">
        <property name="geometry">
         <rect>
-         <x>360</x>
+         <x>420</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -5716,7 +6135,7 @@ border-style: outset;
       <widget class="QLabel" name="label_94">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>430</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -5735,7 +6154,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_supprimerMachine_6">
        <property name="geometry">
         <rect>
-         <x>540</x>
+         <x>620</x>
          <y>10</y>
          <width>191</width>
          <height>41</height>
@@ -5766,7 +6185,7 @@ border-style: outset;
       <widget class="QLabel" name="label_95">
        <property name="geometry">
         <rect>
-         <x>550</x>
+         <x>630</x>
          <y>20</y>
          <width>16</width>
          <height>20</height>
@@ -5785,7 +6204,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_statistiques_6">
        <property name="geometry">
         <rect>
-         <x>730</x>
+         <x>830</x>
          <y>10</y>
          <width>171</width>
          <height>41</height>
@@ -5816,7 +6235,7 @@ border-style: outset;
       <widget class="QLabel" name="label_26">
        <property name="geometry">
         <rect>
-         <x>740</x>
+         <x>840</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -5835,7 +6254,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_chercherMachine_6">
        <property name="geometry">
         <rect>
-         <x>900</x>
+         <x>1020</x>
          <y>10</y>
          <width>201</width>
          <height>41</height>
@@ -5866,7 +6285,7 @@ border-style: outset;
       <widget class="QLabel" name="label_100">
        <property name="geometry">
         <rect>
-         <x>910</x>
+         <x>1030</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -5886,7 +6305,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour_8">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -5917,7 +6336,7 @@ border-style: outset;
      <widget class="QLabel" name="label_96">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -5938,7 +6357,7 @@ border-style: outset;
        <rect>
         <x>-10</x>
         <y>60</y>
-        <width>1131</width>
+        <width>1251</width>
         <height>561</height>
        </rect>
       </property>
@@ -6006,7 +6425,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>61</height>
        </rect>
       </property>
@@ -6269,13 +6688,63 @@ border-style: outset;
         <bool>true</bool>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_envoyerMail_6">
+       <property name="geometry">
+        <rect>
+         <x>1050</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_envoyerMail_6
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_envoyerMail_6:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Envoyer un Mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_133">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/mail-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
      <widget class="QLabel" name="label_115">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>60</y>
-        <width>1131</width>
+        <width>1241</width>
         <height>561</height>
        </rect>
       </property>
@@ -6289,9 +6758,9 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherNom">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>240</y>
-        <width>191</width>
+        <x>40</x>
+        <y>210</y>
+        <width>231</width>
         <height>31</height>
        </rect>
       </property>
@@ -6302,9 +6771,9 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherIdentifiant">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>120</y>
-        <width>191</width>
+        <x>40</x>
+        <y>100</y>
+        <width>231</width>
         <height>31</height>
        </rect>
       </property>
@@ -6315,9 +6784,9 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherCIN">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>360</y>
-        <width>191</width>
+        <x>40</x>
+        <y>320</y>
+        <width>231</width>
         <height>31</height>
        </rect>
       </property>
@@ -6328,8 +6797,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_chercherEmploye">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>160</y>
+        <x>80</x>
+        <y>140</y>
         <width>151</width>
         <height>31</height>
        </rect>
@@ -6359,7 +6828,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour_10">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -6390,7 +6859,7 @@ border-style: outset;
      <widget class="QLabel" name="label_116">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -6409,10 +6878,10 @@ border-style: outset;
      <widget class="QWidget" name="verticalLayoutWidget_12">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>90</y>
+        <x>440</x>
+        <y>60</y>
         <width>451</width>
-        <height>471</height>
+        <height>511</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -6494,8 +6963,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_chercherEmploye_2">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>280</y>
+        <x>80</x>
+        <y>260</y>
         <width>151</width>
         <height>31</height>
        </rect>
@@ -6525,8 +6994,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_chercherEmploye_3">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>400</y>
+        <x>80</x>
+        <y>370</y>
         <width>151</width>
         <height>31</height>
        </rect>
@@ -6560,7 +7029,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1121</width>
+        <width>1241</width>
         <height>61</height>
        </rect>
       </property>
@@ -6576,7 +7045,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_ajouterMachine_8">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>20</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -6607,7 +7076,7 @@ border-style: outset;
       <widget class="QLabel" name="label_117">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>30</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -6626,7 +7095,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_modifierMachine_8">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>220</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -6657,7 +7126,7 @@ border-style: outset;
       <widget class="QLabel" name="label_118">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>230</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -6676,7 +7145,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_afficherMachine_7">
        <property name="geometry">
         <rect>
-         <x>360</x>
+         <x>420</x>
          <y>10</y>
          <width>181</width>
          <height>41</height>
@@ -6707,7 +7176,7 @@ border-style: outset;
       <widget class="QLabel" name="label_119">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>430</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -6726,7 +7195,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_supprimerMachine_7">
        <property name="geometry">
         <rect>
-         <x>540</x>
+         <x>620</x>
          <y>10</y>
          <width>191</width>
          <height>41</height>
@@ -6757,7 +7226,7 @@ border-style: outset;
       <widget class="QLabel" name="label_120">
        <property name="geometry">
         <rect>
-         <x>550</x>
+         <x>630</x>
          <y>20</y>
          <width>16</width>
          <height>20</height>
@@ -6776,7 +7245,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_statistiques_7">
        <property name="geometry">
         <rect>
-         <x>730</x>
+         <x>830</x>
          <y>10</y>
          <width>171</width>
          <height>41</height>
@@ -6807,7 +7276,7 @@ border-style: outset;
       <widget class="QLabel" name="label_121">
        <property name="geometry">
         <rect>
-         <x>740</x>
+         <x>840</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -6826,7 +7295,7 @@ border-style: outset;
       <widget class="QPushButton" name="pushButton_chercherMachine_7">
        <property name="geometry">
         <rect>
-         <x>900</x>
+         <x>1020</x>
          <y>10</y>
          <width>201</width>
          <height>41</height>
@@ -6857,7 +7326,7 @@ border-style: outset;
       <widget class="QLabel" name="label_122">
        <property name="geometry">
         <rect>
-         <x>910</x>
+         <x>1030</x>
          <y>20</y>
          <width>21</width>
          <height>21</height>
@@ -6879,7 +7348,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>60</y>
-        <width>1131</width>
+        <width>1241</width>
         <height>561</height>
        </rect>
       </property>
@@ -6893,8 +7362,8 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherNom_2">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>230</y>
+        <x>70</x>
+        <y>210</y>
         <width>221</width>
         <height>31</height>
        </rect>
@@ -6906,8 +7375,8 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherID">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>110</y>
+        <x>70</x>
+        <y>100</y>
         <width>221</width>
         <height>31</height>
        </rect>
@@ -6919,8 +7388,8 @@ border-style: outset;
      <widget class="QLineEdit" name="lineEdit_chercherReference">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>350</y>
+        <x>70</x>
+        <y>330</y>
         <width>221</width>
         <height>31</height>
        </rect>
@@ -6932,8 +7401,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_chercherMachine_8">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>150</y>
+        <x>80</x>
+        <y>140</y>
         <width>181</width>
         <height>31</height>
        </rect>
@@ -6963,10 +7432,10 @@ border-style: outset;
      <widget class="QWidget" name="verticalLayoutWidget_13">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>90</y>
+        <x>450</x>
+        <y>80</y>
         <width>421</width>
-        <height>421</height>
+        <height>461</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -7010,7 +7479,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour_11">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -7041,7 +7510,7 @@ border-style: outset;
      <widget class="QLabel" name="label_124">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -7060,8 +7529,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_chercherMachine_9">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>280</y>
+        <x>80</x>
+        <y>260</y>
         <width>181</width>
         <height>31</height>
        </rect>
@@ -7091,8 +7560,8 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_chercherMachine_10">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>390</y>
+        <x>80</x>
+        <y>380</y>
         <width>191</width>
         <height>31</height>
        </rect>
@@ -7126,7 +7595,7 @@ border-style: outset;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1131</width>
+        <width>1241</width>
         <height>591</height>
        </rect>
       </property>
@@ -7140,7 +7609,7 @@ border-style: outset;
      <widget class="QPushButton" name="pushButton_retour_12">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>1110</x>
         <y>550</y>
         <width>118</width>
         <height>28</height>
@@ -7171,7 +7640,7 @@ border-style: outset;
      <widget class="QLabel" name="label_126">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1120</x>
         <y>560</y>
         <width>21</width>
         <height>16</height>
@@ -7190,7 +7659,7 @@ border-style: outset;
      <widget class="QLabel" name="label_127">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>140</x>
         <y>100</y>
         <width>971</width>
         <height>301</height>
@@ -7198,6 +7667,717 @@ border-style: outset;
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Cette application est cr&lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600; color:#222222;&quot;&gt;é&lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;e pour le &lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600; color:#222222;&quot;&gt;développement&lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600;&quot;&gt; de logicile orient&lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600; color:#222222;&quot;&gt;é objet et gestion de bases de données.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600; color:#222222;&quot;&gt;Donc, pour assurer le meilleur developpement de votre entreprise, cette application facilite et simplifie &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-size:11pt; font-weight:600; color:#222222;&quot;&gt;tous le travail.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_16">
+     <widget class="QFrame" name="frame_14">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1241</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 207, 207);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_ajouterEmploye_8">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_ajouterEmploye_8
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_ajouterEmploye_8:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_134">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/ajouMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifierEmploye_8">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_modifierEmploye_8
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_modifierEmploye_8:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_135">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/modifier-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_afficherEmploye_7">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>10</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_afficherEmploye_7
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_afficherEmploye_7:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Afficher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_136">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/afficher-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supprimerEmploye_7">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_supprimerEmploye_7
+{
+	background-color: rgb(207, 207, 207);
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_supprimerEmploye_7:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_137">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/supprimerMachine-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="geometry">
+        <rect>
+         <x>840</x>
+         <y>10</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_7
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_7:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chercher Employe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_138">
+       <property name="geometry">
+        <rect>
+         <x>850</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/consulter-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_envoyerMail_7">
+       <property name="geometry">
+        <rect>
+         <x>1050</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_envoyerMail_7
+{
+
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_envoyerMail_7:hover
+{
+	border-color: blue;
+}</string>
+       </property>
+       <property name="text">
+        <string>Envoyer un Mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_139">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Bouttons/mail-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_140">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>1241</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_13">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_13
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_13:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_143">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_mail">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>100</y>
+        <width>381</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_envoyer">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>380</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_envoyer
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_envoyer:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Envoyer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_145">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>390</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/mail-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="msg">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>200</y>
+        <width>381</width>
+        <height>171</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="subject">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>140</y>
+        <width>381</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_17">
+     <widget class="QLabel" name="label_142">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>-10</y>
+        <width>1241</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/fontFinal.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>110</y>
+        <width>245</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPushButton" name="pushButton_on">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_on
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_on:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>On</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_off">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_off
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_off:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>Off</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>350</y>
+        <width>245</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="pushButton_sup">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_sup
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_sup:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_inf">
+         <property name="styleSheet">
+          <string notr="true">#pushButton_inf
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_inf:hover
+{
+	border-color: blue;
+}</string>
+         </property>
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>140</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Lampe 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>390</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Lampe 2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>270</y>
+        <width>191</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Pointage de l'employe&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_38">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>270</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Entré&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_retour_14">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>550</y>
+        <width>118</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_retour_14
+{
+	
+	border-color: beige;
+border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  font: bold 14px;
+  min-width: 6em;
+  padding: 6px;
+
+}
+#pushButton_retour_14:hover
+{
+	border-color: blue;
+}</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_146">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>560</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Bouttons/retour-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
