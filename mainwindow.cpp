@@ -15,7 +15,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tabMachine->setModel(m.afficherMachine());
     ui->tabEmploye->setModel(e.afficherEmploye());
     ui->comboBox_mail->setModel(e.afficher_email());
-    //connect(ui->pushButton_envoyer, SIGNAL(clicked()),this, SLOT(sendMail()));
     //    int ret=a.connect_arduino();
     //    switch(ret)
     //    {
@@ -107,8 +106,6 @@ void MainWindow::on_pushButton_supprimerEmploye_clicked()///////////////////////
 void MainWindow::on_pushButton_modifierEmploye_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
-    //    ui->stackedWidget->setCurrentIndex(5);
-    //    ui->stackedWidget->setCurrentIndex(5);
     ui->lineEdit_nom_2->hide();
     ui->lineEdit_prenom_2->hide();
     ui->lineEdit_identifiant_2->hide();
@@ -555,8 +552,6 @@ void MainWindow::on_pushButton_supprimerEmploye_5_clicked()
 void MainWindow::on_pushButton_clicked()//chercher Employe//////////////////////////////////////////
 {
     ui->stackedWidget->setCurrentIndex(12);
-    //    ui->lineEdit_chercherNom->hide();
-    //    ui->lineEdit_chercherCIN->hide();
     ui->lineEdit_nom_7->hide();
     ui->lineEdit_prenom_4->hide();
     ui->lineEdit_identifiant_4->hide();
@@ -573,8 +568,6 @@ void MainWindow::on_pushButton_2_clicked()////////////////////////
 {
     ui->stackedWidget->setCurrentIndex(12);
     ui->stackedWidget->setCurrentIndex(12);
-    //   ui->lineEdit_chercherNom->hide();
-    //   ui->lineEdit_chercherCIN->hide();
     ui->lineEdit_nom_7->hide();
     ui->lineEdit_prenom_4->hide();
     ui->lineEdit_identifiant_4->hide();
@@ -591,8 +584,6 @@ void MainWindow::on_pushButton_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(12);
     ui->stackedWidget->setCurrentIndex(12);
-    //    ui->lineEdit_chercherNom->hide();
-    //    ui->lineEdit_chercherCIN->hide();
     ui->lineEdit_nom_7->hide();
     ui->lineEdit_prenom_4->hide();
     ui->lineEdit_identifiant_4->hide();
@@ -609,8 +600,6 @@ void MainWindow::on_pushButton_5_clicked()
 {
     ui->stackedWidget->setCurrentIndex(12);
     ui->stackedWidget->setCurrentIndex(12);
-    //  ui->lineEdit_chercherNom->hide();
-    //  ui->lineEdit_chercherCIN->hide();
     ui->lineEdit_nom_7->hide();
     ui->lineEdit_prenom_4->hide();
     ui->lineEdit_identifiant_4->hide();
@@ -627,8 +616,6 @@ void MainWindow::on_pushButton_4_clicked()
 {
     ui->stackedWidget->setCurrentIndex(12);
     ui->stackedWidget->setCurrentIndex(12);
-    //     ui->lineEdit_chercherNom->hide();
-    //     ui->lineEdit_chercherCIN->hide();
     ui->lineEdit_nom_7->hide();
     ui->lineEdit_prenom_4->hide();
     ui->lineEdit_identifiant_4->hide();
@@ -691,8 +678,6 @@ void MainWindow::on_pushButton_ajouterEmploye_7_clicked()
 void MainWindow::on_pushButton_chercherMachine_clicked()////////////////////////////
 {
     ui->stackedWidget->setCurrentIndex(13);
-    //   ui->lineEdit_chercherNom_2->hide();
-    //   ui->lineEdit_chercherReference->hide();
     ui->lineEdit_idMachine_3->hide();
     ui->lineEdit_prix_4->hide();
     ui->lineEdit_nom_8->hide();
@@ -703,8 +688,6 @@ void MainWindow::on_pushButton_chercherMachine_clicked()////////////////////////
 void MainWindow::on_pushButton_chercherMachine_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(13);
-    //    ui->lineEdit_chercherNom_2->hide();
-    //    ui->lineEdit_chercherReference->hide();
     ui->lineEdit_idMachine_3->hide();
     ui->lineEdit_prix_4->hide();
     ui->lineEdit_nom_8->hide();
@@ -715,8 +698,6 @@ void MainWindow::on_pushButton_chercherMachine_2_clicked()
 void MainWindow::on_pushButton_chercherMachine_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(13);
-    //    ui->lineEdit_chercherNom_2->hide();
-    //    ui->lineEdit_chercherReference->hide();
     ui->lineEdit_idMachine_3->hide();
     ui->lineEdit_prix_4->hide();
     ui->lineEdit_nom_8->hide();
@@ -727,8 +708,6 @@ void MainWindow::on_pushButton_chercherMachine_3_clicked()
 void MainWindow::on_pushButton_chercherMachine_4_clicked()
 {
     ui->stackedWidget->setCurrentIndex(13);
-    //    ui->lineEdit_chercherNom_2->hide();
-    //    ui->lineEdit_chercherReference->hide();
     ui->lineEdit_idMachine_3->hide();
     ui->lineEdit_prix_4->hide();
     ui->lineEdit_nom_8->hide();
@@ -739,8 +718,6 @@ void MainWindow::on_pushButton_chercherMachine_4_clicked()
 void MainWindow::on_pushButton_chercherMachine_5_clicked()
 {
     ui->stackedWidget->setCurrentIndex(13);
-    //    ui->lineEdit_chercherNom_2->hide();
-    //    ui->lineEdit_chercherReference->hide();
     ui->lineEdit_idMachine_3->hide();
     ui->lineEdit_prix_4->hide();
     ui->lineEdit_nom_8->hide();
@@ -751,8 +728,6 @@ void MainWindow::on_pushButton_chercherMachine_5_clicked()
 void MainWindow::on_pushButton_chercherMachine_6_clicked()
 {
     ui->stackedWidget->setCurrentIndex(13);
-    //    ui->lineEdit_chercherNom_2->hide();
-    //    ui->lineEdit_chercherReference->hide();
     ui->lineEdit_idMachine_3->hide();
     ui->lineEdit_prix_4->hide();
     ui->lineEdit_nom_8->hide();
@@ -905,8 +880,6 @@ void MainWindow::on_pushButton_supprimerEmploye_7_clicked()
 void MainWindow::on_pushButton_7_clicked()
 {
     ui->stackedWidget->setCurrentIndex(12);
-    //    ui->lineEdit_chercherNom->hide();
-    //    ui->lineEdit_chercherCIN->hide();
     ui->lineEdit_nom_7->hide();
     ui->lineEdit_prenom_4->hide();
     ui->lineEdit_identifiant_4->hide();
@@ -1068,10 +1041,6 @@ void MainWindow::on_pushButton_rechercherModM_clicked()//recherche modification
         ui->lineEdit_nom_4->setText(m.GetNom());
         ui->lineEdit_reference_2->setText(m.GetReference());
         ui->lineEdit_categorie_2->setText(m.GetCategorie());
-
-        //            QMessageBox::information(nullptr, QObject::tr("ok"),
-        //                                     QObject::tr("Machine existe \n"
-        //                                                 "click cancel to exit."), QMessageBox::Cancel);
     }
     else
     {
@@ -1095,7 +1064,6 @@ void MainWindow::on_pushButton_modifierMachine_4_clicked()
     m.SetNom(nom);
     m.SetReference(reference);
     m.SetCategorie(categorie);
-
 
     bool test=m.modifierMachine();
     if (test)
@@ -1368,7 +1336,6 @@ void MainWindow::on_pushButton_supprimerE_clicked()
     }
 }
 
-
 void MainWindow::on_pushButton_rechercherSE_clicked()//recherche supprimer employe
 {
     QString idS=ui->lineEdit_idSupprimerE->text();
@@ -1501,8 +1468,6 @@ void MainWindow::on_pushButton_modifierEmploye_4_clicked()
     e.SetCin(cin.toInt());
     e.SetSexe(sexe);
 
-    // employe e(nom,prenom,idEmploye,naissance,poste,salaire,telephone,mail,domicile,cin,sexe);
-
     bool test=e.modifierEmploye();
     if(test)
     {
@@ -1531,7 +1496,6 @@ void MainWindow::on_pushButton_modifierEmploye_4_clicked()
     }
 
 }
-
 
 void MainWindow::on_pushButton_triEmploye_clicked()
 {
@@ -1790,71 +1754,17 @@ void MainWindow::on_pushButton_chercherEmploye_3_clicked()
     }
 }
 
-
 /*************************************Mailing*************************************/
-
 bool envoie_Retour(bool msg)
 {
     return msg;
 }
 
 void MainWindow::on_pushButton_envoyer_clicked()
-{    
-    //    QString expediteur = ui->server->text();
-    //    int port = ui->port->text().toInt();
-    //    QString nomUtilisateur= ui->uname->text();
-    //    QString mdp= ui->paswd->text();
-    //    QString accepteur =ui->rcpt->text();
-    //    QString sujet= ui->subject->text();
-    //    QString msg= ui->msg->toPlainText();
-
-    //    if ((expediteur!=NULL)&&(port!=NULL)&&(nomUtilisateur!=NULL)&&(mdp!=NULL)&&(accepteur!=NULL)&&(sujet!=NULL)&&(msg!=NULL))
-    //    {
-    //        envoie=true;
-    //        envoie_Retour(envoie);
-    //        //close();
-    //        QMessageBox::information(nullptr, QObject::tr("ok"),
-    //                                 QObject::tr("Msg envoye \n"
-    //                                             "click cancel to exit."), QMessageBox::Cancel);
-    //    }
-    //    else
-    //    {
-    //        QMessageBox::critical(nullptr, QObject::tr("ok"),
-    //                              QObject::tr("Msg non envoye \n"
-    //                                          "click cancel to exit."), QMessageBox::Cancel);
-    //    }
-
-
-    //    QString status;
-    //    smtp* s = new smtp(ui->lineEdit_administrateur->text(),ui->lineEdit_numMecanicien->text() , ui->lineEdit_sujet->text(),ui->textEdit_msg->toPlainText() );
-    //    smtp* s;
-
-    //        connect(s, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
-
-
-    //        s->sendMail(ui->lineEdit_administrateur->text(), ui->lineEdit_numMecanicien->text() , ui->lineEdit_sujet->text(),ui->textEdit_msg->toPlainText());
-    //        QMessageBox::information(nullptr, QObject::tr("ok"),
-    //                                        QObject::tr("Msg envoye \n"
-    //                                                    "click cancel to exit."), QMessageBox::Cancel);
-
-    //    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
-    //        connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
-
-
-    //        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
-    //    }
-
-
-    //        if(status == "Message sent")
-    //            QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+{
     Smtp* smtp = new Smtp("raniacheffai@gmail.com","RC02072000","smtp.gmail.com",465);
     connect (smtp, SIGNAL (status (QString)), this, SLOT (mailSent(QString)));
     smtp->sendMail("raniacheffai@gmail.com", ui->comboBox_mail->currentText(), ui->subject->text(), ui->msg->toPlainText());
-
-
-    //    Smtp * smtp = new Smtp ("amen.benkhalifaaa9@gmail.com", "191JMT2645", "smtp.gmail.com", 465);
-    //    connect (smtp, SIGNAL (status (QString)), this, SLOT (mailSent (QString)));
-    //    smtp-> sendMail ("amen.benkhalifaaa9@gmail.com", ui-> comboBox_mail-> currentText (), ui-> subject-> text (), ui-> msg-> toPlainText ());
 }
 
 /********************ARDUINO************************/
