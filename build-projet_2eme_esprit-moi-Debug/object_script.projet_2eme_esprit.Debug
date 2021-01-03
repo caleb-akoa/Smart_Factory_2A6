@@ -1,0 +1,15 @@
+INPUT(
+./debug\client.o
+./debug\commande.o
+./debug\employe.o
+./debug\fournisseur.o
+./debug\globales.o
+./debug\login.o
+./debug\machine.o
+./debug\main.o
+./debug\mainwindow.o
+./debug\matiere_p.o
+./debug\user.o
+./debug\moc_login.o
+./debug\moc_mainwindow.o
+);

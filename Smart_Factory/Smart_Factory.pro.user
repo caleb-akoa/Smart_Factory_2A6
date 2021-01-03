@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.0, 2020-12-03T00:19:01. -->
+<!-- Written by QtCreator 4.11.0, 2021-01-03T01:26:33. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -287,8 +287,9 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/essaie Qt/Smart_Factory/Smart_Factory.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/essaie Qt/Smart_Factory/Smart_Factory.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Smart_Factory2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/Projet C++/projet/Smart_Factory/Smart_Factory.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/Projet C++/projet/Smart_Factory/Smart_Factory.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>

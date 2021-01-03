@@ -11,21 +11,25 @@ SOURCES += \
     client.cpp \
     commande.cpp \
     employe.cpp \
+    fournisseur.cpp \
     globales.cpp \
     login.cpp \
     machine.cpp \
     main.cpp \
     mainwindow.cpp \
+    matiere_p.cpp \
     user.cpp
 
 HEADERS += \
     client.h \
     commande.h \
     employe.h \
+    fournisseur.h \
     globales.h \
     login.h \
     machine.h \
     mainwindow.h \
+    matiere_p.h \
     user.h
 
 FORMS += \
