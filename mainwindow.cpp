@@ -15,6 +15,44 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tabMachine->setModel(m.afficherMachine());
     ui->tabEmploye->setModel(e.afficherEmploye());
     ui->comboBox_mail->setModel(e.afficher_email());
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery("select * from machine where prix <500 ");
+    float prixx=model->rowCount();
+    model->setQuery("select * from machine where prix between 700 and 800 ");
+    float prixxx=model->rowCount();
+    model->setQuery("select * from machine where prix >850 ");
+    float prixxxx=model->rowCount();
+    float total=prixx+prixxx+prixxxx;
+    QString a=QString("machine moins de 500 prix"+ QString::number((prixx*100)/total,'f',2)+"%");
+    QString b=QString("machine entre 700 et 800 prix"+ QString::number((prixxx*100)/total,'f',2)+"%");
+    QString c=QString("machine plus de 850 prix"+ QString::number((prixxxx*100)/total,'f',2)+"%");
+    QPieSeries *series = new QPieSeries();
+    series->append(a,prixx);
+    series->append(b,prixxx);
+    series->append(c,prixxxx);
+    if (prixx!=0)
+    {
+       QPieSlice *slice = series->slices().at(0);
+        slice->setLabelVisible();
+        slice->setPen(QPen());
+    }
+    if (prixxx!=0)
+    {
+       QPieSlice *slice1 = series->slices().at(1);
+        slice1->setLabelVisible();
+        //slice1->setPen(QPen());
+    }
+    if (prixxxx!=0)
+    {
+       QPieSlice *slice2 = series->slices().at(2);
+        slice2->setLabelVisible();
+        //slice1->setPen(QPen());
+    }
+        QChart *chart = new QChart();
+        chart->addSeries(series);
+        chart->setTitle("Le Prix Des Machines");
+    QChartView *chartview = new QChartView(chart);
+        chartview->setParent(ui->horizontalFrame_3);
     //    int ret=a.connect_arduino();
     //    switch(ret)
     //    {
@@ -86,7 +124,7 @@ void MainWindow::on_pushButton_afficherEmploye_clicked()
     ui->stackedWidget->setCurrentIndex(4);
 }
 
-void MainWindow::on_pushButton_supprimerEmploye_clicked()////////////////////////////////////
+void MainWindow::on_pushButton_supprimerEmploye_clicked()
 {
     ui->stackedWidget->setCurrentIndex(5);
     ui->lineEdit_nom_5->hide();
@@ -136,7 +174,7 @@ void MainWindow::on_pushButton_afficherEmploye_2_clicked()
     ui->stackedWidget->setCurrentIndex(4);
 }
 
-void MainWindow::on_pushButton_supprimerEmploye_2_clicked()//////////////////////////////////////
+void MainWindow::on_pushButton_supprimerEmploye_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(5);
     ui->stackedWidget->setCurrentIndex(5);
@@ -169,7 +207,7 @@ void MainWindow::on_pushButton_afficherEmploye_3_clicked()
     ui->stackedWidget->setCurrentIndex(4);
 }
 
-void MainWindow::on_pushButton_supprimerEmploye_3_clicked()///////////////
+void MainWindow::on_pushButton_supprimerEmploye_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(5);
     ui->stackedWidget->setCurrentIndex(5);
@@ -225,7 +263,7 @@ void MainWindow::on_pushButton_modifierEmploye_5_clicked()
     ui->label_sexe->hide();
 }
 
-void MainWindow::on_pushButton_supprimerEmploye_4_clicked()//////////////////////////////////
+void MainWindow::on_pushButton_supprimerEmploye_4_clicked()
 {
     ui->stackedWidget->setCurrentIndex(5);
     ui->stackedWidget->setCurrentIndex(5);
@@ -322,7 +360,7 @@ void MainWindow::on_pushButton_afficherMachine_clicked()
     ui->stackedWidget->setCurrentIndex(9);
 }
 
-void MainWindow::on_pushButton_supprimerMachine_clicked()//////////////////////////////////
+void MainWindow::on_pushButton_supprimerMachine_clicked()
 {
     ui->stackedWidget->setCurrentIndex(10);
     ui->lineEdit_idMachine_2->hide();
@@ -338,7 +376,7 @@ void MainWindow::on_pushButton_statistiques_clicked()
     ui->stackedWidget->setCurrentIndex(11);
 }
 
-void MainWindow::on_pushButton_modifierMachine_2_clicked()////////////////////
+void MainWindow::on_pushButton_modifierMachine_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(8);
     ui->lineEdit_id_2->hide();
@@ -359,7 +397,7 @@ void MainWindow::on_pushButton_afficherMachine_2_clicked()
     ui->stackedWidget->setCurrentIndex(9);
 }
 
-void MainWindow::on_pushButton_supprimerMachine_2_clicked()////////////////////////////
+void MainWindow::on_pushButton_supprimerMachine_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(10);
     ui->lineEdit_idMachine_2->hide();
@@ -390,7 +428,7 @@ void MainWindow::on_pushButton_afficherMachine_3_clicked()
     ui->stackedWidget->setCurrentIndex(9);
 }
 
-void MainWindow::on_pushButton_supprimerMachine_3_clicked()///////////////////////
+void MainWindow::on_pushButton_supprimerMachine_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(10);
     ui->lineEdit_idMachine_2->hide();
@@ -427,7 +465,7 @@ void MainWindow::on_pushButton_modifierMachine_5_clicked()
     ui->pushButton_modifierMachine_4->hide();
 }
 
-void MainWindow::on_pushButton_supprimerMachine_4_clicked()//////////////////////////
+void MainWindow::on_pushButton_supprimerMachine_4_clicked()
 {
     ui->stackedWidget->setCurrentIndex(10);
     ui->lineEdit_idMachine_2->hide();
@@ -897,7 +935,7 @@ void MainWindow::on_pushButton_retour_13_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
 }
-/*************pointage*******************/
+/************************************************************pointage****************************************************************/
 
 void MainWindow::on_pushButton_retour_14_clicked()
 {
@@ -909,13 +947,13 @@ void MainWindow::on_pushButton_pointer_clicked()
     ui->stackedWidget->setCurrentIndex(16);
 }
 
-/**************quitter l'application************************************/
+/*******************************************************quitter l'application********************************************************/
 void MainWindow::on_pushButton_quitter_clicked()
 {
     close();
 }
 
-/**********************MACHINE***************************/
+/***************************************************************MACHINE**************************************************************/
 void MainWindow::on_pushButton_ajouterMachine_3_clicked()
 {
     int idMachine= ui->lineEdit_idMachine->text().toInt();
@@ -1248,7 +1286,7 @@ void MainWindow::on_pushButton_chercherMachine_10_clicked()
     }
 }
 
-/**********************EMPLOYE***************************/
+/*******************************************************EMPLOYE**********************************************************************/
 
 void MainWindow::on_pushButton_ajouterEmploye_3_clicked()
 {
@@ -1581,45 +1619,6 @@ void MainWindow::on_pushButton_chercherEmploye_clicked()
     }
 }
 
-void MainWindow::on_tabWidget_currentChanged(int index)
-{
-    QLineSeries *series = new QLineSeries();
-    series->append(0,6);
-    series->append(2,4);
-    series->append(3,8);
-    series->append(10,5);
-    *series << QPoint(11,1)<<QPoint(13,3)<<QPoint(17,6)<<QPoint(18,3)<<QPoint(20,2);
-    QChart *chart = new QChart();
-    chart->legend()->hide();
-    chart->addSeries(series);
-    chart->createDefaultAxes();
-    chart->setTitle("Rendement de Machines");
-    QChartView *chartview=new QChartView(chart);
-    chartview->setRenderHint(QPainter::Antialiasing);
-    chartview->setParent(ui->horizontalFrame1);
-}
-
-void MainWindow::on_tabWidget_tabBarClicked(int index)
-{
-    QPieSeries *series =new QPieSeries();
-    series->append("Decembre",80);
-    series->append("Novembre",70);
-    series->append("Janvier",50);
-    series->append("Octobre",40);
-    series->append("Septembre",30);
-
-    QPieSlice *slice = series->slices().at(1);
-    slice->setExploded(true);
-
-    QChart *chart = new QChart();
-    chart->addSeries(series);
-    chart->setTitle("Le Rendement Des Machines Pendant l'Hiver");
-
-    QChartView *chartview = new QChartView(chart);
-    chartview->setParent(ui->horizontalFrame);
-}
-
-
 void MainWindow::on_pushButton_chercherEmploye_2_clicked()
 {
     QString nom= ui->lineEdit_chercherNom->text();
@@ -1754,7 +1753,7 @@ void MainWindow::on_pushButton_chercherEmploye_3_clicked()
     }
 }
 
-/*************************************Mailing*************************************/
+/**************************************************************MAILING***************************************************************/
 bool envoie_Retour(bool msg)
 {
     return msg;
@@ -1767,7 +1766,7 @@ void MainWindow::on_pushButton_envoyer_clicked()
     smtp->sendMail("raniacheffai@gmail.com", ui->comboBox_mail->currentText(), ui->subject->text(), ui->msg->toPlainText());
 }
 
-/********************ARDUINO************************/
+/**************************************************************ARDUINO***************************************************************/
 void MainWindow::on_pushButton_on_clicked()
 {
     a.write_to_arduino("1");
@@ -1801,6 +1800,7 @@ void MainWindow::update_label()
     }
 }
 
+/******************************************************IMPRIMER**********************************************************************/
 void MainWindow::on_pushButton_imprimer_clicked()
 {
     //QDateTime datecreation = date.currentDateTime();

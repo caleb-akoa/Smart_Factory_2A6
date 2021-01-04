@@ -223,7 +223,7 @@ border-style: outset;
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>11</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label_2">
@@ -6023,7 +6023,7 @@ border-style: outset;
   padding: 6px;
 
 }
-#pushButton_ajouterMachine_6:hover
+#pushButton_ajouterMachine_7:hover
 {
 	border-color: blue;
 }</string>
@@ -6368,56 +6368,22 @@ border-style: outset;
        <pixmap>../Bouttons/fontFinal.jpg</pixmap>
       </property>
      </widget>
-     <widget class="QTabWidget" name="tabWidget">
+     <widget class="QFrame" name="horizontalFrame_3">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>60</y>
-        <width>881</width>
-        <height>511</height>
+        <x>170</x>
+        <y>80</y>
+        <width>1081</width>
+        <height>501</height>
        </rect>
       </property>
-      <property name="currentIndex">
-       <number>1</number>
-      </property>
-      <widget class="QWidget" name="tab">
-       <attribute name="title">
-        <string>Courbe</string>
-       </attribute>
-       <widget class="QFrame" name="horizontalFrame">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>881</width>
-          <height>481</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout"/>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="tab_2">
-       <attribute name="title">
-        <string>Diagramme circulaire</string>
-       </attribute>
-       <widget class="QFrame" name="horizontalFrame1">
-        <property name="geometry">
-         <rect>
-          <x>-1</x>
-          <y>0</y>
-          <width>881</width>
-          <height>481</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_2"/>
-       </widget>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_5"/>
      </widget>
      <zorder>frame_11</zorder>
      <zorder>label_19</zorder>
      <zorder>pushButton_retour_8</zorder>
      <zorder>label_96</zorder>
-     <zorder>tabWidget</zorder>
+     <zorder>horizontalFrame_3</zorder>
     </widget>
     <widget class="QWidget" name="page_13">
      <widget class="QFrame" name="frame_12">

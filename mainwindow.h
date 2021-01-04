@@ -232,10 +232,6 @@ private slots:
 
     void on_pushButton_chercherMachine_8_clicked();
 
-    void on_tabWidget_currentChanged(int index);
-
-    void on_tabWidget_tabBarClicked(int index);
-
     void on_pushButton_chercherEmploye_2_clicked();
 
     void on_pushButton_chercherEmploye_3_clicked();
@@ -271,7 +267,6 @@ private slots:
     void on_pushButton_retour_13_clicked();
 
     void on_pushButton_quitter_clicked();
-
 
     void on_pushButton_on_clicked();
 
