@@ -18,6 +18,12 @@
 #include <machine.h>
 #include <factures.h>
 #include <revenues.h>
+#include "fournisseur.h"
+#include "matiere_p.h"
+#include "produit.h"
+#include "entrepot.h"
+#include <QPrinter>
+#include <QPrintDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -319,6 +325,182 @@ private slots:
 
     void on_retour_24_clicked();
 
+    void on_ajouter_clicked();
+
+    void on_pushButton_M_clicked();
+
+    void on_pushButton_supprimer_2_clicked();
+
+    void on_pushButton_imprimer_clicked();
+
+    void on_pushButton_25_clicked();
+
+    void on_pushButton_28_clicked();
+
+    void on_pushButton_51_clicked();
+
+    void on_pushButton_54_clicked();
+
+    void on_pushButton_58_clicked();
+
+    void on_pushButton_63_clicked();
+
+    void on_pushButton_87_clicked();
+
+    void on_pushButton_90_clicked();
+
+    void on_pushButton_105_clicked();
+
+    void on_pushButton_108_clicked();
+
+    void on_pushButton_147_clicked();
+
+    void on_pushButton_150_clicked();
+
+    void on_pushButton_157_clicked();
+
+    void on_pushButton_160_clicked();
+
+    void on_pushButton_132_clicked();
+
+    void on_pushButton_135_clicked();
+
+    void on_pushButton_123_clicked();
+
+    void on_pushButton_126_clicked();
+
+    void on_pushButton_292_clicked();
+
+    void on_pushButton_293_clicked();
+
+    void on_pushButton_294_clicked();
+
+    void on_client_23_clicked();
+
+    void on_pushButton_296_clicked();
+
+    void on_pushButton_297_clicked();
+
+    void on_pushButton_298_clicked();
+
+    void on_pushButton_303_clicked();
+
+    void on_pushButton_304_clicked();
+
+    void on_pushButton_305_clicked();
+
+    void on_client_24_clicked();
+
+    void on_pushButton_306_clicked();
+
+    void on_pushButton_307_clicked();
+
+    void on_pushButton_308_clicked();
+
+    void on_pushButton_309_clicked();
+
+    void on_pushButton_310_clicked();
+
+    void on_pushButton_94_clicked();
+
+    void on_pushButton_95_clicked();
+
+    void on_pushButton_112_clicked();
+
+    void on_pushButton_113_clicked();
+
+    void on_pushButton_154_clicked();
+
+    void on_pushButton_155_clicked();
+
+    void on_pushButton_164_clicked();
+
+    void on_pushButton_165_clicked();
+
+    void on_pushButton_299_clicked();
+
+    void on_pushButton_300_clicked();
+
+    void on_pushButton_31_clicked();
+
+    void on_pushButton_32_clicked();
+
+    void on_pushButton_67_clicked();
+
+    void on_pushButton_68_clicked();
+
+    void on_pushButton_131_clicked();
+
+    void on_pushButton_129_clicked();
+
+    void on_pushButton_128_clicked();
+
+    void on_pushButton_127_clicked();
+
+    void on_client_9_clicked();
+
+    void on_pushButton_125_clicked();
+
+    void on_pushButton_124_clicked();
+
+    void on_pushButton_139_clicked();
+
+    void on_pushButton_138_clicked();
+
+    void on_pushButton_137_clicked();
+
+    void on_pushButton_136_clicked();
+
+    void on_client_12_clicked();
+
+    void on_pushButton_134_clicked();
+
+    void on_pushButton_133_clicked();
+
+    void on_pushButton_59_clicked();
+
+    void on_pushButton_60_clicked();
+
+    void on_ajouter_25_clicked();
+
+    void on_tabprod_activated(const QModelIndex &index);
+
+    void on_del_2_clicked();
+
+    void on_tabWidget_25_currentChanged(int index);
+
+    void on_edi_2_clicked();
+
+    void on_edit_2_clicked();
+
+    void on_editOk_2_clicked();
+
+    void on_delete_btn_2_clicked();
+
+    void on_search_2_textChanged(const QString &arg1);
+
+    void on_pushButton_311_clicked();
+
+    void on_ajouter_23_clicked();
+
+    void on_tabent_activated(const QModelIndex &index);
+
+    void on_del_clicked();
+
+    void on_tabWidget_99_currentChanged(int index);
+
+    void on_edi_clicked();
+
+    void on_edit_clicked();
+
+    void on_editOk_clicked();
+
+    void on_delete_btn_clicked();
+
+    void on_search_textChanged(const QString &arg1);
+
+    void on_pushButton_301_clicked();
+
 private:
     Ui::MainWindow *ui;
     Client client;
@@ -328,5 +510,9 @@ private:
     machine m;
     Revenues rev;
     Factures fac;
+    fournisseur tb;
+    matiere_p mp;
+    produit tmpprod;
+    entrepot tmpent;
 };
 #endif // MAINWINDOW_H

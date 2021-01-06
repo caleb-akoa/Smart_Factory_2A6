@@ -9,12 +9,15 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    if(database.isOpen()){
-        Login screenLogin;
+    if(database.isOpen())
+    {
+        MainWindow screenLogin;
         screenLogin.show();
         return a.exec();
-    }else {
+    }else
+    {
         QMessageBox::critical(0, "Database not connected !", "Cannot connect to the database ...");
         return a.exec();
     }
+
 }

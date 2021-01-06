@@ -18,7 +18,7 @@ bool machine::ajouterMachine()
     QString id =QString::number(idMachine);
     QString pr= QString::number(prix);
     //la requete
-    query.prepare("insert into machine (identifiant, prix,nom,reference,categorie)" "values(:id,:pr,:nom,:reference,:categorie)");
+    query.prepare("insert into machine (identifaint, prix,nom,reference,categorie)" "values(:id,:pr,:nom,:reference,:categorie)");
 
     //creation des variables
     query.bindValue(":id",id);
