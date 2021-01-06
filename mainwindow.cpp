@@ -32,27 +32,27 @@ MainWindow::MainWindow(QWidget *parent)
     series->append(c,prixxxx);
     if (prixx!=0)
     {
-       QPieSlice *slice = series->slices().at(0);
+        QPieSlice *slice = series->slices().at(0);
         slice->setLabelVisible();
         slice->setPen(QPen());
     }
     if (prixxx!=0)
     {
-       QPieSlice *slice1 = series->slices().at(1);
+        QPieSlice *slice1 = series->slices().at(1);
         slice1->setLabelVisible();
         //slice1->setPen(QPen());
     }
     if (prixxxx!=0)
     {
-       QPieSlice *slice2 = series->slices().at(2);
+        QPieSlice *slice2 = series->slices().at(2);
         slice2->setLabelVisible();
         //slice1->setPen(QPen());
     }
-        QChart *chart = new QChart();
-        chart->addSeries(series);
-        chart->setTitle("Le Prix Des Machines");
+    QChart *chart = new QChart();
+    chart->addSeries(series);
+    chart->setTitle("Le Prix Des Machines");
     QChartView *chartview = new QChartView(chart);
-        chartview->setParent(ui->horizontalFrame_3);
+    chartview->setParent(ui->horizontalFrame_3);
     //    int ret=a.connect_arduino();
     //    switch(ret)
     //    {
