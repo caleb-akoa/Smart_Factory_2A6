@@ -6,6 +6,8 @@
 #include <QLineEdit>
 #include<QPdfWriter>
 #include<QPainter>
+#include<QSerialPort>
+#include<QSerialPortInfo>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,6 +17,16 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tabMachine->setModel(m.afficherMachine());
     ui->tabEmploye->setModel(e.afficherEmploye());
     ui->comboBox_mail->setModel(e.afficher_email());
+    int ret=a.connect_arduino();
+    switch(ret)
+    {
+    case(0):qDebug()<< "arduino is available and connected to :" << a.getArduino_port_name();
+        break;
+    case(1):qDebug()<< "arduino is not available but not connected to"<< a.getArduino_port_name();
+        break;
+    case(-1):qDebug()<< "arduino is not avaible";
+    }
+    QObject::connect(a.getSerial(),SIGNAL(readyRead()),this,SLOT(update_label()));
     QSqlQueryModel * model= new QSqlQueryModel();
     model->setQuery("select * from machine where prix <500 ");
     float prixx=model->rowCount();
@@ -53,16 +65,7 @@ MainWindow::MainWindow(QWidget *parent)
     chart->setTitle("Le Prix Des Machines");
     QChartView *chartview = new QChartView(chart);
     chartview->setParent(ui->horizontalFrame_3);
-    //    int ret=a.connect_arduino();
-    //    switch(ret)
-    //    {
-    //    case(0):qDebug()<< "arduino is available and connected to :" << a.getArduino_port_name();
-    //        break;
-    //    case(1):qDebug()<< "arduino is not available but not connected to"<< a.getArduino_port_name();
-    //        break;
-    //    case(-1):qDebug()<< "arduino is not avaible";
-    //    }
-    //    QObject::connect(a.getSerial(),SIGNAL(readyRead()),this,SLOT(update_label()));
+
 }
 
 MainWindow::~MainWindow()
@@ -1787,7 +1790,7 @@ void MainWindow::on_pushButton_inf_clicked()
     a.write_to_arduino("3");
 }
 
-void MainWindow::update_label()
+/*void MainWindow::update_label()
 {
     data=a.read_from_arduino();
     if(data=="1")
@@ -1798,7 +1801,7 @@ void MainWindow::update_label()
     {
         ui->label_38->setText("SORTIE");
     }
-}
+}*/
 
 /******************************************************IMPRIMER**********************************************************************/
 void MainWindow::on_pushButton_imprimer_clicked()

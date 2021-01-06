@@ -223,7 +223,7 @@ border-style: outset;
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>16</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label_2">
@@ -8182,68 +8182,6 @@ border-style: outset;
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="horizontalLayoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>350</y>
-        <width>245</width>
-        <height>80</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
-       <item>
-        <widget class="QPushButton" name="pushButton_sup">
-         <property name="styleSheet">
-          <string notr="true">#pushButton_sup
-{
-	
-	border-color: beige;
-border-style: outset;
-  border-width: 2px;
-  border-radius: 10px;
-  font: bold 14px;
-  min-width: 6em;
-  padding: 6px;
-
-}
-#pushButton_sup:hover
-{
-	border-color: blue;
-}</string>
-         </property>
-         <property name="text">
-          <string>+</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_inf">
-         <property name="styleSheet">
-          <string notr="true">#pushButton_inf
-{
-	
-	border-color: beige;
-border-style: outset;
-  border-width: 2px;
-  border-radius: 10px;
-  font: bold 14px;
-  min-width: 6em;
-  padding: 6px;
-
-}
-#pushButton_inf:hover
-{
-	border-color: blue;
-}</string>
-         </property>
-         <property name="text">
-          <string>-</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
      <widget class="QLabel" name="label_31">
       <property name="geometry">
        <rect>
@@ -8255,45 +8193,6 @@ border-style: outset;
       </property>
       <property name="text">
        <string>Lampe 1</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_32">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>390</y>
-        <width>55</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Lampe 2</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_33">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>270</y>
-        <width>191</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Pointage de l'employe&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_38">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>270</y>
-        <width>55</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Entré&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_retour_14">
