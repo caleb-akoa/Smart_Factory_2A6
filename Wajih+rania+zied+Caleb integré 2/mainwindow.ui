@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>18</number>
+     <number>16</number>
     </property>
     <widget class="QWidget" name="page_7">
      <widget class="QLabel" name="label_30">
@@ -10514,7 +10514,7 @@ QPushButton:pressed {
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>4</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideNone</enum>
@@ -11725,7 +11725,7 @@ QPushButton:pressed {
        </rect>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab_35">
        <attribute name="icon">
@@ -11932,7 +11932,7 @@ QPushButton:pressed {
          <item>
           <widget class="QPushButton" name="pushButton_14">
            <property name="text">
-            <string>Ajoputer</string>
+            <string>Ajouter</string>
            </property>
           </widget>
          </item>
@@ -11976,6 +11976,16 @@ QPushButton:pressed {
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_42">
+         <item>
+          <widget class="QLineEdit" name="lineEdit_64">
+           <property name="maxLength">
+            <number>8</number>
+           </property>
+           <property name="placeholderText">
+            <string>Identifiant</string>
+           </property>
+          </widget>
+         </item>
          <item>
           <widget class="QLineEdit" name="lineEdit_Nom_3">
            <property name="maxLength">
@@ -12022,35 +12032,6 @@ QPushButton:pressed {
           </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_64">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>50</y>
-          <width>211</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="maxLength">
-         <number>8</number>
-        </property>
-        <property name="placeholderText">
-         <string>Identifiant</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_4">
-        <property name="geometry">
-         <rect>
-          <x>530</x>
-          <y>50</y>
-          <width>131</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>chercher</string>
-        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_38">
@@ -12117,16 +12098,6 @@ QPushButton:pressed {
          <string>Supprimer</string>
         </property>
        </widget>
-       <widget class="QTableView" name="tableView_5">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>170</y>
-          <width>751</width>
-          <height>271</height>
-         </rect>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_225">
         <property name="geometry">
          <rect>
@@ -12146,10 +12117,20 @@ QPushButton:pressed {
          <bool>true</bool>
         </property>
        </widget>
+       <widget class="QTableView" name="tableView_5">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>170</y>
+          <width>721</width>
+          <height>271</height>
+         </rect>
+        </property>
+       </widget>
+       <zorder>tableView_5</zorder>
        <zorder>label_225</zorder>
        <zorder>label_216</zorder>
        <zorder>lineEdit_68</zorder>
-       <zorder>tableView_5</zorder>
        <zorder>pushButton_13</zorder>
       </widget>
       <widget class="QWidget" name="tab_41">
@@ -12178,9 +12159,9 @@ QPushButton:pressed {
        <widget class="QLineEdit" name="lineEdit_289">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>110</y>
-          <width>181</width>
+          <x>390</x>
+          <y>50</y>
+          <width>141</width>
           <height>31</height>
          </rect>
         </property>
@@ -12191,10 +12172,10 @@ QPushButton:pressed {
        <widget class="QPushButton" name="pushButton_chercherMachine_22">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>150</y>
-          <width>151</width>
-          <height>21</height>
+          <x>400</x>
+          <y>90</y>
+          <width>121</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -12222,9 +12203,9 @@ border-style: outset;
        <widget class="QLineEdit" name="lineEdit_290">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>250</y>
-          <width>181</width>
+          <x>600</x>
+          <y>50</y>
+          <width>151</width>
           <height>31</height>
          </rect>
         </property>
@@ -12235,9 +12216,9 @@ border-style: outset;
        <widget class="QLineEdit" name="lineEdit_291">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>420</y>
-          <width>181</width>
+          <x>200</x>
+          <y>50</y>
+          <width>141</width>
           <height>31</height>
          </rect>
         </property>
@@ -12248,10 +12229,10 @@ border-style: outset;
        <widget class="QPushButton" name="pushButton_chercherMachine_23">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>300</y>
-          <width>151</width>
-          <height>21</height>
+          <x>620</x>
+          <y>90</y>
+          <width>121</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -12279,10 +12260,10 @@ border-style: outset;
        <widget class="QPushButton" name="pushButton_chercherMachine_24">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>460</y>
-          <width>151</width>
-          <height>21</height>
+          <x>210</x>
+          <y>90</y>
+          <width>121</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -12310,10 +12291,10 @@ border-style: outset;
        <widget class="QTableView" name="tableView_22">
         <property name="geometry">
          <rect>
-          <x>335</x>
-          <y>71</y>
-          <width>551</width>
-          <height>441</height>
+          <x>160</x>
+          <y>130</y>
+          <width>641</width>
+          <height>341</height>
          </rect>
         </property>
        </widget>
@@ -12840,7 +12821,7 @@ QPushButton:pressed {
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="tab_affiche">
        <attribute name="icon">
@@ -13157,16 +13138,6 @@ QPushButton:pressed {
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_38">
          <item>
-          <widget class="QLineEdit" name="lineEdit_identifiantM">
-           <property name="maxLength">
-            <number>8</number>
-           </property>
-           <property name="placeholderText">
-            <string>ID a modifier</string>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QLineEdit" name="lineEdit_nom1">
            <property name="placeholderText">
             <string>nom</string>
@@ -13205,6 +13176,35 @@ QPushButton:pressed {
           </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_identifiantM">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>110</y>
+          <width>171</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maxLength">
+         <number>8</number>
+        </property>
+        <property name="placeholderText">
+         <string>ID a modifier</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_21">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>110</y>
+          <width>101</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Chercher</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_40">
@@ -13309,9 +13309,9 @@ QPushButton:pressed {
        <widget class="QLineEdit" name="lineEdit_chercherID_2">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>50</y>
-          <width>221</width>
+          <x>340</x>
+          <y>100</y>
+          <width>161</width>
           <height>31</height>
          </rect>
         </property>
@@ -24132,10 +24132,10 @@ QPushButton:pressed {
        <widget class="QPushButton" name="pushButton_chercherMachine_20">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>100</y>
-          <width>181</width>
-          <height>21</height>
+          <x>360</x>
+          <y>140</y>
+          <width>121</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -24163,9 +24163,9 @@ border-style: outset;
        <widget class="QLineEdit" name="lineEdit_chercherNom_9">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>190</y>
-          <width>221</width>
+          <x>580</x>
+          <y>100</y>
+          <width>141</width>
           <height>31</height>
          </rect>
         </property>
@@ -24176,10 +24176,10 @@ border-style: outset;
        <widget class="QPushButton" name="pushButton_chercherMachine_21">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>240</y>
-          <width>181</width>
-          <height>21</height>
+          <x>590</x>
+          <y>140</y>
+          <width>121</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -24207,9 +24207,9 @@ border-style: outset;
        <widget class="QTableView" name="tableView_21">
         <property name="geometry">
          <rect>
-          <x>300</x>
-          <y>50</y>
-          <width>511</width>
+          <x>270</x>
+          <y>190</y>
+          <width>601</width>
           <height>381</height>
          </rect>
         </property>
@@ -26657,7 +26657,7 @@ text-decoration: none; }</string>
      <x>0</x>
      <y>0</y>
      <width>926</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

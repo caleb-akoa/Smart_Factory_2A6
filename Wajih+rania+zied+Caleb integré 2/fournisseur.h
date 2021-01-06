@@ -30,6 +30,8 @@ public:
         QSqlQueryModel * trier_nom();
         QSqlQueryModel * trier_ID();
         QSqlQueryModel * chercher(int);
+        QSqlQueryModel * chercherN(QString);
+        int verificationFournisseur();
 
 private:
     int identifiant, telephone;

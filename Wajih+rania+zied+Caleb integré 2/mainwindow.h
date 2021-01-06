@@ -501,6 +501,34 @@ private slots:
 
     void on_pushButton_301_clicked();
 
+    void on_pushButton_21_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_14_clicked();
+
+    void on_pushButton_12_clicked();
+
+    void on_pushButton_13_clicked();
+
+    void on_pushButton_chercherMachine_24_clicked();
+
+    void on_pushButton_chercherMachine_22_clicked();
+
+    void on_pushButton_chercherMachine_23_clicked();
+
+    void on_pushButton_chercherMachine_20_clicked();
+
+    void on_pushButton_chercherMachine_21_clicked();
+
 private:
     Ui::MainWindow *ui;
     Client client;

@@ -80,7 +80,7 @@ bool fournisseur::modifier(int idd)
       {
 
           QString res= QString::number(idd);
-          query.prepare("UPDATE FOURNISSEUR SET NOM=:nom,ADRESSE=:adresse,TELEPHONE=:telephone,EMAIL=:email WHERE IDENTIFIANT=:identifiant");
+          query.prepare("UPDATE FOURNISSEUR SET NOM=:nom,ADRESSE=:adresse,TELEPHONE=:telephone,ADRESSEMAIL=:email WHERE IDENTIFIANT=:identifiant");
           query.bindValue(":identifiant", res);
           query.bindValue(":nom", nom);
           query.bindValue(":adresse", adresse);
@@ -109,4 +109,56 @@ model->setHeaderData(2, Qt::Horizontal, QObject::tr("adresse"));
 model->setHeaderData(3, Qt::Horizontal, QObject::tr("telephone"));
 model->setHeaderData(4, Qt::Horizontal, QObject::tr("email"));
 
+}
+
+
+QSqlQueryModel * fournisseur::chercherN(QString n)
+
+{
+   QSqlQueryModel * model= new QSqlQueryModel();
+QSqlQuery query;
+
+query.prepare("select * from FOURNISSEUR where NOM=:nom");
+query.bindValue(":nom", n);
+
+query.exec();
+model->setQuery(query);
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom "));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("adresse"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("telephone"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("email"));
+
+}
+
+int fournisseur::verificationFournisseur()
+{
+    QSqlQuery query;
+
+    query.prepare("select * from FOURNISSEUR where IDENTIFIANT=:identifiant");
+    query.bindValue(":identifiant",this->identifiant);
+    query.exec();
+
+    int count_user = 0;
+    while (query.next())
+    {
+        identifiant=(query.value(0).toInt());
+        nom=(query.value(1).toString());
+        adresse=(query.value(2).toString());
+        telephone=(query.value(3).toInt());
+        email=(query.value(4).toString());
+        count_user++;
+    }
+    if (count_user==1)
+    {
+        return 0;
+    }
+    else if(count_user > 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 2;
+    }
 }

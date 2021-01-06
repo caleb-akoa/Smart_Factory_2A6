@@ -127,6 +127,45 @@ matiere_p::matiere_p(int R1, QString R2, QString R3,QString R4, int R5, int R6)
         return model;
     }
 
+    QSqlQueryModel * matiere_p::chercherL(QString name)
+
+    {
+        QSqlQueryModel * model= new QSqlQueryModel();
+    QSqlQuery query;
+    query.prepare("select * from MATIERE_PREMIERE where LIBELLE=:libelle");
+    query.bindValue(":libelle", name);
+    query.exec();
+    model->setQuery(query);
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("libelle"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("reference"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("description"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("prix"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("quantite"));
+
+        return model;
+    }
+
+    QSqlQueryModel * matiere_p::chercherP(int prixh)
+
+    {
+        QSqlQueryModel * model= new QSqlQueryModel();
+    QSqlQuery query;
+    query.prepare("select * from MATIERE_PREMIERE where PRIX=:prix");
+    query.bindValue(":prix", prixh);
+    query.exec();
+    model->setQuery(query);
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("libelle"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("reference"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("description"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("prix"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("quantite"));
+
+        return model;
+    }
+
+
     QSqlQueryModel * matiere_p::trier_nom()
     {
         // trier nom
@@ -170,4 +209,105 @@ matiere_p::matiere_p(int R1, QString R2, QString R3,QString R4, int R5, int R6)
         model->setHeaderData(5, Qt::Horizontal, QObject::tr("quantite"));
 
             return model;
+    }
+
+
+    int matiere_p::verificationMp()
+    {
+        QSqlQuery query;
+
+        query.prepare("select * from MATIERE_PREMIERE where IDENTIFIANT=:identifiant");
+        query.bindValue(":identifiant",this->identifiant);
+        query.exec();
+
+        int count_user = 0;
+        while (query.next())
+        {
+            identifiant=(query.value(0).toInt());
+            libelle=(query.value(1).toString());
+            reference=(query.value(2).toString());
+            description=(query.value(3).toString());
+            prix=(query.value(4).toInt());
+            quantite=(query.value(5).toInt());
+            count_user++;
+        }
+        if (count_user==1)
+        {
+            return 0;
+        }
+        else if(count_user > 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return 2;
+        }
+    }
+
+
+    int matiere_p::verificationMpN()
+    {
+        QSqlQuery query;
+
+        query.prepare("select * from MATIERE_PREMIERE where LIBELLE=:libelle");
+        query.bindValue(":libelle",this->libelle);
+        query.exec();
+
+        int count_user = 0;
+        while (query.next())
+        {
+            identifiant=(query.value(0).toInt());
+            libelle=(query.value(1).toString());
+            reference=(query.value(2).toString());
+            description=(query.value(3).toString());
+            prix=(query.value(4).toInt());
+            quantite=(query.value(5).toInt());
+            count_user++;
+        }
+        if (count_user==1)
+        {
+            return 0;
+        }
+        else if(count_user > 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return 2;
+        }
+    }
+
+    int matiere_p::verificationMpP()
+    {
+        QSqlQuery query;
+
+        query.prepare("select * from MATIERE_PREMIERE where PRIX=:prix");
+        query.bindValue(":prix",this->prix);
+        query.exec();
+
+        int count_user = 0;
+        while (query.next())
+        {
+            identifiant=(query.value(0).toInt());
+            libelle=(query.value(1).toString());
+            reference=(query.value(2).toString());
+            description=(query.value(3).toString());
+            prix=(query.value(4).toInt());
+            quantite=(query.value(5).toInt());
+            count_user++;
+        }
+        if (count_user==1)
+        {
+            return 0;
+        }
+        else if(count_user > 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return 2;
+        }
     }

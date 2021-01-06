@@ -2118,106 +2118,6 @@ void MainWindow::on_retour_24_clicked()
     ui->stackedWidget->setCurrentIndex(7);
 }
 
-void MainWindow::on_ajouter_clicked()
-{
-    tb.setID(ui->lineEdit_identifiantF->text().toInt());
-    tb.setNom(ui->lineEdit_nomF->text());
-    tb.setAdresse(ui->lineEdit_adresseF->text());
-    tb.setTelephone(ui->lineEdit_telephoneF->text().toInt());
-    tb.setEmail(ui->lineEdit_emailF->text());
-
-    fournisseur f(tb.get_identifiant(), tb.get_nom(), tb.get_adresse(), tb.get_telephone(), tb.get_email());
-
-    bool test = f.ajouter();
-    if(test)
-    {
-
-        ui->table_F->setModel(tb.afficher());//actualiser
-        QMessageBox::information(this, "Reussite", "Fournisseur ajouté !");
-        ui->lineEdit_identifiantF->clear();
-        ui->lineEdit_nomF->clear();
-        ui->lineEdit_adresseF->clear();
-        ui->lineEdit_telephoneF->clear();
-        ui->lineEdit_emailF->clear();
-    }
-    else
-    {
-        QMessageBox::warning(this, "Echec", "Fournisseur non ajouté !");
-        ui->lineEdit_identifiantF->clear();
-        ui->lineEdit_nomF->clear();
-        ui->lineEdit_adresseF->clear();
-        ui->lineEdit_telephoneF->clear();
-        ui->lineEdit_emailF->clear();
-    }
-}
-
-void MainWindow::on_pushButton_M_clicked()
-{
-    tb.setID(ui->lineEdit_identifiantM->text().toInt());
-    tb.setNom(ui->lineEdit_nom1->text());
-    tb.setAdresse(ui->lineEdit_61->text());
-    tb.setTelephone(ui->lineEdit_62->text().toInt());
-    tb.setEmail(ui->lineEdit_63->text());
-
-    fournisseur f(tb.get_identifiant(), tb.get_nom(), tb.get_adresse(), tb.get_telephone(), tb.get_email());
-
-    if(  f.get_identifiant()!=0, f.get_nom()!=NULL, f.get_adresse()!=NULL, f.get_telephone()!=0, f.get_email()!=NULL )
-    {
-
-        bool test = f.modifier(f.get_identifiant());
-        if(test)
-        {
-            ui->table_F->setModel(tb.afficher());
-            qDebug()<<"Modification effectue"<<endl;
-
-            QMessageBox::information(this, "Reussite", "Modification effectué !");
-            ui->lineEdit_identifiantM->clear();
-            ui->lineEdit_nom1->clear();
-            ui->lineEdit_61->clear();
-            ui->lineEdit_62->clear();
-            ui->lineEdit_63->clear();
-        }
-        else
-        {
-            qDebug()<<"Envoi non effectue"<<endl;
-            QMessageBox::information(this, "Echec", "Modification non effectué !");
-            ui->lineEdit_identifiantM->clear();
-            ui->lineEdit_nom1->clear();
-            ui->lineEdit_61->clear();
-            ui->lineEdit_62->clear();
-            ui->lineEdit_63->clear();
-        }
-
-    }
-    else
-        QMessageBox::critical(this, "Echec", "Remplissez tout les champs !");
-}
-
-void MainWindow::on_pushButton_supprimer_2_clicked()
-{
-    tb.setID(ui->recherche->text().toInt());
-    if(tb.get_identifiant()!=0)
-    {
-        bool test=tb.supprimer(tb.get_identifiant());
-        if(test)
-        {
-            ui->table_F->setModel(tb.afficher());
-            qDebug()<<"Suppression effectue"<<endl;
-            QMessageBox::information(this, "Reussite", "Supression effectué !");
-            ui->recherche->clear();
-
-        }
-        else
-        {
-            qDebug()<<"Suppression non effectue"<<endl;
-            QMessageBox::warning(this, "Echec", "Supression non effectué !");
-            ui->recherche->clear();
-        }
-
-    }
-    else
-        QMessageBox::warning(this, "Echec", "Remplissez le champs !");
-}
 
 void MainWindow::on_pushButton_imprimer_clicked()
 {
@@ -3055,5 +2955,366 @@ void MainWindow::on_pushButton_301_clicked()
 
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//    CALEB !!
+
+
+////////////////////////
+// Fournisseur !
+void MainWindow::on_ajouter_clicked()
+{
+    tb.setID(ui->lineEdit_identifiantF->text().toInt());
+    tb.setNom(ui->lineEdit_nomF->text());
+    tb.setAdresse(ui->lineEdit_adresseF->text());
+    tb.setTelephone(ui->lineEdit_telephoneF->text().toInt());
+    tb.setEmail(ui->lineEdit_emailF->text());
+
+    fournisseur f(tb.get_identifiant(), tb.get_nom(), tb.get_adresse(), tb.get_telephone(), tb.get_email());
+
+    bool test = f.ajouter();
+    if(test)
+    {
+
+        ui->table_F->setModel(tb.afficher());//actualiser
+        QMessageBox::information(this, "Reussite", "Fournisseur ajouté !");
+        ui->lineEdit_identifiantF->clear();
+        ui->lineEdit_nomF->clear();
+        ui->lineEdit_adresseF->clear();
+        ui->lineEdit_telephoneF->clear();
+        ui->lineEdit_emailF->clear();
+    }
+    else
+    {
+        QMessageBox::warning(this, "Echec", "Fournisseur non ajouté !");
+        ui->lineEdit_identifiantF->clear();
+        ui->lineEdit_nomF->clear();
+        ui->lineEdit_adresseF->clear();
+        ui->lineEdit_telephoneF->clear();
+        ui->lineEdit_emailF->clear();
+    }
+}
+
+
+
+
+void MainWindow::on_pushButton_M_clicked()
+{
+    tb.setID(ui->lineEdit_identifiantM->text().toInt());
+    tb.setNom(ui->lineEdit_nom1->text());
+    tb.setAdresse(ui->lineEdit_61->text());
+    tb.setTelephone(ui->lineEdit_62->text().toInt());
+    tb.setEmail(ui->lineEdit_63->text());
+
+    fournisseur f(tb.get_identifiant(), tb.get_nom(), tb.get_adresse(), tb.get_telephone(), tb.get_email());
+
+
+        bool test = f.modifier(f.get_identifiant());
+        if(test)
+        {
+            ui->table_F->setModel(tb.afficher());
+            qDebug()<<"Modification effectue"<<endl;
+
+            QMessageBox::information(this, "Reussite", "Modification effectué !");
+            ui->lineEdit_identifiantM->clear();
+            ui->lineEdit_nom1->clear();
+            ui->lineEdit_61->clear();
+            ui->lineEdit_62->clear();
+            ui->lineEdit_63->clear();
+        }
+        else
+        {
+            qDebug()<<"Envoi non effectue"<<endl;
+            QMessageBox::information(this, "Echec", "Modification non effectué !");
+            ui->lineEdit_identifiantM->clear();
+            ui->lineEdit_nom1->clear();
+            ui->lineEdit_61->clear();
+            ui->lineEdit_62->clear();
+            ui->lineEdit_63->clear();
+        }
+}
+
+void MainWindow::on_pushButton_supprimer_2_clicked()
+{
+    tb.setID(ui->recherche->text().toInt());
+    if(tb.get_identifiant()!=0)
+    {
+        if(tb.verificationFournisseur()==0)
+        {
+            bool test=tb.supprimer(tb.get_identifiant());
+            if(test)
+            {
+                ui->table_F->setModel(tb.afficher());
+                qDebug()<<"Suppression effectue"<<endl;
+                QMessageBox::information(this, "Reussite", "Supression effectué !");
+                ui->recherche->clear();
+
+            }
+            else
+            {
+                qDebug()<<"Suppression non effectue"<<endl;
+                QMessageBox::warning(this, "Echec", "Supression non effectué !");
+                ui->recherche->clear();
+            }
+
+        }
+
+    }
+    else
+        QMessageBox::warning(this, "Echec", "Remplissez le champs !");
+}
+
+
+
+
+void MainWindow::on_pushButton_21_clicked()
+{
+    QString ids=ui->lineEdit_identifiantM->text();
+    tb.setID(ids.toInt());
+    if(tb.verificationFournisseur()==0)
+    {
+        ui->lineEdit_identifiantM->show();
+        ui->lineEdit_nom1->show();
+        ui->lineEdit_61->show();
+        ui->lineEdit_62->show();
+        ui->lineEdit_63->show();
+
+        QString id=QString::number(tb.get_identifiant());
+        QString pr=QString::number(m.GetPrix());
+
+        ui->lineEdit_identifiantM->setText(id);
+        ui->lineEdit_nom1->setText(tb.get_nom());;
+        ui->lineEdit_61->setText(tb.get_adresse());
+        ui->lineEdit_62->setText(pr));
+        ui->lineEdit_63->setText(tb.get_email());
+
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, QObject::tr("ok"),
+                              QObject::tr("l'identifiant n'existe pas \n"
+                                          "click cancel to exit."), QMessageBox::Cancel);
+    }
+}
+
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->table_F->setModel(tb.trier_nom());
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    ui->table_F->setModel(tb.trier_ID());
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    ui->afficherMatierePremiere->setModel(mp.trier_nom());
+}
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    ui->afficherMatierePremiere->setModel(mp.trier_quantite());
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->afficherMatierePremiere->setModel(mp.trier_prix());
+}
+
+
+
+void MainWindow::on_pushButton_chercherMachine_20_clicked()
+{
+    tb.setID(ui->lineEdit_chercherID_2->text());
+    ui->tableView_21->setModel(tb.chercher(tb.get_identifiant()));
+}
+
+void MainWindow::on_pushButton_chercherMachine_21_clicked()
+{
+    tb.setNom(ui->lineEdit_chercherNom_9->text());
+    ui->tableView_21->setModel(tb.chercherN(tb.get_nom()));
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//Matiere Premiere
+
+void MainWindow::on_pushButton_14_clicked()
+{
+    mp.setID(ui->lineEdit_69->text().toInt());
+    mp.setNom(ui->lineEdit_292->text());
+    mp.setReference(ui->lineEdit_70->text());
+    mp.setDescription(ui->plainTextEdit_2->toPlainText());
+    mp.setQuantite(ui->lineEdit_72->text().toInt());
+    mp.setPrix(ui->lineEdit_71->text().toInt());
+
+
+
+
+
+       matiere_P MP(mp.get_identifiant(),mp.get_libelle(),mp.get_reference(),mp.get_description(),mp.get_prix(),mp.get_quantite());
+
+       if(MP.get_identifiant()!=0, MP.get_libelle()!=NULL, MP.get_reference()!=NULL, MP.get_description()!=NULL, MP.get_prix()!=0, mp.get_quantite()!=0)
+       {
+
+           bool test = MP.ajouter();
+
+            if(test)
+            {
+                 ui->afficherMatierePremiere->setModel(mp.afficher());//actualiser
+                  QMessageBox::information(this, "Reussite", "Matiere premiere ajouté !");
+                 qDebug()<<"Envoi effectue"<<endl;
+                 ui->lineEdit_69->clear();
+                 ui->lineEdit_292->clear();
+                 ui->lineEdit_70->clear();
+                 ui->plainTextEdit_2->clear();
+                 ui->lineEdit_71->clear();
+                 ui->lineEdit_72->clear();
+            }
+           else
+            {
+
+                 qDebug()<<"Envoi non effectue"<<endl;
+                 QMessageBox::information(this, "Reussite", "Matiere premiere non ajouté !");
+                 ui->lineEdit_69->clear();
+                 ui->lineEdit_292->clear();
+                 ui->lineEdit_70->clear();
+                 ui->plainTextEdit_2->clear();
+                 ui->lineEdit_71->clear();
+                 ui->lineEdit_72->clear();
+            }
+
+       }
+       else
+             QMessageBox::warning(this, "Echec", "Remplissez tout les champs !");
+}
+
+
+
+void MainWindow::on_pushButton_12_clicked()
+{
+    mp.setID(ui->lineEdit_64->text().toInt());
+    mp.setNom(ui->lineEdit_Nom_3->text());
+    mp.setReference(ui->lineEdit_65->text());
+    mp.setDescription(ui->plainTextEdit->toPlainText());
+    mp.setQuantite(ui->lineEdit_66->text().toInt());
+    mp.setPrix(ui->lineEdit_67->text().toInt());
+
+
+       matiere_P MP(mp.get_identifiant(),mp.get_libelle(),mp.get_reference(),mp.get_description(),mp.get_prix(),mp.get_quantite());
+
+
+       if(MP.get_identifiant()!=0, MP.get_libelle()!=NULL, MP.get_reference()!=NULL, MP.get_description()!=NULL, MP.get_prix()!=0, mp.get_quantite()!=0)
+       {
+                 if(mp.verificationMp()==0)
+                 {
+                     bool test = MP.miseAjour(MP.get_identifiant());
+
+                           if(test)
+                           {
+                                ui->afficherMatierePremiere->setModel(mp.afficher());//actualiser
+
+                                qDebug()<<"Envoi effectue"<<endl;
+                                QMessageBox::information(this, "Reussite", "Modification effectue !");
+                                ui->lineEdit_64->clear();
+                                ui->lineEdit_65->clear();
+                                ui->lineEdit_Nom_3->clear();
+                                ui->plainTextEdit->clear();
+                                ui->lineEdit_66->clear();
+                                ui->lineEdit_67->clear();
+                           }
+                          else
+                           {
+                                 qDebug()<<"Envoi non effectue"<<endl;
+                                  QMessageBox::information(this, "Reussite", "Modification non effectue !");
+                                  ui->lineEdit_64->clear();
+                                  ui->lineEdit_65->clear();
+                                  ui->lineEdit_Nom_3->clear();
+                                  ui->plainTextEdit->clear();
+                                  ui->lineEdit_66->clear();
+                                  ui->lineEdit_67->clear();
+
+                           }
+                 }
+
+       }
+       else
+             QMessageBox::critical(this, "Echec", "Remplissez tout les champs !");
+
+}
+
+
+
+void MainWindow::on_pushButton_13_clicked()
+{
+    mp.setID(ui->lineEdit_68->text().toInt());
+    if(mp.get_identifiant()!=0)
+    {
+         if(mp.verificationMp()==0)
+         {
+
+             bool test=mp.supprimer(mp.get_identifiant());
+                     if(test)
+                     {
+                           ui->afficherMatierePremiere->setModel(mp.afficher());
+                           QMessageBox::information(this, "Reussite", "Suppression effectue !");
+                          ui->lineEdit_68->clear();
+
+                     }
+                    else
+                        {
+
+                         QMessageBox::information(this, "Reussite", "Suppression effectue !");
+                         ui->lineEdit_68->clear();
+                       }
+         }
+
+    }
+    else
+          QMessageBox::critical(this, "Echec", "Remplissez tout les champs !");
+
+}
+
+void MainWindow::on_pushButton_chercherMachine_24_clicked()
+{
+    mp.setPrix(ui->lineEdit_291->text().toInt());
+    if(mp.get_prix()!=0)
+    {
+         if(mp.verificationMpP()==0)
+         {
+                 ui->tableView_22->setModel(mp.chercherP(mp.get_prix()));
+         }
+
+}
+
+void MainWindow::on_pushButton_chercherMachine_22_clicked()
+{
+    mp.setID(ui->lineEdit_289->text().toInt());
+    if(mp.get_identifiant()!=0)
+    {
+         if(mp.verificationMp()==0)
+         {
+                 ui->tableView_22->setModel(mp.chercher(mp.get_identifiant()));
+         }
+}
+
+void MainWindow::on_pushButton_chercherMachine_23_clicked()
+{
+    mp.setNom(ui->lineEdit_289->text());
+    if(mp.get_nom()!=NULL)
+    {
+         if(mp.verificationMpN()==0)
+         {
+                 ui->tableView_22->setModel(mp.chercherL(mp.get_nom()));
+         }
+}
 
 

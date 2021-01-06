@@ -38,6 +38,11 @@ public:
          QSqlQueryModel * trier_prix();
          QSqlQueryModel * trier_quantite();
          QSqlQueryModel * chercher(int);
+         QSqlQueryModel * chercherL(QString);
+         QSqlQueryModel * chercherP(int);
+         int verificationMp();
+         int verificationMpN();
+         int verificationMpP();
 
 
 
