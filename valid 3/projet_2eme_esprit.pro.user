@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.2, 2021-01-07T02:08:41. -->
+<!-- Written by QtCreator 4.13.2, 2021-01-07T03:24:55. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -326,8 +326,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">projet_2eme_esprit2</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/wajih/OneDrive/Documents/GitHub/Smart_Factory_2A6/wajih+rania integré/projet_2eme_esprit.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/wajih/OneDrive/Documents/GitHub/Smart_Factory_2A6/wajih+rania integré/projet_2eme_esprit.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/wajih/OneDrive/Desktop/2 10/2 10/wajih+rania+zied integré 23 11/projet_2eme_esprit.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/wajih/OneDrive/Desktop/2 10/2 10/wajih+rania+zied integré 23 11/projet_2eme_esprit.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
